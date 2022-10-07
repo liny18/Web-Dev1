@@ -119,9 +119,8 @@ main p {
 
 .intro {
     width: 50%;
-    margin: 0 auto;
-    margin-top: 6%;
-    margin-bottom: 3%;
+    margin: auto;
+    margin-top: 3%;
 }
 
 .programs {
@@ -259,8 +258,8 @@ main p {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 10% auto;
-    width: 80%;
+    margin: 8% auto;
+    width: 90%;
 }
 
 .prof img {
@@ -384,7 +383,7 @@ input[type=submit]:hover {
     justify-content: space-between;
     /* align-items: center; */
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     min-width: 1000px;
 }
 
@@ -394,7 +393,7 @@ input[type=submit]:hover {
 .grad-main article {
     border-radius: 5px;
     max-height: 700px;
-    max-width: 500px;
+    max-width: 300px;
     padding: 0 10px;
 }
 
