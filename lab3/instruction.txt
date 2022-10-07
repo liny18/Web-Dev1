@@ -1,0 +1,29 @@
+Lab 3
+
+Due 10/7 before you walk in the door
+
+Have you seen the ITWS web page? It’s not very good… https://science.rpi.edu/itws/
+Your job this week (as individuals, this is not a group lab) is to make us a new site.
+
+Features
+The site should have the following features:
+Information about the ITWS program
+Undergrad major
+Undergrad minor
+Grad
+Information about the core faculty (me, Prof. Plotka, Prof. Thilanka, Dr. Fontaine, Dr. Stewart)
+Links to our social media presence (TikTok: ITWSatRPI, Twitter: rpi_itws, Facebook, our blog: https://itwsatrpi.blogspot.com/, LinkedIn ITWS group)
+At least 5 interesting news items (this can be static content)
+A way to contact us: e.g., a form that sends something to an email address 
+(don’t use anyone’s email address without asking them first! – when in doubt, use a fake email address)
+The site need not be mobile, but if you’re going to use Bootstrap, that will likely happen anyway. 
+You are free to check the mobile site and tell us about it in your README.md file and that will get filed under creativity.
+You need not use jQuery (you can if you’d like) but you must use JavaScript.
+Make the site catchy. Something we would actually want to replace our current site with (and hey, maybe we will!)
+This site can be all one page or multiple pages, up to you!
+This week’s lab is to see how well you use HTML/CSS/JS together to make well-presented pages. 
+So feel free to use whatever you’d like to showcase that.
+
+Please serve this lab at the following URL: http://<your-personal-vm>/<your-personal-lab-repo>/lab3
+This should be the default URL if you make a new folder in your personal repo named lab3 and 
+then clone your personal repo into your /var/www/html directory.
