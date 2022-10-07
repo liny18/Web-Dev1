@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <title>ITWS RPI</title>
+    <link rel="icon" href="pictures/logo1.png">
 </head>
 <body>
     <header>
@@ -19,9 +20,10 @@
                 <h1>Information Technology & Web Science</h1>
             </div>
         </a>
-        <a href="">Faculty</a>
-        <a href="">News</a>
-        <a href="">Contact</a>
+        <nav id="program">Programs</nav>
+        <nav id="faculty">Faculty</nav>
+        <nav id="news">News</nav>
+        <nav id="contact">Contact</nav>
         <div class="socials">
             Socials
             <nav class="socials-dropdown">
@@ -56,10 +58,12 @@
                 academic discipline of their choice.
             </p>
         </section>
-        <nav class="programs">
+        <nav class="slides programs">
             <div class="boxes box1">
                 Undergraduate Major
-                <img src="pictures/arrow.png" alt="go to page">
+                <a href="undergrad.html">
+                    <img src="pictures/arrow.png" alt="go to page">
+                </a>
             </div>
             <div class="boxes box2" onclick="minorPopup()">
                 Undergraduate Minor
@@ -91,9 +95,276 @@
             </div>
             <div class="boxes box3">
                 Graduate
-                <img src="pictures/arrow.png" alt="go to page">
+                <a href="grad.html">
+                    <img src="pictures/arrow.png" alt="go to page">
+                </a>
             </div>
         </nav>
+
+        <article class="slides prof">
+            <div class="professors Callahan">
+                <img src="faculty/Callahan.jpeg" alt="Brian Callahan">
+                <h2>Callahan, Brian</h2>
+                <p>
+                    Lecturer
+                </p>
+                <section class="profpopup">
+                    <h2>Brian Callahan</h2>
+                    <p>callab5@rpi.edu</p>
+                    <p>https://briancallahan.net/</p>
+                    <p>0000-0002-1797-8633</p>
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Brian Callahan is a Lecturer in ITWS. His research covers fields such as marginalized experiences in the technology sector, cybersecurity of robotics and operating systems software, and the design, implementation, and long-term maintenance of digital humanities software suites. Callahan oversees the Information Security and Science & Technology Studies concentrations for undergraduates and the Information Security concentration for graduates. He is a developer for the OpenBSD operating system, which ties his professional experiences together with his teaching.
+                    </p>
+                </section>
+            </div>
+
+            <div class="professors Fontaine">
+                <img src="faculty/Fontaine.jpeg" alt="Kathy Fontaine">
+                <h2>Fontaine, Kathy</h2>
+                <p>
+                    Adjunct Professor
+                </p>
+                <section class="profpopup">
+                    <h2>Kathy Fontaine</h2>
+                    <p>fontak@rpi.edu</p>
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Dr. Kathleen (Kathy) Fontaine joined RPI in 2014, after 25 years at NASA Goddard Space Flight Center, first  as a contractor, and then as a civil servant.  She is currently a Research Scientist in the Tetherless Web Constellation, where she developed and teaches a graduate course in Big Data Policy.  Dr. Fontaine has also developed an Ethics module for the Capstone class, and has designed a Research Methods seminar that she hopes to develop into a full course. Dr. Fontaine’s government career included both supporting the development of, and then creating policies to enable data access nationally and internationally through the Committee on Earth Observations Satellites (CEOS) Working Group on Information Systems and Services (WGISS); in the Group on Earth Observations (GEO); and in the US interagency US Group on Earth Observations (USGEO).  These relationships drove her professional and research interests in international organizations and their cultures, developing and implementing policies, and the intricacies of volunteer organizations.  Dr. Fontaine is still actively involved with GEO, serving on their Programme Board on behalf of the Earth Science Information Partners (ESIP).  Just prior to becoming joining ITWS, Dr. Fontaine served as the Managing Director for the Research Data Alliance/US, in support of research data sharing activities nationally and internationally. Her professional affiliations include the American Geophysical Union (AGU), the Association for Computing Machinery (ACM) and its web science group, the ACM policy group (US Technology Policy Committee), the Institute of Electrical and Electronics Engineers (IEEE) Geoscience and Remote Sensing Society (IEEE GRSS), and the IEEE Society on Social Implications of Technology (SSIT). Her hobbies include singing, cooking, sewing, and looking after her rescue dogs with her husband Mark.
+                    </p>
+                </section>
+            </div>
+
+            <div class="professors Munasinghe">
+                <img src="faculty/Munasinghe.jpeg" alt="Thilanka Munasinghe">
+                <h2>Munasinghe, Thilanka</h2>
+                <p>
+                    Lecturer
+                </p>
+                <section class="profpopup">
+                    <h2>Thilanka Munasinghe</h2>
+                    <p>Lally 315</p>
+                    <p>munast@rpi.edu</p>
+                    <p> http://thilankam.github.io/</p>
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Thilanka Munasinghe is a lecturer at Information Technology & Web Science (ITWS) at Rensselaer Polytechnic Institute (RPI) focusing on teaching areas related to Data Science, Data Analytics, and Informatics. Prior to joining RPI, Thilanka was the CodeLab instructor at West Virginia University’s LaunchLab, where he was instrumental in providing technical expertise and mentorship to student entrepreneurs of early-stage student-initiated start-ups. Thilanka has also contributed to large-scale open-source software projects such as MIT App Inventor. Thilanka received his BSc in Aerospace Engineering and MSc in Mechanical Engineering from West Virginia University and has conducted research on microgravity systems and genetic algorithms. Thilanka’s current research interests are in data-driven analytics using big data to address societal challenges in a diverse set of areas such as multi-disciplinary engineering applications, energy systems, urbanization, social networks, and health issues that impact society by building novel early warning systems and Internet of Things (IoT) applications.
+                    </p>
+                </section>
+            </div>
+
+            <div class="professors Plotka">
+                <img src="faculty/Plota.jpeg" alt="Richard Plotka">
+                <h2>Plotka, Richard</h2>
+                <p>
+                    Program Director
+                </p>
+                <section class="profpopup">
+                    <h2>Richard Plotka</h2>
+                    <p>plotkr2@rpi.edu</p>
+                    <p>(518) 276-2590</p>
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Areas of Instruction: Professor Plotka teaches Introduction to ITWS, ITWS Capstone, Web Systems Development and Web Science Systems Development in the Information Technology and Web Science program. In addition to his commitment to Information Technology and Web Science students, Professor Plotka has played an active role in the ITWS community by serving as a member of the IT Advisory Board from 1999-2012. Research Interests: Professor Plotka is pursuing the latest trends in information technology, executive management, systems architecture, applications architecture, operations research management, and project management. As he contributes to the field of business and technology management, Professor Plotka calls upon his 20 years of experience in industry. He is currently the Chief Executive Office at Appatura, a SaaS Component Content Management and Automated Publishing solutions provider.  He is actively involved in the application of Blockchain to challenges in Legal, Marketing, Music and Real Estate.
+                    </p>
+                </section>
+            </div>
+            
+            <div class="professors Callahan">
+                <img src="faculty/Stewart.jpeg" alt="Kevin Stewart">
+                <h2>Stewart, Kevin</h2>
+                <p>
+                    Adjunct Professor
+                </p>
+                <section class="profpopup">
+                    <h2>Kevin Stewart</h2>
+                    <p>stewak4@rpi.edu</p>
+                    <h2>
+                        About
+                    </h2>
+                    <p>
+                        Kevin R. Stewart, is an entrepreneur with more than 30 years experience in the development of new technologies, building teams and delivering new solutions to the marketplace. He is currently an Adjunct Professor in the schools of Science and Engineering at RPI, where he teaches a course titled “Business Issues for Engineers and Scientists”. After receiving a BA in Chemistry from WVU, Randy began his career as a chemist with the Eastman Kodak, synthesizing photo chemicals for new and existing Kodak products.   Two years of industrial chemistry sent Randy off to graduate school where he earned a Ph.D. in Chemistry from NCSU, while publishing on topics related to structure and bonding in organometallic chemistry.  Dr. Stewart then traveled to Harvard University as a National Institutes of Health Fellow and expanded his studies on solid materials to include the chemistry and physics of surfaces.   He joined GE Corporate R&D, first as a member of a technology team, and then given greater responsibilities building new exploratory research efforts.   When GE exited defense industries in 1993, Randy acquired a technology for optical data transfer that was being developed by GE for aerospace applications, and with continued support from the U.S. DOD, he formed MOEC (Molecular OptoElectronics Corp.).  Under his guidance, MOEC became an international supplier of fiber optic components to the telecom industry, providing awarding winning products for optical power control in fiber optic network systems.  In 2003, with the collapse of the telecom industrial sector, Randy lead the wind down of MOEC; selling the assets to other companies. In 2017, Dr. Stewart organized the restructuring of Prism Solar Technologies followed by a merger with Genie Energy Ltd., (NYSE:GNE), where he is currently CEO of Plus EnerG Inc., an energy systems designer, which owns Prism Solar Technologies, Inc. Dr. Stewart has been awarded 25 patents and has authored 26 peer review technical publications.  He has served on numerous committees for the National Science Foundation and the New York State Energy Research & Development Authority.  He was a member of the NSF Panel creating the Advanced Materials and Processing Program (AMPP), and served on the external advisory group for the Consortium for Lightforce Dynamics in the Department of Physics at Harvard University.
+                    </p>
+                </section>
+            </div>
+        </article>
+
+        <article class="slides news-content">
+            <section class="news-number" onclick="showNews(1)">
+                <h2>1</h2>
+                <p>Rensselaer Professor Lirong Xia Named One of “AI’s 10 to Watch”</p>
+                <section class="news-popup" id="news1">
+                    <h1>Rensselaer Professor Lirong Xia Named One of “AI’s 10 to Watch”</h1>
+                    <p>Lirong Xia, a computer scientist whose research focuses on “social choice” – the analysis of individual preferences used to reach collective decisions or social objectives – has been recognized by IEEE Intelligent Systems magazine as one of “AI’s 10 to Watch.”
+
+                        According to IEEE Intelligent Systems, a publication of the Institute of Electrical and Electronics Engineers (IEEE), the biennial honor is intended to acknowledge and celebrate 10 young scientists in the field of artificial intelligence (AI) and to promote cutting-edge research among next-generation researchers, industry, and the general public alike.
+                        
+                        Chuck Stewart, head of the Department of Computer Science, congratulated Xia, who joined Rensselaer Polytechnic Institute (RPI) in 2013.
+                        
+                        “This award highlights Lirong’s great early success and his outstanding potential, and we congratulate him on this recognition,” Stewart said. “Professor Xia joins Heng Ji – a young expert in natural language processing – as the second Rensselaer recipient of this award, reflecting the high quality of AI researchers who have joined the department in recent years.”
+                        
+                        Xia’s research combines principles and techniques of economics, statistics, and AI to help a group of agents resolve disputes and make joint decisions. For example, the Internet Movie Database (IMDb) wants to rank movies by aggregating user ratings, which represent subjective preferences and can be viewed as data generated by a statistical model – how should IMDb design its ranking mechanism? An ideal system will produce accurate rankings and recommendations with minimal input, but such a system presents many challenges. For example, recommendations are only accurate if they match the preferences of the user. And systems must also contend with the strategic behavior of users who, for example, deliberately enter a ranking either more positive or negative than their true opinion in order to sway the overall ranking of a product in one direction or another.
+                        
+                        IEEE Intelligent Systems began the process of selecting recipients in early 2015 by soliciting nominations from a wide range of senior AI researchers from both academia and industry. The nominees all received their Ph.D.s in the past five years. A short list of top candidates was voted on by the selection #committee, consisting of members of the Intelligent Systems editorial and advisory boards. The “AI’s 10 to Watch” were recognized in the January/February 2016 edition of IEEE Intelligent Systems.
+                        
+                        Having served on the selection #committee for the award in previous years, James Hendler, director of the Rensselaer Institute for Data Exploration and Applications (IDEA) and Tetherless World Professor of Computer, Web, and Cognitive Sciences at Rensselaer, said he could attest to the difficulty of the decision and the weight of the honor.
+                        
+                        "This award is one of the top awards given to young scientists in the AI field,” Hendler said. “Started 10 years ago, the award is given to researchers who are clearly having strong impact within the first few years after their thesis.  Nominations are sought from department chairs, fellows of professional organizations, and others, and the field is global. Only the best are chosen.”
+                        
+                        Xia’s research exemplifies the work being done at The New Polytechnic, addressing difficult and complex global challenges, the need for interdisciplinary and true collaboration, and the use of the latest tools and technologies, many of which are developed at Rensselaer.
+                        
+                        Xia is an assistant professor in the Department of Computer Science at Rensselaer. Prior to joining Rensselaer in 2013, he was a National Science Foundation Computing Innovation Fellow at the Center for Research on Computation and Society at Harvard University. Xia received a Ph.D. in computer science from Duke University. He is an associate editor of Mathematical Social Sciences and is on the editorial board of the Journal of Artificial Intelligence Research. Xia is the recipient of a National Science Foundation CAREER award, and a Simons-Berkeley Research Fellowship for the Economics and Computation Program.</p>
+                </section>
+            </section>
+
+            <section class="news-number" onclick="showNews(2)">
+                <h2>2</h2>
+                <p>Toward IoT – A Framework for Data Analytics on Digital Device Networks</p>
+                <section class="news-popup" id="news2">
+                    <h1>
+                        Toward IoT – A Framework for Data Analytics on Digital Device Networks
+                    </h1>
+                    <p>
+                        The Internet of Things promises to improve our lives by connecting sensors in the objects that surround us – buildings, appliances, gadgets, and vehicles – and the data that they collect. But to realize that potential, programmers need tools that make it easier to create applications that combine devices and the cloud. With the support of the National Science Foundation (NSF), researcher Stacy Patterson is building those tools and developing a framework that developers can use to easily perform data analytics over a multitude of devices.
+
+                        “Rather than developers designing custom algorithms for each network of devices, we’re going to build a framework of software that sits on all these devices and the cloud that will automatically manage communication between the devices and deal with device and network failures,” said Patterson, the Clare Boothe Luce Assistant Professor of Computer Science at Rensselaer Polytechnic Institute (RPI). “Now the developer only needs to provide a little bit of code to say ‘this is how I want it to work,’ and this framework will take care of the rest.”
+
+                        The project, “Toward a Machine Learning Framework for the Internet of Things,” is supported by a prestigious five-year $618,661 NSF Faculty Early Career Development Award (CAREER).
+
+                        “Dr. Patterson is developing approaches that advance the vision of Internet of Things technology,” said Curt Breneman, dean of the Rensselaer School of Science. “This CAREER award recognizes the promise of that work, and we congratulate her for it.”
+
+                        Patterson’s research epitomizes the work being done at The New Polytechnic, addressing difficult and complex global challenges, the need for interdisciplinarity and true collaboration, and the use of the latest tools and technologies, many of which are developed at Rensselaer.
+
+                        The Internet of Things (IoT) describes a network of devices, from RFID tags, to smart thermostats, to light bulbs, that can sense and communicate information. It is predicted that, by 2020, there will be 25 to 50 billion IoT devices. This massive network and the data it generates will enable new applications in a wide range of critical domains including environmental management, smart infrastructure, and health care.
+
+                        The project is an extension of Patterson’s current research into enhancing the utility of sensors embedded in automobiles, by creating real-time networks that allow automobiles to pool their individual information into a larger shared picture of driving conditions in the area.
+
+                        To achieve the vision of IoT, as well as in her work with automobile networks, Patterson said, it is crucial to be able to quickly analyze and learn from the massive amount of generated data. Current approaches for big data analytics require full data transfer to a platform with large computational power, such as the cloud. Given the projected explosion in the number of devices and the resulting data generation rate, this is not feasible.
+
+                        Patterson said the grant will help her achieve three goals in IoT research. The first is to develop a computational framework that reduces the problem to an abstraction, anticipating considerations like the type and quality of data, the number of devices, and how the data are related across devices.
+
+                        “What kinds of relationships are people interested in with this data, and how does that embed down to the physical world?” Patterson said. “This is ultimately about searching for a pattern in how I would solve the kinds of problems that interest people.”
+
+                        The second goal is to provide a stable platform that masks the differences between devices, and compensates for failed devices or computers and lost data. Finally, she will build tools to enforce a standard for speed and accuracy of the framework.
+                    </p>
+                </section>
+            </section>
+
+            <section class="news-number" onclick="showNews(3)">
+                <h2>3</h2>
+                <p>Driving Conditions According to Cars and the Cloud</p>
+                <section class="news-popup" id="news3">
+                    <h1>
+                        Driving Conditions According to Cars and the Cloud
+                    </h1>
+                    <p>
+                        About 1.3 million vehicles are involved in weather-related accidents each year. Cars are increasingly equipped with sensors that could trigger early warning systems about dangerous conditions such as icy roads with valuable real-time data, but analyzing and distributing that data currently requires costly communication between cars and cloud computers. Researchers at Rensselaer Polytechnic Institute (RPI) think there’s a better way.
+
+                        “We want cars to communicate with one another – sharing and analyzing information – as well as the cloud, so that they can learn from each other, reducing the expensive bandwidth that comes with contacting the cloud,” said Stacy Patterson, a Rensselaer professor developing the approach with Montana State University researcher Mike P. Wittie, in a new project supported by the National Science Foundation (NSF).
+
+                        The project, “A Hybrid Vehicle-Cloud Solution for Robust, Cost-Efficient Road Monitoring,” is supported with a two-year $250,000 NSF grant. The research combines the best aspects of existing approaches to big data analytics, which generally fall into two categories: centralized approaches where data is sent to a single location for analysis; and distributed approaches where data analytics is performed by passing messages between participating entities.  Centralized approaches are often simpler, but difficult to scale. Distributed approaches, while scalable, are difficult to analyze and may be disrupted by changes in the network such as loss of network connectivity. 
+
+                        “Our project combines the best of both approaches to get scalability and guaranteed performance,” said Patterson, the Clare Boothe Luce Assistant Professor of Computer Science at Rensselaer. “This is a hybrid architecture, a new way of performing data analytics that could have applications beyond vehicle networks, such as smart grid design and Internet of Things applications.”
+
+                        Conceptually, the project leverages sensors and networking capabilities already present in new vehicles, and uses connectivity to the cloud to provide a stable backbone when necessary. The proposed system will be designed from the ground up specifically to support data analytics at a low communication cost. The result will be a scalable, agile, cost-efficient solution for real-time, widespread sensing and estimation in vehicle networks.
+
+                        Patterson said the first step in the process is to conduct research confirming that they can use select sensor data to estimate road conditions. To do that, they will equip a small fleet of cars with a custom suite of sensors, gather data, and determine whether their application is capable of accurately estimating actual conditions on the ground using only a portion of that data.
+
+                        “I know we can determine this literal ‘ground truth’ using massive amounts of information. But can we build an application that can estimate this ground truth without measuring every segment of the road and communicate that information to the cloud?” Patterson said. “The benefit of that is that you would need fewer measurements and less bandwidth to make a valuable determination.”
+
+                        After gathering data, the team will build a simulator of their approach, in which they are able to feed in real-world data and simulate cars moving around, sampling the data, and using the algorithm and network to generate information on current road conditions.
+
+                        “You can think of the goal of this project as a prototype, a system where we work out what information needs to be sent to what place and when, and how accurately it’s able to solve the problem,” said Patterson.
+
+                        Patterson is an expert in dynamic networks, distributed algorithms, and cooperative control whose research creates new utility by linking the sensors that pepper modern consumer goods. Her current research is aimed at enhancing the utility of sensors embedded in automobiles, by creating real-time networks that allows automobiles to pool their individual information into a larger shared picture of driving conditions in the area.
+
+                        Her work is an example of The New Polytechnic, a new paradigm for teaching, learning, and research at Rensselaer, the foundation of which is the recognition that global challenges and opportunities are so great that they cannot be addressed by the most talented person working alone. The New Polytechnic enables collaborations between talented people across disciplines, sectors, and global regions, in order to address the complex problems the world.</p>
+                </section>
+            </section>
+
+            <section class="news-number" onclick="showNews(4)">
+                <h2>4</h2>
+                <p>Francine Berman Appointed by President Obama to the National Council on the Humanities</p>
+                <section class="news-popup" id="news4">
+                    <h1>
+                        Francine Berman Appointed by President Obama to the National Council on the Humanities
+                    </h1>
+                    <p>
+                        Francine Berman has been appointed by President Obama and confirmed by the U.S. Senate to serve on the National Council on the Humanities (NCH), a board of 26 distinguished individuals who advise the chairman of the National Endowment of the Humanities (NEH). Dr. Berman is the Edward P. Hamilton Distinguished Professor in Computer Science at Rensselaer Polytechnic Institute (RPI).
+
+                        Berman is an international leader in data science whose work focuses on the development of sustainable infrastructure for digital stewardship and preservation. Such infrastructure is critical to support data-driven research and new discovery in a broad variety of fields, including the digital humanities. Berman has worked closely with the library and museum community and co-chaired the Blue Ribbon Task Force on Sustainable Digital Preservation and Access and the National Research Council Board on Research Data and Information. She currently serves as the U.S. chair of the Research Data Alliance, an international community-driven organization founded to accelerate research data sharing and data-driven innovation worldwide. 
+
+                        “Dr. Berman is a distinguished data scientist with exceptional national impact,” said Prabhat Hajela, provost of Rensselaer. “We are proud that she has been named to the NCH, and believe that she will bring important insight and data expertise to her work with the NEH.”
+
+                        At the time of her nomination, President Barack Obama praised Berman and another nominee. “These women have demonstrated knowledge and dedication throughout their careers,” said Obama.  “I am grateful they have chosen to take on these important roles, and I look forward to working with them in the months and years to come.”
+
+                        “Digital information is transforming the landscape in all areas, including humanities research, education, and preservation,” said Berman. “I am tremendously honored by this appointment and look forward to contributing and learning as a member of Council and on behalf of the NEH.”
+
+                        NEH Chairman William D. Adams praised the appointments. “Dr. Francine Berman, Patricia Limerick, and Shelly Lowe are distinguished, prominent leaders in their respective fields of study and I look forward to their insights and contributions. Their expertise will help NEH strengthen and promote excellence in the humanities for all Americans.”
+
+                        Berman’s work contributes to The New Polytechnic, a new paradigm for teaching, learning, and research at Rensselaer, the foundation of which is the recognition that global challenges and opportunities are so great that they cannot be addressed by the most talented person working alone, nor even by a single discipline, sector, or nation. The New Polytechnic enables collaborations between talented people across disciplines, sectors, and global regions, in order to address the complex problems the world.
+
+                        Berman is a fellow of the Association of Computing Machinery (ACM), the Institute of Electrical and Electronics Engineers (IEEE), and the American Association for the Advancement of Science (AAAS). She has also been recognized as a “Digital Preservation Pioneer” by the Library of Congress. In 2009, Berman was the inaugural recipient of the ACM/IEEE-CS Ken Kennedy Award for “influential leadership in the design, development, and deployment of national-scale cyberinfrastructure.” Previously, Berman served as vice president for research at Rensselaer and as director of the San Diego Supercomputer Center. She currently serves as chair of the Anita Borg Institute Board of Trustees, as co-chair of the National Science Foundation Advisory Committee for the Computer and Information Science and Engineering Directorate, and as a member of the Board of Trustees of the Alfred P. Sloan Foundation. 
+
+                        ABOUT THE NATIONAL ENDOWMENT FOR THE HUMANITIES
+
+                        Created in 1965 as an independent federal agency, the National Endowment for the Humanities supports research and learning in history, literature, philosophy, and other areas of the humanities by funding selected, peer-reviewed proposals from around the nation. Additional information about the National Endowment for the Humanities and its grant programs is available at: www.neh.gov.
+                    </p>
+                </section>
+            </section>
+
+            <section class="news-number" onclick="showNews(5)">
+                <h2>5</h2>
+                <p>Rensselaer Cybersecurity Expert Appointed to Homeland Security Science and Technology Advisory Committee</p>
+                <section class="news-popup" id="news5">
+                    <h1>
+                        Rensselaer Cybersecurity Expert Appointed to Homeland Security Science and Technology Advisory Committee
+                    </h1>
+                    <p>
+                        James Hendler, director of the Rensselaer Polytechnic Institute (RPI) Institute for Data Exploration and Applications (IDEA), has been appointed to the Homeland Security Science and Technology Advisory Committee. The #committee provides scientific and technical advice to the Under Secretary for Science and Technology and senior department leadership on matters related to the expansion of technological capabilities across the homeland security enterprise.
+
+                        Homeland Security Science and Technology Advisory Committee members are selected from disciplines within the following fields of expertise: organizational strategy and management; first responders; cybersecurity/risk; cross-cutting technical expertise; and chemical and biological defense. The 28 new HSSTAC members will join the six current members on the #committee. All members serve two-year terms on the #committee.
+
+                        Hendler was selected for his expertise in cybersecurity/risk, along with Vinton G. Cerf, vice president and chief Internet evangelist for Google, and Vincent W.S. Chan, a professor of electrical engineering and computer science at Massachusetts Institute of Technology.
+
+                        Hendler is the Tetherless World Professor of Computer, Web and Cognitive Sciences at Rensselaer. One of the originators of the Semantic Web, Hendler was the recipient of a 1995 Fulbright Foundation Fellowship, is a former member of the U.S. Air Force Science Advisory Board, and is a fellow of the American Association for Artificial Intelligence, the British Computer Society, the Institute of Electrical and Electronics Engineers (IEEE), and the American Association for the Advancement of Science (AAAS).  
+
+                        Hendler is also the former chief scientist of the Information Systems Office at the U.S. Defense Advanced Research Projects Agency (DARPA) and was awarded a U.S. Air Force Exceptional Civilian Service Medal in 2002. The former editor-in-chief of IEEE Intelligent Systems, he is also the first computer scientist to serve on the board of reviewing editors for Science. In 2010, Hendler was selected as an “Internet Web Expert” by the U.S. government. In 2012, he was one of the inaugural recipients of the Strata Conference “Big Data” awards for his work on large-scale open government data, and he is a columnist and associate editor of the Big Data journal. In 2013, he was appointed by Governor Andrew Cuomo as the open data advisor to New York state.
+
+                        Hendler’s research and the work being done at the Rensselaer IDEA exemplify The New Polytechnic, a new paradigm for teaching, learning, and research at Rensselaer, the foundation of which is the recognition that global challenges and opportunities are so great that they cannot be addressed by the most talented person working alone, nor even by a single discipline, sector, or nation. The New Polytechnic enables collaborations between talented people across disciplines, sectors, and global regions, in order to address the complex problems the world.
+                    </p>
+                </section>
+            </section>
+        </article>
+
+        <article class="slides contact-form">
+            <form>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="First name">
+            
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Last name..">
+            
+                <label for="email">Email</label>
+                <input type="email" id="email" name="mail" placeholder="Email">
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Message.."></textarea>
+            
+                <input type="submit" value="Send Email">
+            </form>
+            </article>
+
     </main>
     <footer>
         <p>ITWS @ RPI</p>

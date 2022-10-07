@@ -4,7 +4,7 @@ body {
     color: #000000;
     margin: 0;
     padding: 0;
-    background: url(pictures/meme.webp) no-repeat center center fixed;
+    background: url(pictures/monkey.jpg) no-repeat center center fixed;
     background-size: cover;
     /* background-image: linear-gradient(to bottom right,#1f878f, #cace9c); */
     color: white;
@@ -15,6 +15,19 @@ body {
     0 -0.07em black;
     font-family: Lato, sans-serif;
     height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.undergrad-body {
+    background: url(pictures/cat.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.grad-body {
+    background: url(pictures/dog.jpg) no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
@@ -24,19 +37,20 @@ header {
     align-items: center;
     padding: 0 20px;
     font-size: 20px;
-    font-family: Lato, sans-serif;
     font-weight: 700;
-    /* margin-left: 3%; */
     padding-right: 50px;
-    border-bottom: 1px solid #f8f8f8;
-    box-shadow: 0 3px 15px -2px #ebebeb;
+    background-color: #000000;
+    box-shadow: 0 2px 5px 1px white;
+    width: 100%;
 }
 
 header a,
-header div {
+header div,
+header nav {
     color: white;
     text-decoration: none;
     margin: 0 3%;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -62,26 +76,13 @@ footer {
     position:absolute;
     bottom:0;
     width:100%;
-    border-top: 1px solid #f8f8f8;
-    box-shadow: 0 -1px 4px 1px #ebebeb;
+    box-shadow: 0 -1px 5px 1px white;
+    background-color: black;
+    color:white;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
 }
-
-/* .socials img{
-    width: 50px;
-    height: 50px;
-}
-
-.socials {
-    width:100%;
-    height:50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 50px;
-    align-items: center;
-} */
 
 .socials {
     position: relative;
@@ -121,7 +122,9 @@ main p {
 
 .intro {
     width: 50%;
-    margin: 6% auto;
+    margin: 0 auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
 }
 
 .programs {
@@ -146,14 +149,16 @@ main p {
     position: relative;
 }
 
-.boxes:hover {
-    transform: translateY(-10%);
+/* .boxes:hover,
+.professors:hover {
+    transform: scale(1.1);
     transition: all 0.3s ease-in-out;
-}
+} */
+
 
 .box1 {
     /* border-top: 4px solid #4b7bbb; */
-    background-color: #4b7bbb;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .box1:hover {
@@ -162,7 +167,7 @@ main p {
 
 .box2 {
     /* border-top: 4px solid #cdda58; */
-    background-color: #fcff46;
+    background-color: rgba(0, 0, 0, 0.5);
     position: relative;
 }
 
@@ -173,7 +178,7 @@ main p {
 
 .box3 {
     /* border-top: 4px solid #f06e4d; */
-    background-color: #f06e4d;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .box3:hover {
@@ -196,35 +201,230 @@ main p {
     cursor: pointer;
 }
 
-.box2 .box2popup {
-    visibility: hidden;
-    /* background-color: rgb(91, 189, 206); */
+.box2 .box2popup,
+.professors .profpopup,
+.news-number .news-popup {
+    display: none;
     background-color: #333;
     color: #fff;
     padding: 1% 10%;
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    bottom: -10%;
-    left: 14%;
-    width: 50%;
+    width: 30%;
     min-width: 150px;
     box-shadow: 0 0 10px 1px #000000;
 }
 
-.box2popup h2{
-    font-size: 1em;
+.news-number .news-popup {
+    width: 50%;
+}
+
+.box2popup h2,
+.profpopup h2,
+.news-popup h1 {
+    font-size: 1.5rem;
     font-weight: bold;
     padding-bottom: 10px;
     border-bottom: 2px solid #fff;
 }
+
 .box2popup p,
 .box2popup li {
     font-size: 0.7em;
     font-weight: 400;
 }
 
-.box2 .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
+.profpopup p,
+.news-popup p {
+    font-size: 1rem;
+    font-weight: light;
+}
+
+.box2 .show,
+.professors .show,
+.news-number .show {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+.slides,
+.undergrad-slide {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+.prof {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10% auto;
+    width: 80%;
+}
+
+.prof img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid rgba(0, 0, 0, 1);
+    border-radius: 50%;
+}
+
+.prof h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.professors {
+    border: 2px solid rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1%;
+    border-radius: 5px;
+}
+.professors:hover {
+    cursor: pointer;
+}
+
+.news-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}
+
+.news-number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* box-shadow: inset 0 0 3px 1px #000000; */
+    margin-bottom: 1%;
+    width: 70%;
+    border-radius: 3px;
+    padding: 0 20px;
+}
+
+.news-number:hover {
+    /* transform: translateX(-5%);
+    transition: all 0.5s ease-in-out; */
+    cursor: pointer;
+}
+
+
+.news-number h2 {
+    /* font-size: 2em; */
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #6ac3d3;
+    color: #ffffff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    min-width: 50px;
+}
+
+label {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+input[type=text], select, textarea,
+input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 1% 0;
+}
+
+input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+input[type=submit]:hover {
+
+    background-color: black;
+    color: white;
+}
+
+.contact-form {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.undergrad-main,
+.grad-main {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5%;
+    min-width: 1000px;
+}
+
+.undergrad-main section,
+.undergrad-main article,
+.grad-main section,
+.grad-main article {
+    border-radius: 5px;
+    max-height: 700px;
+    max-width: 500px;
+    padding: 0 10px;
+}
+
+.undergrad-main section,
+.grad-main section {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.undergrad-main section h1,
+.undergrad-main article h1,
+.grad-main section h1,
+.grad-main article h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+.undergrad-main article h2,
+.undergrad-main article h3,
+.grad-main article h2,
+.grad-main article h3 {
+    font-size: 1.1rem;
+}
+
+.undergrad-main section p,
+.undergrad-main article p,
+.grad-main section p,
+.grad-main article p {
+    font-size: 1.4em;
+}
+
+.undergrad-main article li,
+.grad-main article li {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
 }
