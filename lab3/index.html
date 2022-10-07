@@ -13,43 +13,90 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="pictures/logo3.png" alt="logo">
-            <h1>Information Technology & Web Science</h1>
-        </div>
-        <a href="">Programs</a>
+        <a class="logo-container" href="index.html">
+            <div class="logo">
+                <img src="pictures/logo3.png" alt="logo">
+                <h1>Information Technology & Web Science</h1>
+            </div>
+        </a>
         <a href="">Faculty</a>
         <a href="">News</a>
         <a href="">Contact</a>
-        <a href="">Socials</a>
-        
-
+        <div class="socials">
+            Socials
+            <nav class="socials-dropdown">
+                <a href="https://discord.gg/yVaxSzEH" target="_blank">
+                    <img src="pictures/discord.svg" alt="discord">
+                </a>
+                <a href="https://twitter.com/rpi_itws" target="_blank">
+                    <img src="pictures/twitter.webp" alt="twitter">
+                </a>
+                <a href="https://www.instagram.com/itwsatrpi/?hl=en" target="_blank">
+                    <img src="pictures/instagram.webp" alt="instagram">
+                </a>
+                <a href="https://www.tiktok.com/@itwsatrpi" target="_blank">
+                    <img src="pictures/tiktok.png" alt="tiktok">
+                </a>
+                <a href="https://www.linkedin.com/groups/137071/" target="_blank">
+                    <img src="pictures/linkedin.webp" alt="linkedin">
+                </a>
+                <a href="https://itwsatrpi.blogspot.com/" target="_blank">
+                    <img src="pictures/blog.png" alt="blog">
+                </a>
+            </nav>
+        </div>
     </header>
-    <!-- <footer>
-        <p>Find us on our socials!</p>
-        <nav class="socials">
-            <a href="">
-                <img src="pictures/discord.svg" alt="discord">
-            </a>
-            <a href="">
-                <img src="pictures/twitter.webp" alt="twitter">
-            </a>
-            <a href="">
-                <img src="pictures/instagram.webp" alt="instagram">
-            </a>
-            <a href="">
-                <img src="pictures/linkedin.webp" alt="linkedin">
-            </a>
-            <a href="">
-                <img src="pictures/tiktok.png" alt="tiktok">
-            </a>
-            <a href="">
-                <img src="pictures/facebook.webp" alt="facebook">
-            </a>
-            <a href="">
-                <img src="pictures/blog.png" alt="blog">
-            </a>
+
+    <main>
+        <section class="intro">
+            <h1>Information Technology and Web Science at Rensselaer</h1>
+            <p>
+                ITWS at Rensselaer presents a unique opportunity for students 
+                to combine a mastery of Information Age technologies with an 
+                academic discipline of their choice.
+            </p>
+        </section>
+        <nav class="programs">
+            <div class="boxes box1">
+                Undergraduate Major
+                <img src="pictures/arrow.png" alt="go to page">
+            </div>
+            <div class="boxes box2" onclick="minorPopup()">
+                Undergraduate Minor
+                <section class="box2popup" id="box2popup">
+                    <h2>
+                        ITWS Minor
+                    </h2>
+                    <p>
+                        The ITWS minor requires a minimum of 16 credit hours that must be approved by the minor advisor in ITWS.
+                    </p>
+                    <ul>
+                        <li>
+                            ITWS-1100 Introduction to ITWS
+                        </li>
+                        <li>
+                            ITWS/IHSS-1220 IT and Society
+                        </li>
+                        <li>
+                            ITWS-2110 Web Systems Development (CSCI 1200 Data Structures is a pre-requisite for ITWS-2110)
+                        </li>
+                        <li>
+                            ITWS-4310 Managing IT Resources<sup>1</sup>
+                        </li>
+                    </ul>
+                    <p>
+                        <sup>1</sup>MGMT Majors only – Take ITWS-4100 Information Technology and Web Science Capstone or other course as approved by faculty advisor.
+                    </p>
+                </secti>
+            </div>
+            <div class="boxes box3">
+                Graduate
+                <img src="pictures/arrow.png" alt="go to page">
+            </div>
         </nav>
-    </footer> -->
+    </main>
+    <footer>
+        <p>ITWS @ RPI</p>
+    </footer>
 </body>
 </html>
