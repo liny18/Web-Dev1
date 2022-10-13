@@ -29,9 +29,13 @@ function getLocation() {
     alert("Sorry, browser does not support geolocation!");
   }
 }
+input.addEventListener("keypress", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    buttons[1].click();
+  }
+});
 
-getLocation();
-  
 function randomInt(max) {
   return Math.floor(Math.random() * (max + 1))
 }
@@ -50,7 +54,6 @@ function getData(button) {
     unit = "imperial";
     symbol = "&#8457";
   }
-
   let link = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&units=${unit}&appid=b4589d851907c84c0a9c58f444fc3710`
   if (button === 'load') {
     link = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${unit}&appid=b4589d851907c84c0a9c58f444fc3710`
@@ -58,7 +61,6 @@ function getData(button) {
   fetch(link)
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     const tempValue = data['main']['temp'];
     const nameValue = data['name'];
     const descValue = data['weather'][0]['description'];
@@ -79,7 +81,6 @@ function getData(button) {
     pressure.innerHTML = pressureValue + " hPa";
     high.innerHTML = highValue + " " + symbol;
     low.innerHTML = lowValue + " " + symbol;
-
     fetch('https://pixabay.com/api/?key=30557093-e3a371281b0c10edee259ab8c&q='+descValue+'&image_type=photo')
     .then(response => response.json())
     .then(data => {
@@ -88,6 +89,7 @@ function getData(button) {
       bg.style.backgroundImage = "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(" + bgValue + ")";
     })
   })
-
   .catch(err => alert("Enter a valid city name!"));
 }
+
+getLocation();
