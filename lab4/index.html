@@ -19,7 +19,7 @@
   <div class="container-fluid h-100">
     <div class="row h-100 whole">
       <h2 class="name">TerryWeather</h2>
-      <div class="col right-container d-flex justify-content-center align-items-center rounded-5">
+      <div class="col-4 right-container d-flex justify-content-center align-items-center">
         <div class="card search-card p-4 ">
           <div class="card-body">
             <h5 class="card-title">Search</h5>
@@ -28,11 +28,11 @@
                 <input type="text" class="form-control" id="search" placeholder="City">
                 <label for="search">Enter a city</label>
               </div>
-              <button type="button" class="btn btn-outline-primary button">
+              <button type="button" class="btn btn-outline-primary button" id="F">
                 <i class="fas fa-search"></i>
                 &#8457
               </button>
-              <button type="button" class="btn btn-outline-danger button">
+              <button type="button" class="btn btn-outline-danger button" id="C">
                 <i class="fas fa-search"></i>
                 &#8451
               </button>
@@ -41,11 +41,11 @@
         </div>
       </div>
       
-      <div class="col left-container d-flex flex-column justify-content-center align-items-center">
-        <h2 class="text-center city">City</h2>
+      <div class="col-8 left-container d-flex flex-column justify-content-center align-items-center rounded-5">
         <div class="card main-card p-4">
+          <h2 class="card-title text-center city">City</h2>
             <div class="row">
-              <div class="col-6 main-card-left">
+              <div class="col-6 main-card-left d-flex flex-column justify-content-center">
                 <h2 class="main-temp">32&#8451</h2>
                 <div class="main-card-flex">
                   <h2 class="main-weather">Sunny</h2>

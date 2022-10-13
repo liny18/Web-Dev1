@@ -11,11 +11,18 @@ html {
 html,
 body {
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .left-container {
   position: relative;
-
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .right-container {
@@ -23,17 +30,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(pictures/monkey.jpg); */
   height: 100%;
-  width: 100%;
-}
-
-.left-container {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
 }
 
 .card {
@@ -65,15 +62,24 @@ body {
 }
 
 .details {
-  line-height: 1;
   font-size: 1rem;
   color:rgb(134, 134, 134);
-  line-height: 0.7;
+  /* line-height: 0.7; */
 }
 
 .city {
   font-size: 3rem;
   font-weight: bold;
+  color: white;
+  text-shadow:
+    0.05em 0 black,
+    0 0.05em black,
+    -0.05em 0 black,
+    0 -0.05em black,
+    -0.05em -0.05em black,
+    -0.05em 0.05em black,
+    0.05em -0.05em black,
+    0.05em 0.05em black;
 }
 
 .whole {
