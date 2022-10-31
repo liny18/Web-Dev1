@@ -1,0 +1,124 @@
+<!--
+Copyright (c) 2020-2021 Brian Callahan <bcallah@openbsd.org>
+
+Permission to use, copy, modify, and distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/png" href="../favicon.png">
+
+		<title>Free Bee</title>
+
+		<link rel="stylesheet" href="./resources/mini.css">
+		<script defer src="./resources/mini.js"></script>
+	</head>
+
+	<body>
+		<div id="main">
+				<h1><a href="#" title="Top">Free Bee</a></h1>
+				<p class="subtitle">Enhanced Free Software clone of The New York Times game Spelling Bee</p>
+				<hr>
+		</div>
+		<div>
+			<button class="dmb button" onclick="darkmode()">Switch Dark/Light mode</button>
+			<span class="dictionary">
+				<a href="https://github.com/freebee-game/enable/issues">Request dictionary changes</a>
+			</span>
+		</div>
+			<h2 id="play">Play Free Bee on the Web</h2>
+			
+			<main>
+					<div class="points">
+						<h4>Points</h4>
+						<span id="points-update">0</span>
+					</div>
+
+				<div id="game">
+					<img id="comb1" class="bg" src="./images/comb.png" alt="comb1">
+					<img id="comb2" class="bg" src="./images/comb.png" alt="comb2">
+					<img id="comb3" class="bg" src="./images/comb.png" alt="comb3">
+					<img id="comb4" class="bg" src="./images/comb.png" alt="comb4">
+					<img id="comb5" class="bg" src="./images/comb.png" alt="comb5">
+					<img id="comb6" class="bg" src="./images/comb.png" alt="comb6">
+					<img id="comb7" class="bg" src="./images/comb-inv.png" alt="comb7">
+					<img id="play1" class="fg" src="#" alt="play1" width="60" height="100">
+					<img id="play2" class="fg" src="#" alt="play2" width="60" height="100">
+					<img id="play3" class="fg" src="#" alt="play3" width="60" height="100">
+					<img id="play4" class="fg" src="#" alt="play4" width="60" height="100">
+					<img id="play5" class="fg" src="#" alt="play5" width="60" height="100">
+					<img id="play6" class="fg" src="#" alt="play6" width="60" height="100">
+					<img id="play7" class="fg" src="#" alt="play7" width="60" height="100">
+				</div>
+
+					<div class="rank">
+						<h4>Rank</h4>
+						<span id="rank-update">Newbie</span>
+					</div>
+			</main>
+
+			<br>
+
+			<div class="game-buttons">
+				<button class="button" onclick="shuffle()">Shuffle letters</button>
+			</div>
+
+			<br>
+
+			<div class="game-forms">
+				<form id="player-guess" onsubmit="check(); return false">
+					<input type="text" id="guess" placeholder="Enter word">
+					<input class="button" type="submit" value="Submit">
+				</form>
+				<button id="delete-button" class="button" onclick="delete_letter()">Clear</button>
+			</div>
+
+			<div class="messages">
+				<span id="no-message" class="message">&nbsp;</span>
+				<span id="pangram" class="message">Pangram!</span>
+				<span id="already-found" class="message">Word already found</span>
+				<span id="center-letter" class="message">Must use center letter</span>
+				<span id="too-short" class="message">Too short!</span>
+				<span id="not-in-list" class="message">Word not in list</span>
+			</div>
+
+			<div class="wordlists">
+				<div class="both-answers">
+					<h4 class="answers">Words found</h4>
+					<div class="update-answers">
+						<div id="answers-update"></div>
+					</div>
+				</div>
+				<div class="both-answers">
+					<h4 id="yesterday-or-random" class="answers">Yesterday's answers</h4>
+					<div id="update-random"></div>
+				</div>
+			</div>
+
+			<br>
+			<br>
+
+			<div class="restart">
+				<button class="button" onclick="random()">New random game</button>
+				<button id ="random-answers" class="button" onclick="show_random()">Show answers</button>
+				<button id="restart-daily-button" class="button" onclick="daily()">Return to daily game</button>
+			</div>
+
+			<hr>
+			<p id="footer">Free Bee is brought to you by Studio Urban Homestead | OpenBSD httpd</p>
+	</body>
+</html>
