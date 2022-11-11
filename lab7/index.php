@@ -11,7 +11,7 @@
   <body>
     <?php include "./includes/connect.php";?>
     <h1>
-      I'm terry!!
+      Hi, I'm terry
     </h1>
     <?php
       echo "code monkey\n";
