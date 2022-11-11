@@ -11,7 +11,7 @@
   <body>
     <?php include 'connect.php';?>
     <h1>
-      I'm kenneth dong
+      I'm kenneth
     </h1>
     <?php
       echo "code monkey\n";
