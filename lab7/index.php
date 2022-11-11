@@ -10,11 +10,37 @@
   </head>
   <body>
     <?php include "./includes/connect.php";?>
-    <h1>
-      Hi, I'm terry!
-    </h1>
-    <?php
-      echo "code monkey\n";
-    ?>
+    <div class="container">
+      <h1>Grade Book</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Student ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            $sql = "SELECT * FROM students";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+              while($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["RIN"] . "</td>";
+                echo "<td>" . $row["RCSID"] . "</td>";
+                echo "<td>" . $row["first-name"] . "</td>";
+                echo "<td>" . $row["last-name"] . "</td>";
+                echo "<td>" . $row["grade"] . "</td>";
+                echo "</tr>";
+              }
+            } else {
+              echo "0 results";
+            }
+            $conn->close();
+          ?>
+        </tbody>
+      </table>
   </body>
 </html>
