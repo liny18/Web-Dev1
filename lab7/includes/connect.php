@@ -1,5 +1,4 @@
 <?php
-  echo "hi";
   $serverName = "localhost";
   $username = "phpmyadmin";
   $password = "Xlkswdhood00";
