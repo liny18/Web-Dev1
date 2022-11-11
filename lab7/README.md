@@ -16,6 +16,10 @@ https://www.youtube.com/watch?v=gInhdzPeVU8&list=PLk-EmIiBIYGF8WCitdIVq7dvvacqY0
 https://stackoverflow.com/questions/53634922/sql-select-average-from-results-of-distinct-rows
 https://stackoverflow.com/questions/41818610/mysql-count-distinct-rows-by-another-column-and-group-results
 
+PART 1:
+CREATE TABLE courses ( crn int(11), prefix VARCHAR(4) NOT NULL, number SMALLINT(4) NOT NULL, title VARCHAR(255) NOT NULL, PRIMARY KEY (crn) );
+CREATE TABLE students ( RIN int(9), RCSID char(7), first_name VARCHAR(100) NOT NULL, last_name VARCHAR(100) NOT NULL, alias VARCHAR(100) NOT NULL, phone VARCHAR(15), PRIMARY KEY (RIN) );
+
 PART 2:
 1:
 ALTER TABLE `students` ADD `state` VARCHAR(20) NOT NULL AFTER `phone`, ADD `city` VARCHAR(20) NOT NULL AFTER `state`, ADD `street` VARCHAR(100) NOT NULL AFTER `city`, ADD `zip` INT(5) NOT NULL AFTER `street`;
