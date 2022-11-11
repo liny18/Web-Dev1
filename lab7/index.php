@@ -10,5 +10,11 @@
   </head>
   <body>
     <?php include 'connect.php';?>
+    <h1>
+      I'm kenneth dong
+    </h1>
+    <?php
+      echo "code monkey\n";
+    ?>
   </body>
 </html>
