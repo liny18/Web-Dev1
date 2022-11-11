@@ -1,4 +1,5 @@
 <?php
+  echo "hi";
   $serverName = "localhost";
   $username = "phpmyadmin";
   $password = "Xlkswdhood00";
@@ -7,6 +8,4 @@
   if ($link -> connect_errno) {
     echo "Failed to connect to MySQL: " . $link -> connect_error;
     exit();
-  } else {
-    echo "hi";
   }
