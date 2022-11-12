@@ -78,7 +78,7 @@
                     </thead>
                     <tbody>
                       <?php
-                        $query = "SELECT * FROM courses";
+                        $query = "SELECT * FROM grades";
                         $result = $conn->query($query);
                         if (!$result) {
                           echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
@@ -102,7 +102,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <h2>Add a course</h2>
+              <h2>Add a grade</h2>
             </div>
             <form action="includes/addGrades.php" method="post">
               <div class="row">
