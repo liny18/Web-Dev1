@@ -1,13 +1,3 @@
-<?php 
-include "includes/connect.php";
-$columns = array('RIN','last-name','RCSID','first-name');
-$column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
-$sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
-if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' ' . $sort_order)) {
-	// Some variables we need for the table.
-	$up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
-	$asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc'; 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +16,7 @@ if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' '
     }
 </style>
 <body>
+  <?php include "includes/connect.php"; ?>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -81,8 +72,7 @@ if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' '
                   <tr>
                     <th scope="col">RIN</th>
                     <th scope="col">RCSID</th>
-                    <!-- <th scope="col">first-name</th> -->
-                    <th><a href="students.php?column=first-name&order=<?php echo $asc_or_desc; ?>">first-name<i class="fas fa-sort<?php echo $column == 'first-name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                    <th scope="col">first-name</th>
                     <th scope="col">last-name</th>
                     <th scope="col">alias</th>
                     <th scope="col">phone</th>
@@ -94,6 +84,11 @@ if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' '
                 </thead>
                 <tbody>
                   <?php
+                    $query = "SELECT * FROM students";
+                    $result = $conn->query($query);
+                    if (!$result) {
+                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                    } else {
                       $rows = $result->num_rows;
                       for ($j = 0; $j < $rows; ++$j) {
                         $result->data_seek($j);
@@ -178,4 +173,3 @@ if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' '
   </div>
 </body>
 </html>
-}

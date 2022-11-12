@@ -44,7 +44,7 @@
                 <hr>
                 <div class="dropdown pb-4 border-top">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/liny18.png" alt="user" width="30" height="30" class="rounded-circle">
+                        <img src="https://github.com/liny18.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Me</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
@@ -80,16 +80,11 @@
                     </thead>
                     <tbody>
                       <?php
-                      $columns = array('RIN','last-name','RCSID','first-name');
-                      $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
-                      $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
-                        $query = 'SELECT * FROM courses ORDER BY ' .  $column . ' ' . $sort_order;
+                        $query = "SELECT * FROM courses";
                         $result = $conn->query($query);
                         if (!$result) {
                           echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
                         } else {
-                          $up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
-                          $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
                           $rows = $result->num_rows;
                           for ($j = 0; $j < $rows; ++$j) {
                             $result->data_seek($j);
@@ -149,8 +144,8 @@
               </div>
             </form>
           </div>
-        </div>
       </div>
     </div>
+  </div>
 </body>
 </html>
