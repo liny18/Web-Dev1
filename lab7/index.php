@@ -17,17 +17,7 @@
     }
 </style>
 <body>
-  <?php
-    $serverName = "localhost";
-    $username = "phpmyadmin";
-    $password = "Xlkswdhood00";
-    $dbName = "websyslab7";
-    @ $conn = new mysqli($serverName, $username, $password, $dbname);
-    if ($conn -> connect_errno) {
-      echo "Failed to connect to MySQL: " . $conn -> connect_error;
-      exit();
-      }
-  ?>
+  <?php include "includes/connect.php"; ?>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
