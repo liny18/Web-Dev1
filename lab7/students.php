@@ -70,10 +70,10 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                  <th><a href="students.php?column=RIN&order=<?php echo $asc_or_desc; ?>">RIN<i class="fas fa-sort<?php echo $column == 'RIN' ? '-' . $up_or_down : ''; ?>"></i></a></th>
-                    <!-- <th scope="col">RIN</th> -->
+                    <th scope="col">RIN</th>
                     <th scope="col">RCSID</th>
-                    <th scope="col">first-name</th>
+                    <!-- <th scope="col">first-name</th> -->
+                    <th><a href="students.php?column=first-name&order=<?php echo $asc_or_desc; ?>">first-name<i class="fas fa-sort<?php echo $column == 'first-name' ? '-' . $up_or_down : ''; ?>"></i></a></th>
                     <th scope="col">last-name</th>
                     <th scope="col">alias</th>
                     <th scope="col">phone</th>
