@@ -178,3 +178,4 @@ if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' '
   </div>
 </body>
 </html>
+}
