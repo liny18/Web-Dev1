@@ -44,7 +44,7 @@
                 <hr>
                 <div class="dropdown pb-4 border-top">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/liny18.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <img src="https://github.com/liny18.png" alt="user" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Me</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
@@ -60,57 +60,63 @@
         </div>
 
         <div class="col py-3 text-center">
-            <div class="row">
-                <div class="col-12">
-                  <h1>Students</h1>
-                </div>
+          <div class="row">
+              <div class="col-12">
+                <h1>Students</h1>
               </div>
-              <div class="row">
-                <div class="col-12">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">RIN</th>
-                        <th scope="col">RCSID</th>
-                        <th scope="col">first-name</th>
-                        <th scope="col">last-name</th>
-                        <th scope="col">alias</th>
-                        <th scope="col">phone</th>
-                        <th scope="col">state</th>
-                        <th scope="col">city</th>
-                        <th scope="col">street</th>
-                        <th scope="col">zip</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                        $query = "SELECT * FROM students";
-                        $result = $conn->query($query);
-                        if (!$result) {
-                          echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
-                        } else {
-                          $rows = $result->num_rows;
-                          for ($j = 0; $j < $rows; ++$j) {
-                            $result->data_seek($j);
-                            $row = $result->fetch_array(MYSQLI_ASSOC);
-                            echo "<tr>";
-                            echo "<td>" . $row['RIN'] . "</td>";
-                            echo "<td>" . $row['RCSID'] . "</td>";
-                            echo "<td>" . $row['first-name'] . "</td>";
-                            echo "<td>" . $row['last-name'] . "</td>";
-                            echo "<td>" . $row['alias'] . "</td>";
-                            echo "<td>" . $row['phone'] . "</td>";
-                            echo "<td>" . $row['state'] . "</td>";
-                            echo "<td>" . $row['city'] . "</td>";
-                            echo "<td>" . $row['street'] . "</td>";
-                            echo "<td>" . $row['zip'] . "</td>";
-                            echo "</tr>";
-                          }
-                        }
-                      ?>
-                    </tbody>
-                  </table>
-              </div>
+            </div>
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                  <th><a href="index.php?column=RIN&order=<?php echo $asc_or_desc; ?>">RIN<i class="fas fa-sort<?php echo $column == 'RIN' ? '-' . $up_or_down : ''; ?>"></i></a></th>
+                    <!-- <th scope="col">RIN</th> -->
+                    <th scope="col">RCSID</th>
+                    <th scope="col">first-name</th>
+                    <th scope="col">last-name</th>
+                    <th scope="col">alias</th>
+                    <th scope="col">phone</th>
+                    <th scope="col">state</th>
+                    <th scope="col">city</th>
+                    <th scope="col">street</th>
+                    <th scope="col">zip</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  $columns = array('RIN','last-name','RCSID','first-name');
+                  $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
+                  $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
+                    $query = 'SELECT * FROM students ORDER BY ' .  $column . ' ' . $sort_order;
+                    $result = $conn->query($query);
+                    if (!$result) {
+                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                    } else {
+                      $up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
+                      $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
+                      $rows = $result->num_rows;
+                      for ($j = 0; $j < $rows; ++$j) {
+                        $result->data_seek($j);
+                        $row = $result->fetch_array(MYSQLI_ASSOC);
+                        echo "<tr>";
+                        echo "<td>" . $row['RIN'] . "</td>";
+                        echo "<td>" . $row['RCSID'] . "</td>";
+                        echo "<td>" . $row['first-name'] . "</td>";
+                        echo "<td>" . $row['last-name'] . "</td>";
+                        echo "<td>" . $row['alias'] . "</td>";
+                        echo "<td>" . $row['phone'] . "</td>";
+                        echo "<td>" . $row['state'] . "</td>";
+                        echo "<td>" . $row['city'] . "</td>";
+                        echo "<td>" . $row['street'] . "</td>";
+                        echo "<td>" . $row['zip'] . "</td>";
+                        echo "</tr>";
+                      }
+                    }
+                  ?>
+                </tbody>
+              </table>
+            </div>
           </div>
           <div class="row">
             <div class="col-12">
