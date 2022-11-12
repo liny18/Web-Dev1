@@ -83,7 +83,7 @@
                   </tr>
                 </thead>
                 <form name="sorting" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                  <button type="submit" name="rin_sort" class="button">Sort by RIN</button>
+                  <button type="submit" name="rin_sort" class="btn">Sort by RIN</button>
                   <button type="submit" name="fn_sort" class="button">Sort by First Name</button>
                   <button type="submit" name="to_sort" class="button">Sort by Last Name</button>
                   <button type="submit" name="rcs_sort" class="button">Sort by RCSID</button>
