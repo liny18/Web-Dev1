@@ -1,3 +1,13 @@
+<?php 
+include "includes/connect.php";
+$columns = array('RIN','last-name','RCSID','first-name');
+$column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
+$sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
+if ($result = $mysqli->query('SELECT * FROM students ORDER BY ' .  $column . ' ' . $sort_order)) {
+	// Some variables we need for the table.
+	$up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
+	$asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +26,6 @@
     }
 </style>
 <body>
-  <?php include "includes/connect.php"; ?>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -85,16 +94,6 @@
                 </thead>
                 <tbody>
                   <?php
-                  $columns = array('RIN','last-name','RCSID','first-name');
-                  $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
-                  $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
-                    $query = 'SELECT * FROM students ORDER BY ' .  $column . ' ' . $sort_order;
-                    $result = $conn->query($query);
-                    if (!$result) {
-                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
-                    } else {
-                      $up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
-                      $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
                       $rows = $result->num_rows;
                       for ($j = 0; $j < $rows; ++$j) {
                         $result->data_seek($j);
