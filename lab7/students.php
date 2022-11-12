@@ -83,10 +83,10 @@
                   </tr>
                 </thead>
                 <form name="sorting" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                  <button type="submit" name="rin_sort" class="button" value="Sort by RIN"></button>
-                  <button type="submit" name="fn_sort" class="button" value="Sort by First Name"></button>
-                  <button type="submit" name="to_sort" class="button" value="Sort by Last Name"></button>
-                  <button type="submit" name="rcs_sort" class="button" value="Sort by RCSID"></button>
+                  <button type="submit" name="rin_sort" class="button">Sort by RIN</button>
+                  <button type="submit" name="fn_sort" class="button">Sort by First Name</button>
+                  <button type="submit" name="to_sort" class="button">Sort by Last Name</button>
+                  <button type="submit" name="rcs_sort" class="button">Sort by RCSID</button>
                 </form>
                 <tbody>
                     <?php
@@ -94,10 +94,10 @@
                       $query = "SELECT * FROM students ORDER BY RIN ASC";
                     }
                     else if(isset($_POST['fn_sort'])){
-                      $query = "SELECT * FROM students ORDER BY first_name ASC";
+                      $query = "SELECT * FROM students ORDER BY `first-name` ASC";
                     }
                     else if(isset($_POST['to_sort'])){
-                      $query = "SELECT * FROM students ORDER BY last_name ASC";
+                      $query = "SELECT * FROM students ORDER BY `last-name` ASC";
                     }
                     else if(isset($_POST['rcs_sort'])){
                       $query = "SELECT * FROM students ORDER BY RCSID ASC";
