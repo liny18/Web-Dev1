@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <last-name>Grade Book</last-name>
+  <title>Grade Book</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <style>
@@ -118,43 +118,43 @@
             </div>
             <form action="includes/addStudents.php" method="post">
               <div class="row">
-                <div class="col-2">
+                <div class="col">
                   <label for="RIN">RIN</label>
                   <input type="text" class="form-control" name="RIN" id="RIN">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="RCSID">RCSID</label>
                   <input type="text" class="form-control" name="RCSID" id="RCSID">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="first-name">first-name</label>
                   <input type="text" class="form-control" name="first-name" id="first-name">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="last-name">last-name</label>
                   <input type="text" class="form-control" name="last-name" id="last-name">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="alias">alias</label>
                   <input type="text" class="form-control" name="alias" id="alias">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="phone">phone</label>
                   <input type="text" class="form-control" name="phone" id="phone">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="state">state</label>
                   <input type="text" class="form-control" name="state" id="state">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="city">city</label>
                   <input type="text" class="form-control" name="city" id="city">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="street">street</label>
                   <input type="text" class="form-control" name="street" id="street">
                 </div>
-                <div class="col-2">
+                <div class="col">
                   <label for="zip">zip</label>
                   <input type="text" class="form-control" name="zip" id="zip">
                 </div>
