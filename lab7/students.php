@@ -70,7 +70,9 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">RIN</th>
+                    <a href=students.php?sort='RIN'&order=ASC>
+                      <th scope="col">RIN</th>
+                    </a>
                     <th scope="col">RCSID</th>
                     <th scope="col">first-name</th>
                     <th scope="col">last-name</th>
@@ -84,7 +86,13 @@
                 </thead>
                 <tbody>
                   <?php
+                  if(isset($_GET['sort']) && isset($_GET['order'])) {
+                    $sort = $_GET['sort'];
+                    $order = $_GET['order'];
+                    $query = "SELECT * FROM students ORDER BY $sort $order";
+                  } else {
                     $query = "SELECT * FROM students";
+                  }
                     $result = $conn->query($query);
                     if (!$result) {
                       echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
