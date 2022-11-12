@@ -80,11 +80,16 @@
                     </thead>
                     <tbody>
                       <?php
-                        $query = "SELECT * FROM courses";
+                      $columns = array('RIN','last-name','RCSID','first-name');
+                      $column = isset($_GET['column']) && in_array($_GET['column'], $columns) ? $_GET['column'] : $columns[0];
+                      $sort_order = isset($_GET['order']) && strtolower($_GET['order']) == 'desc' ? 'DESC' : 'ASC';
+                        $query = 'SELECT * FROM courses ORDER BY ' .  $column . ' ' . $sort_order;
                         $result = $conn->query($query);
                         if (!$result) {
                           echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
                         } else {
+                          $up_or_down = str_replace(array('ASC','DESC'), array('up','down'), $sort_order); 
+                          $asc_or_desc = $sort_order == 'ASC' ? 'desc' : 'asc';
                           $rows = $result->num_rows;
                           for ($j = 0; $j < $rows; ++$j) {
                             $result->data_seek($j);
