@@ -117,7 +117,7 @@
               <h2>Add a student</h2>
             </div>
             <form action="includes/addStudents.php" method="post">
-              <div class="row">
+              <div class="row align-items-center">
                 <div class="col">
                   <label for="RIN">RIN</label>
                   <input type="text" class="form-control" name="RIN" id="RIN">
@@ -158,6 +158,7 @@
                   <label for="zip">zip</label>
                   <input type="text" class="form-control" name="zip" id="zip">
                 </div>
+              </div>
                 <div class="row">
                   <div class="col-12">
                     <button type="submit" class="btn btn-primary">Add</button>
