@@ -105,7 +105,7 @@
               <h2>Add a grade</h2>
             </div>
             <form action="includes/addGrades.php" method="post">
-              <div class="row">
+              <div class="row justify-content-center">
                 <div class="col-2">
                   <label for="id">id</label>
                   <input type="text" class="form-control" name="id" id="id">
