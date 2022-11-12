@@ -74,7 +74,9 @@
                       <th scope="col">RIN</th>
                     </a>
                     <th scope="col">RCSID</th>
+                    <a href=students.php?sort='first-name'&order=ASC>
                     <th scope="col">first-name</th>
+                    </a>
                     <th scope="col">last-name</th>
                     <th scope="col">alias</th>
                     <th scope="col">phone</th>
