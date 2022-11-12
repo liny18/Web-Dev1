@@ -70,13 +70,9 @@
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <a href=students.php?sort='RIN'&order=ASC>
-                      <th scope="col">RIN</th>
-                    </a>
+                    <th scope="col">RIN</th>
                     <th scope="col">RCSID</th>
-                    <a href=students.php?sort='first-name'&order=ASC>
                     <th scope="col">first-name</th>
-                    </a>
                     <th scope="col">last-name</th>
                     <th scope="col">alias</th>
                     <th scope="col">phone</th>
@@ -86,15 +82,30 @@
                     <th scope="col">zip</th>
                   </tr>
                 </thead>
+                <form name="sorting" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                  <button type="submit" name="rin_sort" class="button" value="Sort by RIN"></button>
+                  <button type="submit" name="fn_sort" class="button" value="Sort by First Name"></button>
+                  <button type="submit" name="to_sort" class="button" value="Sort by Last Name"></button>
+                  <button type="submit" name="rcs_sort" class="button" value="Sort by RCSID"></button>
+                </form>
                 <tbody>
-                  <?php
-                  if(isset($_GET['sort']) && isset($_GET['order'])) {
-                    $sort = $_GET['sort'];
-                    $order = $_GET['order'];
-                    $query = "SELECT * FROM students ORDER BY $sort $order";
-                  } else {
-                    $query = "SELECT * FROM students";
-                  }
+                    <?php
+                    if(isset($_POST['rin_sort'])){
+                      $query = "SELECT * FROM students ORDER BY RIN ASC";
+                    }
+                    else if(isset($_POST['fn_sort'])){
+                      $query = "SELECT * FROM students ORDER BY first_name ASC";
+                    }
+                    else if(isset($_POST['to_sort'])){
+                      $query = "SELECT * FROM students ORDER BY last_name ASC";
+                    }
+                    else if(isset($_POST['rcs_sort'])){
+                      $query = "SELECT * FROM students ORDER BY RCSID ASC";
+                    }
+                    else{
+                      $query = "SELECT * FROM students";
+                    }
+                    // $query = "SELECT * FROM students";
                     $result = $conn->query($query);
                     if (!$result) {
                       echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
