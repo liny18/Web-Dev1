@@ -28,16 +28,16 @@
                 </div>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item active">
-                        <a href="#" class="nav-link px-0 current">
+                        <a href="index.php" class="nav-link px-0">
                         <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Courses</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link px-0">
+                        <a href="students.php" class="nav-link px-0">
                         <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Students</span> </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link px-0">
+                        <a href="#" class="nav-link px-0 current">
                         <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
                     </li>
                 </ul>
