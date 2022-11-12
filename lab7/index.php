@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Grade Book</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </head>
@@ -17,7 +17,17 @@
     }
 </style>
 <body>
-  <?php include "includes/connect.php"; ?>
+  <?php
+    $serverName = "localhost";
+    $username = "phpmyadmin";
+    $password = "Xlkswdhood00";
+    $dbName = "websyslab7";
+    @ $conn = new mysqli($serverName, $username, $password, $dbname);
+    if ($conn -> connect_errno) {
+      echo "Failed to connect to MySQL: " . $conn -> connect_error;
+      exit();
+      }
+  ?>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -103,8 +113,8 @@
                       ?>
                     </tbody>
                   </table>
-                </div>
-            </div>
-        </div>
+              </div>
+          </div>
+      </div>
 </body>
 </html>
