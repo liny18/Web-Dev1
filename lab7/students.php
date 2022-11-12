@@ -113,60 +113,63 @@
               </div>
           </div>
           <div class="row">
-                <div class="col-12">
-                  <h2>Add a student</h2>
-                </div>
-                <form action="includes/addStudents.php" method="post">
-                  <div class="row justify-content-center">
-                    <div class="col-2">
-                      <label for="RIN">RIN</label>
-                      <input type="text" class="form-control" name="RIN" id="RIN">
-                    </div>
-                    <div class="col-2">
-                      <label for="RCSID">RCSID</label>
-                      <input type="text" class="form-control" name="RCSID" id="RCSID">
-                    </div>
-                    <div class="col-2">
-                      <label for="first-name">first-name</label>
-                      <input type="text" class="form-control" name="first-name" id="first-name">
-                    </div>
-                    <div class="col-2">
-                      <label for="last-name">last-name</label>
-                      <input type="text" class="form-control" name="last-name" id="last-name">
-                    </div>
-                    <div class="col-2">
-                      <label for="alias">alias</label>
-                      <input type="text" class="form-control" name="alias" id="alias">
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-2">
-                    <label for="phone">phone</label>
-                    <input type="text" class="form-control" name="phone" id="phone">
-                    </div>
-                    <div class="col-2">
-                    <label for="state">state</label>
-                    <input type="text" class="form-control" name="state" id="state">
-                    </div>
-                    <div class="col-2">
-                    <label for="city">city</label>
-                    <input type="text" class="form-control" name="city" id="city">
-                    </div>
-                    <div class="col-2">
-                    <label for="street">street</label>
-                    <input type="text" class="form-control" name="street" id="street">
-                    </div>
-                    <div class="col-2">
-                    <label for="zip">zip</label>
-                    <input type="text" class="form-control" name="zip" id="zip">
-                    </div>
-                  </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <button type="submit" class="btn btn-primary">Add</button>
-                      </div>
-                    </div>
-                </form>
+            <div class="col-12">
+              <h2>Add a student</h2>
             </div>
+            <form action="includes/addStudents.php" method="post">
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <label for="RIN">RIN</label>
+                  <input type="text" class="form-control" name="RIN" id="RIN">
+                </div>
+                <div class="col-2">
+                  <label for="RCSID">RCSID</label>
+                  <input type="text" class="form-control" name="RCSID" id="RCSID">
+                </div>
+                <div class="col-2">
+                  <label for="first-name">first-name</label>
+                  <input type="text" class="form-control" name="first-name" id="first-name">
+                </div>
+                <div class="col-2">
+                  <label for="last-name">last-name</label>
+                  <input type="text" class="form-control" name="last-name" id="last-name">
+                </div>
+                <div class="col-2">
+                  <label for="alias">alias</label>
+                  <input type="text" class="form-control" name="alias" id="alias">
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                  <div class="col-2">
+                  <label for="phone">phone</label>
+                  <input type="text" class="form-control" name="phone" id="phone">
+                  </div>
+                  <div class="col-2">
+                  <label for="state">state</label>
+                  <input type="text" class="form-control" name="state" id="state">
+                  </div>
+                  <div class="col-2">
+                  <label for="city">city</label>
+                  <input type="text" class="form-control" name="city" id="city">
+                  </div>
+                  <div class="col-2">
+                  <label for="street">street</label>
+                  <input type="text" class="form-control" name="street" id="street">
+                  </div>
+                  <div class="col-2">
+                  <label for="zip">zip</label>
+                  <input type="text" class="form-control" name="zip" id="zip">
+                  </div>
+                </div>
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+  </div>
 </body>
 </html>

@@ -104,6 +104,8 @@
                   </table>
               </div>
           </div>
+
+
           <div class="row">
             <div class="col-12">
               <h2>Add a course</h2>
@@ -141,6 +143,9 @@
                 </div>
               </div>
             </form>
+          </div>
         </div>
+      </div>
+    </div>
 </body>
 </html>
