@@ -62,7 +62,7 @@
         <div class="col py-3 text-center">
             <div class="row">
                 <div class="col-12">
-                  <h1>Courses</h1>
+                  <h1>Grades</h1>
                 </div>
               </div>
               <div class="row">
@@ -70,12 +70,10 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th scope="col">id</th>
                         <th scope="col">CRN</th>
-                        <th scope="col">prefix</th>
-                        <th scope="col">number</th>
-                        <th scope="col">title</th>
-                        <th scope="col">section</th>
-                        <th scope="col">year</th>
+                        <th scope="col">RIN</th>
+                        <th scope="col">grade</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -90,12 +88,10 @@
                             $result->data_seek($j);
                             $row = $result->fetch_array(MYSQLI_ASSOC);
                             echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
                             echo "<td>" . $row['CRN'] . "</td>";
-                            echo "<td>" . $row['prefix'] . "</td>";
-                            echo "<td>" . $row['number'] . "</td>";
-                            echo "<td>" . $row['title'] . "</td>";
-                            echo "<td>" . $row['section'] . "</td>";
-                            echo "<td>" . $row['year'] . "</td>";
+                            echo "<td>" . $row['RIN'] . "</td>";
+                            echo "<td>" . $row['grade'] . "</td>";
                             echo "</tr>";
                           }
                         }
@@ -108,31 +104,23 @@
             <div class="col-12">
               <h2>Add a course</h2>
             </div>
-            <form action="includes/addCourse.php" method="post">
+            <form action="includes/addGrades.php" method="post">
               <div class="row">
+                <div class="col-2">
+                  <label for="id">id</label>
+                  <input type="text" class="form-control" name="id" id="id">
+                </div>
                 <div class="col-2">
                   <label for="CRN">CRN</label>
                   <input type="text" class="form-control" name="CRN" id="CRN">
                 </div>
                 <div class="col-2">
-                  <label for="prefix">prefix</label>
-                  <input type="text" class="form-control" name="prefix" id="prefix">
+                  <label for="RIN">RIN</label>
+                  <input type="text" class="form-control" name="RIN" id="RIN">
                 </div>
                 <div class="col-2">
-                  <label for="number">number</label>
-                  <input type="text" class="form-control" name="number" id="number">
-                </div>
-                <div class="col-2">
-                  <label for="title">title</label>
-                  <input type="text" class="form-control" name="title" id="title">
-                </div>
-                <div class="col-2">
-                  <label for="section">section</label>
-                  <input type="text" class="form-control" name="section" id="section">
-                </div>
-                <div class="col-2">
-                  <label for="year">year</label>
-                  <input type="text" class="form-control" name="year" id="year">
+                  <label for="grade">grade</label>
+                  <input type="text" class="form-control" name="grade" id="grade">
                 </div>
               </div>
               <div class="row">
