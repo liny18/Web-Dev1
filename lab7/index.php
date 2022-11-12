@@ -105,6 +105,43 @@
                   </table>
               </div>
           </div>
-      </div>
+          <div class="row">
+            <div class="col-12">
+              <h2>Add a course</h2>
+            </div>
+            <form action="includes/add.php" method="post">
+              <div class="row">
+                <div class="col-2">
+                  <label for="CRN">CRN</label>
+                  <input type="text" class="form-control" name="CRN" id="CRN">
+                </div>
+                <div class="col-2">
+                  <label for="prefix">prefix</label>
+                  <input type="text" class="form-control" name="prefix" id="prefix">
+                </div>
+                <div class="col-2">
+                  <label for="number">number</label>
+                  <input type="text" class="form-control" name="number" id="number">
+                </div>
+                <div class="col-2">
+                  <label for="title">title</label>
+                  <input type="text" class="form-control" name="title" id="title">
+                </div>
+                <div class="col-2">
+                  <label for="section">section</label>
+                  <input type="text" class="form-control" name="section" id="section">
+                </div>
+                <div class="col-2">
+                  <label for="year">year</label>
+                  <input type="text" class="form-control" name="year" id="year">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </form>
+        </div>
 </body>
 </html>
