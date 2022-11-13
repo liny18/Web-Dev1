@@ -5,11 +5,6 @@ phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
 // This is not recommended in the real world!
 // But we don't have the apparatus to install our own certs...
 phpCAS::setNoCasServerValidation();
-
-if (phpCAS::isAuthenticated()) {
-  echo "User: " . phpCAS::getUser();
-  echo "<a href='logout.php'>Logout</a>";
-} else {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,20 +52,29 @@ if (phpCAS::isAuthenticated()) {
                     </li>
                 </ul>
                 <hr>
-                <div class="dropdown pb-4 border-top">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/liny18.png" alt="user" width="30" height="30" class="rounded-circle">
-                        <span class="d-none d-sm-inline mx-1">Me</span>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider bg-light">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Sign out</a></li>
-                    </ul>
-                </div>
+                
+                <?php 
+                  if (phpCAS::isAuthenticated()) {
+                    echo "User: " . phpCAS::getUser();
+                    echo "<a href='logout.php'>Logout</a>"; 
+                  } else {
+                    echo '
+                    <div class="dropdown pb-4 border-top">
+                          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="https://github.com/liny18.png" alt="user" width="30" height="30" class="rounded-circle">
+                              <span class="d-none d-sm-inline mx-1">Me</span>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+                              <li><a class="dropdown-item" href="#">Settings</a></li>
+                              <li><a class="dropdown-item" href="#">Profile</a></li>
+                              <li>
+                                  <hr class="dropdown-divider bg-light">
+                              </li>
+                              <li><a href="logout.php">Logout</a></li>
+                          </ul>
+                      </div>'
+                    } 
+                ?>
             </div>
         </div>
 
@@ -81,6 +85,3 @@ if (phpCAS::isAuthenticated()) {
   </div>
 </body>
 </html>
-<?php
-}
-?>
