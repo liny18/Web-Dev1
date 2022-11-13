@@ -35,7 +35,7 @@ phpCAS::setNoCasServerValidation();
                     <span class="fs-1 text-center">Content</span>
                   </a> 
                 </div>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <ul class="nav flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <!-- <li class="nav-item active">
                         <a href="#" class="nav-link px-0 current">
                         <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Lectures</span>
