@@ -35,13 +35,14 @@ phpCAS::setNoCasServerValidation();
                     <span class="fs-1 text-center">Content</span>
                   </a> 
                 </div>
-                <nav class="navbar navbar-expand-lg text-white">
+                <nav class="navbar nav-tabs nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start">
                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                       <a id="labs"class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Labs
                       </a>
                       <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Action</a></li>
                       </ul>
                     </li>
@@ -54,7 +55,7 @@ phpCAS::setNoCasServerValidation();
                         <li><a class="dropdown-item" href="#">Action</a></li>
                       </ul>
                     </li>
-                </ul>
+                  </ul>
                 </nav>
                 <hr>
                 <?php 
