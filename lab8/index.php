@@ -54,10 +54,10 @@ phpCAS::setNoCasServerValidation();
                 <hr>
                 
                 <?php 
-                  if (phpCAS::isAuthenticated()) {
-                    echo "User: " . phpCAS::getUser();
+                  if (!phpCAS::isAuthenticated()) {
                     echo "<a href='logout.php'>Logout</a>"; 
                   } else {
+                    echo "User: " . phpCAS::getUser();
                     echo '
                     <div class="dropdown pb-4 border-top">
                           <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -70,7 +70,7 @@ phpCAS::setNoCasServerValidation();
                               <li>
                                   <hr class="dropdown-divider bg-light">
                               </li>
-                              <li><a href="logout.php">Logout</a></li>
+                              <li><a href="login.php">Login</a></li>
                           </ul>
                       </div>';
                     } 
