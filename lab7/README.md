@@ -15,6 +15,7 @@ https://dba.stackexchange.com/questions/61342/storing-a-shipping-address-best-pr
 https://www.youtube.com/watch?v=gInhdzPeVU8&list=PLk-EmIiBIYGF8WCitdIVq7dvvacqY0rdl&index=6
 https://stackoverflow.com/questions/53634922/sql-select-average-from-results-of-distinct-rows
 https://stackoverflow.com/questions/41818610/mysql-count-distinct-rows-by-another-column-and-group-results
+https://stackoverflow.com/questions/11698065/create-a-button-that-will-sort-a-mysql-query-ascending-and-descending
 
 PART 1:
 CREATE TABLE courses ( crn int(11), prefix VARCHAR(4) NOT NULL, number SMALLINT(4) NOT NULL, title VARCHAR(255) NOT NULL, PRIMARY KEY (crn) );

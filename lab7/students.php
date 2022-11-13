@@ -83,10 +83,10 @@
                   </tr>
                 </thead>
                 <form name="sorting" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                <button type="submit" name="rin_sort" class="btn btn-primary">Sort by RIN</button>
-                <button type="submit" name="fn_sort" class="btn btn-success">Sort by First Name</button>
-                <button type="submit" name="to_sort" class="btn btn-warning">Sort by Last Name</button>
-                <button type="submit" name="rcs_sort" class="btn btn-danger">Sort by RCSID</button>
+                  <button type="submit" name="rin_sort" class="btn btn-primary m-2">Sort by RIN</button>
+                  <button type="submit" name="fn_sort" class="btn btn-success m-2">Sort by First Name</button>
+                  <button type="submit" name="to_sort" class="btn btn-warning m-2">Sort by Last Name</button>
+                  <button type="submit" name="rcs_sort" class="btn btn-danger m-2">Sort by RCSID</button>
                 </form>
                 <tbody>
                     <?php
