@@ -29,7 +29,7 @@ phpCAS::setNoCasServerValidation();
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-            <div class="collapse navbar-collapse text-white min-vh-100">
+            <div class="d-flex flex-column align-items-sm-start px-3 pt-2 text-white min-vh-100">
                 <div class="w-100 text-center border-bottom">
                   <a href="#" class="pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <span class="fs-1 text-center">Content</span>
