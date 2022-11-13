@@ -71,6 +71,7 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th scope="col">id</th>
                         <th scope="col">CRN</th>
                         <th scope="col">RIN</th>
                         <th scope="col">grade</th>
@@ -88,6 +89,7 @@
                             $result->data_seek($j);
                             $row = $result->fetch_array(MYSQLI_ASSOC);
                             echo "<tr>";
+                            echo "<td>" . $row['id'] . "</td>";
                             echo "<td>" . $row['CRN'] . "</td>";
                             echo "<td>" . $row['RIN'] . "</td>";
                             echo "<td>" . $row['grade'] . "</td>";
