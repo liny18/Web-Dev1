@@ -88,8 +88,9 @@
                   <button type="submit" name="to_sort" class="btn btn-warning m-2">Sort by Last Name</button>
                   <button type="submit" name="rcs_sort" class="btn btn-danger m-2">Sort by RCSID</button>
                 </form>
+                <br>
                 <form name="filtering" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                  <button type="submit" name="filter" class="btn btn-primary m-2">> 90</button>
+                  <button type="submit" name="filter" class="btn btn-dark m-2">> 90</button>
                 </form>
                 <tbody>
                     <?php

@@ -60,51 +60,91 @@
         </div>
 
         <div class="col py-3 text-center">
-            <div class="row">
-                <div class="col-12">
-                  <h1>Courses</h1>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">CRN</th>
-                        <th scope="col">prefix</th>
-                        <th scope="col">number</th>
-                        <th scope="col">title</th>
-                        <th scope="col">section</th>
-                        <th scope="col">year</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                        $query = "SELECT * FROM courses";
-                        $result = $conn->query($query);
-                        if (!$result) {
-                          echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
-                        } else {
-                          $rows = $result->num_rows;
-                          for ($j = 0; $j < $rows; ++$j) {
-                            $result->data_seek($j);
-                            $row = $result->fetch_array(MYSQLI_ASSOC);
-                            echo "<tr>";
-                            echo "<td>" . $row['CRN'] . "</td>";
-                            echo "<td>" . $row['prefix'] . "</td>";
-                            echo "<td>" . $row['number'] . "</td>";
-                            echo "<td>" . $row['title'] . "</td>";
-                            echo "<td>" . $row['section'] . "</td>";
-                            echo "<td>" . $row['year'] . "</td>";
-                            echo "</tr>";
-                          }
-                        }
-                      ?>
-                    </tbody>
-                  </table>
-              </div>
+          <div class="row">
+            <div class="col-12">
+              <h1>Courses</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">CRN</th>
+                    <th scope="col">prefix</th>
+                    <th scope="col">number</th>
+                    <th scope="col">title</th>
+                    <th scope="col">section</th>
+                    <th scope="col">year</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    $query = "SELECT * FROM courses";
+                    $result = $conn->query($query);
+                    if (!$result) {
+                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                    } else {
+                      $rows = $result->num_rows;
+                      for ($j = 0; $j < $rows; ++$j) {
+                        $result->data_seek($j);
+                        $row = $result->fetch_array(MYSQLI_ASSOC);
+                        echo "<tr>";
+                        echo "<td>" . $row['CRN'] . "</td>";
+                        echo "<td>" . $row['prefix'] . "</td>";
+                        echo "<td>" . $row['number'] . "</td>";
+                        echo "<td>" . $row['title'] . "</td>";
+                        echo "<td>" . $row['section'] . "</td>";
+                        echo "<td>" . $row['year'] . "</td>";
+                        echo "</tr>";
+                      }
+                    }
+                  ?>
+                </tbody>
+              </table>
+            </div>
           </div>
 
+          <div class="row">
+            <div class="col-12">
+              <h1>Average</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Grade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    $query = "SELECT courses.title, AVG(grade) as 'Average Grade'
+                    FROM grades
+                    INNER JOIN courses
+                    ON courses.CRN = grades.CRN
+                    GROUP BY grades.CRN";
+                    $result = $conn->query($query);
+                    if (!$result) {
+                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                    } else {
+                      $rows = $result->num_rows;
+                      for ($j = 0; $j < $rows; ++$j) {
+                        $result->data_seek($j);
+                        $row = $result->fetch_array(MYSQLI_ASSOC);
+                        echo "<tr>";
+                        echo "<td>" . $row['courses.title'] . "</td>";
+                        echo "<td>" . $row['AVG(grade)'] . "</td>";
+                        echo "</tr>";
+                      }
+                    }
+                  ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
           <div class="row">
             <div class="col-12">
