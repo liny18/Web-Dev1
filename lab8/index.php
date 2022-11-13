@@ -35,21 +35,27 @@ phpCAS::setNoCasServerValidation();
                     <span class="fs-1 text-center">Content</span>
                   </a> 
                 </div>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link px-0 current">
-                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Courses</span>
-                        </a>
+                <nav class="navbar navbar-expand-lg text-white">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                      <a id="labs"class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Labs
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                      </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="students.php" class="nav-link px-0">
-                        <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Students</span> </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="grades.php" class="nav-link px-0">
-                        <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Grades</span></a>
+
+                    <li class="nav-item dropdown">
+                      <a id="lectures"class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Lectures
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                      </ul>
                     </li>
                 </ul>
+                </nav>
                 <hr>
                 <?php 
                   if (!phpCAS::isAuthenticated()) {
