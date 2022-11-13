@@ -71,7 +71,6 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th scope="col">id</th>
                         <th scope="col">CRN</th>
                         <th scope="col">RIN</th>
                         <th scope="col">grade</th>
@@ -89,7 +88,6 @@
                             $result->data_seek($j);
                             $row = $result->fetch_array(MYSQLI_ASSOC);
                             echo "<tr>";
-                            echo "<td>" . $row['id'] . "</td>";
                             echo "<td>" . $row['CRN'] . "</td>";
                             echo "<td>" . $row['RIN'] . "</td>";
                             echo "<td>" . $row['grade'] . "</td>";
@@ -107,10 +105,6 @@
             </div>
             <form action="includes/addGrades.php" method="post">
               <div class="row justify-content-center">
-                <div class="col-2">
-                  <label for="id">id</label>
-                  <input type="text" class="form-control" name="id" id="id">
-                </div>
                 <div class="col-2">
                   <label for="CRN">CRN</label>
                   <input type="text" class="form-control" name="CRN" id="CRN">
