@@ -6,10 +6,9 @@ phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
 // But we don't have the apparatus to install our own certs...
 phpCAS::setNoCasServerValidation();
 
-if (phpCAS::isAuthenticated()) {
-  echo "User: " . phpCAS::getUser();
-  echo "<a href='logout.php'>Logout</a>";
+if (!phpCAS::isAuthenticated()) {
+  phpCAS::forceAuthentication();
 } else {
-  echo "<a href='login.php'>Login</a>";
+  header('Location: index.php');
 }
 ?>
