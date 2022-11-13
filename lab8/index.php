@@ -53,11 +53,7 @@ phpCAS::setNoCasServerValidation();
                 <hr>
                 <?php 
                   if (!phpCAS::isAuthenticated()) {
-                    echo "
-                    <div class='px-5 pb-3 border-top'>
-                      <a href='login.php' class='btn btn-primary mt-2'>Login</a>
-                    </div>
-                    "; 
+                    header("Location: out.php");
                   } else {
                     echo "User: " . phpCAS::getUser();
                     echo '
