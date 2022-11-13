@@ -135,8 +135,8 @@
                         $result->data_seek($j);
                         $row = $result->fetch_array(MYSQLI_ASSOC);
                         echo "<tr>";
-                        echo "<td>" . $row['courses.title'] . "</td>";
-                        echo "<td>" . $row['AVG(grade)'] . "</td>";
+                        echo "<td>" . $row['title'] . "</td>";
+                        echo "<td>" . $row['Average Grade'] . "</td>";
                         echo "</tr>";
                       }
                     }
