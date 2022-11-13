@@ -88,6 +88,9 @@
                   <button type="submit" name="to_sort" class="btn btn-warning m-2">Sort by Last Name</button>
                   <button type="submit" name="rcs_sort" class="btn btn-danger m-2">Sort by RCSID</button>
                 </form>
+                <form name="filtering" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                  <button type="submit" name="filter" class="btn btn-primary m-2">> 90</button>
+                </form>
                 <tbody>
                     <?php
                     if(isset($_POST['rin_sort'])){
@@ -101,6 +104,13 @@
                     }
                     else if(isset($_POST['rcs_sort'])){
                       $query = "SELECT * FROM students ORDER BY RCSID ASC";
+                    }
+                    else if(isset($_POST['filter'])){
+                      $query = "SELECT DISTINCT students.RIN, `first-name`, `last-name`, street, city, state, zip
+                      FROM students
+                      INNER JOIN grades
+                      ON `students`.`RIN` = `grades`.`RIN`
+                      WHERE `grades`.`grade` > 90";
                     }
                     else{
                       $query = "SELECT * FROM students";
