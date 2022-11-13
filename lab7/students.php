@@ -191,7 +191,7 @@
             <div class="col-12">
               <h2>Add a student</h2>
             </div>
-            <form action="includes/addStudents.php" method="post">
+            <form action="includes/addStudent.php" method="post">
               <div class="row justify-content-center">
                 <div class="col-2">
                   <label for="RIN">RIN</label>
