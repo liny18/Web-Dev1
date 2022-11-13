@@ -54,7 +54,7 @@ phpCAS::setNoCasServerValidation();
                 <?php 
                   if (!phpCAS::isAuthenticated()) {
                     echo "
-                    <div class='px-5 pb-5 border-top'>
+                    <div class='px-5 pb-3 border-top'>
                       <a href='login.php' class='btn btn-primary'>Login</a>
                     </div>
                     "; 
