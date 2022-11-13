@@ -68,3 +68,6 @@ FROM grades
 INNER JOIN courses
 ON courses.CRN = grades.CRN
 GROUP BY grades.CRN;
+
+
+This is by far the most confusing lab for me, for I have very little experience in both MySQL and PHP. I had to do a ton of googling and youtube binging to literally learn everything since I haven't touched these two languages since Intro to ITWS, which was a whole year ago. The first part of the lab was extremely easy to do via phpmyadmin. However, the second part was much worse as I had to actually figure out the syntax of MySQL. The third part is also much worse than the second part, for this is my first time linking PHP to MySQL. It was a lot of copy pasta(listed all my references) and trying to figure out how to do a simple thing. Overall, this was a very time consuming lab but I'm very proud of the result as I had a functional grade book. I definitely can make the front-end look better, but that's not the purpose of this lab. Bootstrap came in handy once again.
