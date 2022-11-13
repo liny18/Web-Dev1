@@ -26,7 +26,6 @@ phpCAS::setNoCasServerValidation();
     }
 </style>
 <body>
-  <?php include "includes/connect.php"; ?>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -55,9 +54,7 @@ phpCAS::setNoCasServerValidation();
                 <?php 
                   if (!phpCAS::isAuthenticated()) {
                     echo "
-                    <div class='justify-content-center'>
-                      <a href='login.php' class='btn btn-primary'>Login</a>
-                    </div>
+                    <a href='login.php' class='btn btn-primary mx-5 my-2'>Login</a>
                     "; 
                   } else {
                     echo "User: " . phpCAS::getUser();
@@ -73,7 +70,7 @@ phpCAS::setNoCasServerValidation();
                               <li>
                                   <hr class="dropdown-divider bg-light">
                               </li>
-                              <li class="justify-content-center"><a href="logout.php" class="btn btn-primary">Logout</a></li>
+                              <li class="ms-3"><a href="logout.php" class="btn btn-primary">Logout</a></li>
                           </ul>
                       </div>';
                     } 
