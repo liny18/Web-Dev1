@@ -144,6 +144,48 @@
               </table>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-12">
+              <h1>Students in each course</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Course</th>
+                    <th scope="col">Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                    $query = "SELECT courses.title, COUNT(DISTINCT `RIN`) as 'Count'
+                    FROM grades
+                    INNER JOIN courses
+                    ON courses.CRN = grades.CRN
+                    GROUP BY grades.CRN;";
+                    $result = $conn->query($query);
+                    if (!$result) {
+                      echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                    } else {
+                      $rows = $result->num_rows;
+                      for ($j = 0; $j < $rows; ++$j) {
+                        $result->data_seek($j);
+                        $row = $result->fetch_array(MYSQLI_ASSOC);
+                        echo "<tr>";
+                        echo "<td>" . $row['title'] . "</td>";
+                        echo "<td>" . $row['Count'] . "</td>";
+                        echo "</tr>";
+                      }
+                    }
+                  ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <div class="row">
             <div class="col-12">
               <h2>Add a student</h2>
