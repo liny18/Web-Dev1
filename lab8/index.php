@@ -1,4 +1,5 @@
 <?php
+include "connect.php";
 include_once("./CAS-1.4.0/CAS.php");
 phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
 
@@ -90,14 +91,17 @@ phpCAS::setNoCasServerValidation();
               Refresh
             </div>
             <div class="row justify-content-center align-items-center">
-            <div class="col-6">       
-                <div class="card p-2 mt-5">
-                  <img class="card-img-top" src="resources/images/monkey.jpg" alt="Title">
-                  <div class="card-body">
+              <div class="col-6">       
+                  <div class="card p-2 mt-5">
+                    <img class="card-img-top" src="resources/images/monkey.jpg" alt="Title">
+                    <div class="card-body">
+                    </div>
                   </div>
-                </div>
-          </div>
-      </div>
+              </div>
+            </div>
+            <form name="button1" method="post" action="archive.php" id="button1">
+              <button type="submit" name="archive" class="btn btn-danger m-2">Archive</button>
+            </form>
     </div>
     </div>
   </div>
