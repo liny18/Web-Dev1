@@ -97,7 +97,7 @@ phpCAS::setNoCasServerValidation();
                     <div class="card-body">
                     </div>
                     <div class="card-footer">
-                    <form action="archive.php" method="post" class="my-2">
+                    <form action="archive.php" method="post">
               <div class="row justify-content-center">
                 <div class="col-2 d-none">
                   <input type="text" class="form-control" name="Title" id="Title">
@@ -118,11 +118,9 @@ phpCAS::setNoCasServerValidation();
                   </div>
               </div>
             </div>
-            <!-- <div class="row">
-            
-        </div> -->
 
-          <div class="row bg-light">
+            <div class="col-6">
+            <div class="row bg-light">
             <div class="col-12">
               <h1>Course Content</h1>
             </div>
@@ -161,6 +159,7 @@ phpCAS::setNoCasServerValidation();
             </div>
           </div>
           </div>
+            </div>
     </div>
   </div>
 </body>
