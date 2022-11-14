@@ -10,6 +10,6 @@ if (isset($_POST['archive'])) {
   $stmt->execute();
   $stmt->close();
   $conn->close();
-  header("Location: index.php");
+  header("Location: table.php");
 }
 ?>
