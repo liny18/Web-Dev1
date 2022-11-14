@@ -4,6 +4,9 @@ const allPicks = document.querySelectorAll('.picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
+const Title = document.querySelector('#Title');
+const Description = document.querySelector('#Description');
+const Link = document.querySelector('#Link'); 
 
 window.onload = loadcontent();
 
@@ -19,6 +22,21 @@ fetch('resources/websys.json')
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
       allLabs.appendChild(labItem);
+      const inp = document.createElement('input');
+      inp.setAttribute("type", "text");
+      inp.classList.add('form-control');
+      inp.name = lab.Title;
+      Title.appendChild(inp);
+      const inp2 = document.createElement('input');
+      inp2.setAttribute("type", "text");
+      inp2.classList.add('form-control');
+      inp2.name = lab.Description;
+      Description.appendChild(inp2);
+      const inp3 = document.createElement('input');
+      inp3.setAttribute("type", "text");
+      inp3.classList.add('form-control');
+      inp3.name = lab.Link;
+      Link.appendChild(inp3);
     });
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
@@ -26,6 +44,21 @@ fetch('resources/websys.json')
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allLectures.appendChild(lectureItem);
+      const inp = document.createElement('input');
+      inp.setAttribute("type", "text");
+      inp.classList.add('form-control');
+      inp.name = lecture.Title;
+      Title.appendChild(inp);
+      const inp2 = document.createElement('input');
+      inp2.setAttribute("type", "text");
+      inp2.classList.add('form-control');
+      inp2.name = lecture.Description;
+      Description.appendChild(inp2);
+      const inp3 = document.createElement('input');
+      inp3.setAttribute("type", "text");
+      inp3.classList.add('form-control');
+      inp3.name = lecture.Link;
+      Link.appendChild(inp3);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });

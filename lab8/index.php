@@ -99,9 +99,32 @@ phpCAS::setNoCasServerValidation();
                   </div>
               </div>
             </div>
-            <form name="button1" method="post" action="archive.php" id="button1">
-              <button type="submit" name="archive" class="btn btn-danger m-2">Archive</button>
+            <div class="row">
+            <div class="col-12">
+              <h2>Archive</h2>
+            </div>
+            <form action="archive.php" method="post">
+              <div class="row justify-content-center">
+                <div class="col-2" id="Title">
+                  <label for="CRN">CRN</label>
+                  <!-- <input type="text" class="form-control" name="Title"> -->
+                </div>
+                <div class="col-2" id="Description">
+                  <label for="RIN">RIN</label>
+                  <!-- <input type="text" class="form-control" name="Description"> -->
+                </div>
+                <div class="col-2"  id="Link">
+                  <label for="grade">grade</label>
+                  <!-- <input type="text" class="form-control" name="Link"> -->
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary">Archive</button>
+                </div>
+              </div>
             </form>
+        </div>
     </div>
     </div>
   </div>
