@@ -1,5 +1,5 @@
 <?php
-  $sql = "REPLACE INTO content (Title, Description, Link) VALUES (?, ?, ?)";
+  $sql = "INSERT IGNORE INTO content (Title, Description, Link) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("sss", $title, $description, $link);
   $title = $_POST['Title'];
