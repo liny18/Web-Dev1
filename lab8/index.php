@@ -107,15 +107,15 @@ phpCAS::setNoCasServerValidation();
               <div class="row justify-content-center">
                 <div class="col-2">
                   <label for="CRN">CRN</label>
-                  <input type="text" class="form-control" name="title"  id="Title">
+                  <input type="text" class="form-control" name="Title"  id="Title">
                 </div>
                 <div class="col-2">
                   <label for="RIN">RIN</label>
-                  <input type="text" class="form-control" name="description"  id="Description">
+                  <input type="text" class="form-control" name="Description"  id="Description">
                 </div>
                 <div class="col-2">
                   <label for="grade">grade</label>
-                  <input type="text" class="form-control" name="Link" id="link">
+                  <input type="text" class="form-control" name="Link" id="Link">
                 </div>
               </div>
               <div class="row">

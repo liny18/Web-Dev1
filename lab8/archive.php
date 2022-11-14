@@ -3,9 +3,9 @@
   $sql = "INSERT INTO content (Title, Description, Link) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("sss", $title, $description, $link);
-  $title = $_POST['title'];
-  $description = $_POST['description'];
-  $link = $_POST['link'];
+  $title = $_POST['Title'];
+  $description = $_POST['Description'];
+  $link = $_POST['Link'];
   $stmt->execute();
   $stmt->close();
   $conn->close();
