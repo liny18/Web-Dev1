@@ -112,7 +112,7 @@ phpCAS::setNoCasServerValidation();
               <div class="row">
                 <div class="col-12">
                   <button type="submit" class="btn btn-success" name="archive" formaction="archive.php">Archive</button>
-                  <button type="button" class="btn btn-danger" name="delete" formaction="delete.php">Delete</button>
+                  <button type="submit" class="btn btn-danger" name="delete" formaction="delete.php">Delete</button>
                 </div>
               </div>
             </form>
