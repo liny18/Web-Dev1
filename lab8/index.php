@@ -119,9 +119,6 @@ phpCAS::setNoCasServerValidation();
                   </div>
               </div>
             </div>
-            <div class="row">
-            
-        </div>
     </div>
     <div class="col py-3 text-center">
           <div class="row">
