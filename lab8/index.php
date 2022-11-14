@@ -91,7 +91,7 @@ phpCAS::setNoCasServerValidation();
         <div class="col py-3 align-content-center text-center right">
             <h2>Pick from the navigation bar on the left</h2>
             <div class="btn btn-success" id="refresh">
-              <p>Refresh</p>
+              Refresh
             </div>
             <div class="row justify-content-center align-items-center">
             <div class="col-6">       
