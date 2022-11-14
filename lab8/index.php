@@ -125,7 +125,7 @@ phpCAS::setNoCasServerValidation();
               <h1>Course Content</h1>
             </div>
           </div>
-          <div class="row">
+          <div class="row bg-light">
             <div class="col-12">
               <table class="table table-striped">
                 <thead>
