@@ -50,9 +50,9 @@ function show(title, description, image, link) {
   linkEl.href = link;
   cardBody.appendChild(linkEl);
   cardImage.src = `https://source.unsplash.com/500x300/?${description}`;
-  Title.value = lab.Title;
-  Description.value = lab.Description;
-  Link.value = lab.Link;
+  Title.value = title
+  Description.value = description;
+  Link.value = link;
 }
 
 refreshButton.addEventListener('click', refresh);
