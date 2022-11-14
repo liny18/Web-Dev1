@@ -57,6 +57,11 @@ phpCAS::setNoCasServerValidation();
                       <ul class="dropdown-menu" id="lectures">
                       </ul>
                     </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="index.php" role="button">
+                        Home
+                      </a>
                   </ul>
                 </nav>
                 <hr>

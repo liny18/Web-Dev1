@@ -60,7 +60,7 @@ phpCAS::setNoCasServerValidation();
 
                     <li class="nav-item">
                       <a class="nav-link text-white" href="table.php" role="button">
-                        Projects
+                        Archives
                       </a>
                   </ul>
                 </nav>
