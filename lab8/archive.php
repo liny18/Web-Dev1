@@ -1,5 +1,6 @@
 <?php include "connect.php"; ?>
 <?php
+if (isset($_POST['archive'])) {
   $sql = "INSERT IGNORE INTO content (Title, Description, Link) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param("sss", $title, $description, $link);
@@ -10,4 +11,5 @@
   $stmt->close();
   $conn->close();
   header("Location: index.php");
+}
 ?>

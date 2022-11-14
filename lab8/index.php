@@ -100,7 +100,7 @@ phpCAS::setNoCasServerValidation();
                     <form action="archive.php" method="post">
               <div class="row justify-content-center">
                 <div class="col-2 d-none">
-                  <input type="text" class="form-control" name="Title" class="Title">
+                  <input type="text" class="form-control" name="Title" id="Title">
                 </div>
                 <div class="col-2 d-none">
                   <input type="text" class="form-control" name="Description" id="Description">
@@ -112,19 +112,9 @@ phpCAS::setNoCasServerValidation();
               <div class="row">
                 <div class="col-12">
                   <button type="submit" class="btn btn-success" name="archive">Archive</button>
+                  <button type="button" class="btn btn-danger" name="delete">Delete</button>
                 </div>
               </div>
-            </form>
-            <form action="delete.php" method="post">
-              <div class="row justify-content-center">
-                <div class="col-2 d-none">
-                  <input type="text" class="form-control" name="Title" class="Title">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <button type="submit" class="btn btn-danger" name="delete">Delete</button>
-                </div>
             </form>
                     </div>
                   </div>
