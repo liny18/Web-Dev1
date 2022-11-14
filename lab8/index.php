@@ -96,16 +96,19 @@ phpCAS::setNoCasServerValidation();
                     <img class="card-img-top" src="resources/images/monkey.jpg" alt="Title">
                     <div class="card-body">
                     </div>
-                    <div class="card-footer">
-                    <form action="archive.php" method="post">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+            <form action="archive.php" method="post">
               <div class="row justify-content-center">
-                <div class="col-2 d-none">
+                <div class="col-2">
                   <input type="text" class="form-control" name="Title" id="Title">
                 </div>
-                <div class="col-2 d-none">
+                <div class="col-2">
                   <input type="text" class="form-control" name="Description" id="Description">
                 </div>
-                <div class="col-2 d-none">
+                <div class="col-2">
                   <input type="text" class="form-control" name="Link" id="Link">
                 </div>
               </div>
@@ -115,19 +118,14 @@ phpCAS::setNoCasServerValidation();
                 </div>
               </div>
             </form>
-                  </div>
-              </div>
-            </div>
-            </div>
+        </div>
 
-            </div>
-
-            <div class="row bg-light">
+          <div class="row">
             <div class="col-12">
               <h1>Course Content</h1>
             </div>
           </div>
-          <div class="row bg-light">
+          <div class="row">
             <div class="col-12">
               <table class="table table-striped">
                 <thead>
@@ -161,7 +159,7 @@ phpCAS::setNoCasServerValidation();
             </div>
           </div>
           </div>
-
+    </div>
   </div>
 </body>
 </html>
