@@ -120,7 +120,6 @@ phpCAS::setNoCasServerValidation();
                   </div>
               </div>
             </div>
-    </div>
     <div class="col py-3 text-center">
           <div class="row">
             <div class="col-12">
@@ -160,6 +159,7 @@ phpCAS::setNoCasServerValidation();
               </table>
             </div>
           </div>
+    </div>
     </div>
     </div>
   </div>
