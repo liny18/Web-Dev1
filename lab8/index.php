@@ -24,10 +24,6 @@ phpCAS::setNoCasServerValidation();
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
-    .card-img-top {
-      /* width: 50%;
-      margin: auto; */
-    }
     .picks:hover {
       cursor: pointer;
     }

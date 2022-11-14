@@ -53,5 +53,5 @@ refreshButton.addEventListener('click', refresh);
 
 function refresh() {
   loadcontent();
-  window.location.reload();
+  // window.location.reload();
 }
