@@ -105,17 +105,17 @@ phpCAS::setNoCasServerValidation();
             </div>
             <form action="archive.php" method="post">
               <div class="row justify-content-center">
-                <div class="col-2" id="Title">
+                <div class="col-2">
                   <label for="CRN">CRN</label>
-                  <!-- <input type="text" class="form-control" name="Title"> -->
+                  <input type="text" class="form-control" name="Title"  id="Title">
                 </div>
-                <div class="col-2" id="Description">
+                <div class="col-2">
                   <label for="RIN">RIN</label>
-                  <!-- <input type="text" class="form-control" name="Description"> -->
+                  <input type="text" class="form-control" name="Description"  id="Description">
                 </div>
-                <div class="col-2"  id="Link">
+                <div class="col-2">
                   <label for="grade">grade</label>
-                  <!-- <input type="text" class="form-control" name="Link"> -->
+                  <input type="text" class="form-control" name="Link" id="Link">
                 </div>
               </div>
               <div class="row">
