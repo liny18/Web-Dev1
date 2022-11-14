@@ -1,5 +1,4 @@
 <?php
-include "archive.php";
 include "connect.php";
 include_once("./CAS-1.4.0/CAS.php");
 phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
@@ -100,7 +99,7 @@ phpCAS::setNoCasServerValidation();
                   </div>
               </div>
             </div>
-            <form name="button1" method="post" action="archive.php" id="button1">
+            <form name="button1" method="post" action="/lab8/archive.php" id="button1">
               <button type="submit" name="archive" class="btn btn-danger m-2">Archive</button>
             </form>
     </div>
