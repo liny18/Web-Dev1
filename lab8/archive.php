@@ -1,3 +1,4 @@
+<?php include "connect.php"; ?>
 <?php
   $sql = "INSERT INTO content (Title, Description, Link) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($sql);
