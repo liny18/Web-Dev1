@@ -22,9 +22,6 @@ fetch('resources/websys.json')
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
       allLabs.appendChild(labItem);
-      Title.value = lab.Title;
-      Description.value = lab.Description;
-      Link.value = lab.Link;
     });
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
@@ -32,9 +29,6 @@ fetch('resources/websys.json')
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allLectures.appendChild(lectureItem);
-      Title.value = lecture.Title;
-      Description.value = lecture.Description;
-      Link.value = lecture.Link;
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });
@@ -56,6 +50,9 @@ function show(title, description, image, link) {
   linkEl.href = link;
   cardBody.appendChild(linkEl);
   cardImage.src = `https://source.unsplash.com/500x300/?${description}`;
+  Title.value = lab.Title;
+  Description.value = lab.Description;
+  Link.value = lab.Link;
 }
 
 refreshButton.addEventListener('click', refresh);
