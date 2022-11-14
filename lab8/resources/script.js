@@ -4,7 +4,7 @@ const allPicks = document.querySelectorAll('.picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
-const Title = document.querySelector('#Title');
+const Title = document.querySelectorAll('.Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link'); 
 
