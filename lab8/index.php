@@ -119,7 +119,9 @@ phpCAS::setNoCasServerValidation();
               </div>
             </div>
 
-            <div class="col-12">
+            </div>
+
+            <div class="col-6">
             <div class="row bg-light">
             <div class="col-12">
               <h1>Course Content</h1>
@@ -160,7 +162,7 @@ phpCAS::setNoCasServerValidation();
           </div>
           </div>
             </div>
-    </div>
+
   </div>
 </body>
 </html>
