@@ -1,4 +1,5 @@
 <?php
+include "archive.php";
 include "connect.php";
 include_once("./CAS-1.4.0/CAS.php");
 phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
