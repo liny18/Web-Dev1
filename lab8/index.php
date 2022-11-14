@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include_once "connect.php";
 include_once("./CAS-1.4.0/CAS.php");
 phpCAS::client(CAS_VERSION_2_0,'cas.auth.rpi.edu',443,'/cas');
 
@@ -103,10 +103,10 @@ phpCAS::setNoCasServerValidation();
             <form action="archive.php" method="post">
               <div class="row justify-content-center">
                 <div class="col-2">
-                  <input type="text" class="form-control" name="Title"  id="Title">
+                  <input type="text" class="form-control" name="Title" id="Title">
                 </div>
                 <div class="col-2">
-                  <input type="text" class="form-control" name="Description"  id="Description">
+                  <input type="text" class="form-control" name="Description" id="Description">
                 </div>
                 <div class="col-2">
                   <input type="text" class="form-control" name="Link" id="Link">
