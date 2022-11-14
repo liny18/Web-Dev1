@@ -52,6 +52,7 @@ function show(title, description, image, link) {
 refreshButton.addEventListener('click', refresh);
 
 function refresh() {
+  console.log('refresh');
   loadcontent();
   // window.location.reload();
 }
