@@ -119,7 +119,7 @@ phpCAS::setNoCasServerValidation();
               </div>
             </div>
     </div>
-    <div class="col py-3 text-center">
+    <div class="col-6 py-3 text-center">
           <div class="row">
             <div class="col-12">
               <h1>Course Content</h1>
