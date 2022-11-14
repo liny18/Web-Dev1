@@ -120,7 +120,7 @@ phpCAS::setNoCasServerValidation();
             </form>
         </div>
 
-          <div class="row">
+          <div class="row bg-light">
             <div class="col-12">
               <h1>Course Content</h1>
             </div>

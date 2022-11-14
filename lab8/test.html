@@ -88,6 +88,44 @@
       <form name="button1" method="post">
         <button type="submit" name="archive" class="btn btn-danger m-2">Archive</button>
       </form>
+      <div class="row bg-light">
+        <div class="col-12">
+          <h1>Course Content</h1>
+        </div>
+      </div>
+      <div class="row bg-light">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php
+                $query = "SELECT * FROM content";
+                $result = $conn->query($query);
+                if (!$result) {
+                  echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+                } else {
+                  $rows = $result->num_rows;
+                  for ($j = 0; $j < $rows; ++$j) {
+                    $result->data_seek($j);
+                    $row = $result->fetch_array(MYSQLI_ASSOC);
+                    echo "<tr>";
+                    echo "<td>" . $row['Title'] . "</td>";
+                    echo "<td>" . $row['Description'] . "</td>";
+                    echo "<td><a href='" . $row['Link'] . "'>Link</a></td>";
+                    echo "</tr>";
+                  }
+                }
+              ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </body>
