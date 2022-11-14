@@ -1,12 +1,11 @@
 <?php include "connect.php"; ?>
 <?php
-  $sql = "INSERT INTO content (title, date, description, link) VALUES (?, ?, ?, ?)";
+  $sql = "INSERT INTO content (Title, Description, Link) VALUES (?, ?, ?)";
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("ssss", $title, $date, $description, $link);
-  $title = $_POST['title'];
-  $date = $_POST['date'];
-  $description = $_POST['description'];
-  $link = $_POST['link'];
+  $stmt->bind_param("sss", $title, $description, $link);
+  $title = $_POST['Title'];
+  $description = $_POST['Description'];
+  $link = $_POST['Link'];
   $stmt->execute();
   $stmt->close();
   $conn->close();
