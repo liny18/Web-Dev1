@@ -1,6 +1,6 @@
 const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
-const allMbns = document.querySelector('#mbns');
+const allMbes = document.querySelector('#mbes');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
@@ -8,19 +8,21 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
-var all = [];
+var t = [];
+var d = [];
+var i = [];
+var l = [];
 
 function randomInt(max) {
   console.log(max);
   return Math.floor(Math.random() * (max + 1))
 }
 
-// Next.addEventListener('click', function() {
-//   const randomIndex = randomInt(allPicks.length - 1);
-//   console.log(randomIndex);
-//   const randomPick = allPicks[randomIndex];
-//   show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-// });
+Next.addEventListener('click', function() {
+  const randomIndex = randomInt(t.length - 1);
+  console.log(randomIndex);
+  show(t[randomIndex], d[randomIndex], i[randomIndex], l[randomIndex]);
+});
 
 window.onload = loadcontent();
 
@@ -34,6 +36,10 @@ fetch('resources/websys.json')
       const labItem = document.createElement('li');
       labItem.classList.add('dropdown-item', 'picks');
       labItem.innerText = lab.Title;
+      t.push(lab.Title);
+      d.push(lab.Description);
+      i.push(lab.Image);
+      l.push(lab.Link);
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
       allLabs.appendChild(labItem);
     });
@@ -41,22 +47,30 @@ fetch('resources/websys.json')
       const lectureItem = document.createElement('li');
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
+      t.push(lab.Title);
+      d.push(lab.Description);
+      i.push(lab.Image);
+      l.push(lab.Link);
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allLectures.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });
 
-  fetch('resources/mbn.json')
+  fetch('resources/mbe.json')
   .then(response => response.json())
   .then(data => {
-    const lectures = data.Mbn_course.Lectures;
+    const lectures = data.Mbe_course.Lectures;
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
+      t.push(lab.Title);
+      d.push(lab.Description);
+      i.push(lab.Image);
+      l.push(lab.Link);
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
-      allMbns.appendChild(lectureItem);
+      allMbes.appendChild(lectureItem);
     });
   });
 }
