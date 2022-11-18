@@ -1,5 +1,6 @@
 const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
+const allMbns = document.querySelector('#mbns');
 const allPicks = document.querySelectorAll('.picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
@@ -29,6 +30,20 @@ fetch('resources/websys.json')
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allLectures.appendChild(lectureItem);
+    });
+    show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
+  });
+
+  fetch('resources/mbn.json')
+  .then(response => response.json())
+  .then(data => {
+    const lectures = data.Mbn_course.Lectures;
+    lectures.forEach(lecture => {
+      const lectureItem = document.createElement('li');
+      lectureItem.classList.add('dropdown-item', 'picks');
+      lectureItem.innerText = lecture.Title;
+      lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
+      allMbns.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });
