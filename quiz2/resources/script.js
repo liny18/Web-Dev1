@@ -2,7 +2,6 @@ const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
 const allMbns = document.querySelector('#mbns');
 const allPicks = document.querySelector('#picks');
-const all = document.querySelectorAll('.picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
@@ -93,5 +92,6 @@ function refresh() {
   window.location.reload();
 }
 
+const all = document.querySelectorAll('.picks');
 randomInt(3);
 randomInt(all.length);
