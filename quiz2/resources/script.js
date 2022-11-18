@@ -22,7 +22,6 @@ Next.addEventListener('click', function() {
   const randomIndex = randomInt(t.length - 1);
   console.log(randomIndex);
   show(t[randomIndex], d[randomIndex], i[randomIndex], l[randomIndex]);
-  refresh();
 });
 
 window.onload = loadcontent();
@@ -100,6 +99,6 @@ function show(title, description, image, link) {
 refreshButton.addEventListener('click', refresh);
 
 function refresh() {
-  // loadcontent();
+  loadcontent();
   window.location.reload();
 }
