@@ -1,7 +1,6 @@
 const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
 const allMbns = document.querySelector('#mbns');
-const allPicks = document.querySelectorAll('.picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
@@ -18,6 +17,7 @@ Next.addEventListener('click', function() {
   // const randomIndex = randomInt(allPicks.length - 1);
   // const randomPick = allPicks[randomIndex];
   // show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+  const allPicks = document.querySelectorAll('.picks');
   show(allPicks[1].Title, allPicks[1].Description, allPicks[1].Image, allPicks[1].Link);
 });
 
