@@ -9,6 +9,7 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
+var count = 0;
 
 function randomInt(max) {
   console.log(max);
@@ -35,6 +36,7 @@ fetch('resources/websys.json')
       labItem.classList.add('dropdown-item', 'picks');
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
+      count = count + 1;
       allPicks.appendChild(labItem);
       // allLabs.appendChild(labItem);
     });
@@ -43,6 +45,7 @@ fetch('resources/websys.json')
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
+      count = count + 1;
       allPicks.appendChild(lectureItem);
       // allLectures.appendChild(lectureItem);
     });
@@ -58,6 +61,7 @@ fetch('resources/websys.json')
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
+      count = count + 1;
       allPicks.appendChild(lectureItem);
       // allMbns.appendChild(lectureItem);
     });
@@ -94,4 +98,4 @@ function refresh() {
 
 var all = document.getElementsByClassName('.picks');
 randomInt(3);
-randomInt(all.length);
+randomInt(count);
