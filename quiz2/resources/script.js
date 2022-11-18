@@ -18,7 +18,7 @@ Next.addEventListener('click', function() {
   // const randomIndex = randomInt(allPicks.length - 1);
   // const randomPick = allPicks[randomIndex];
   // show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-  show(allPicks[0].Title, allPicks[0].Description, allPicks[0].Image, allPicks[0].Link);
+  show(allPicks[1].Title, allPicks[1].Description, allPicks[1].Image, allPicks[1].Link);
 });
 
 window.onload = loadcontent();
