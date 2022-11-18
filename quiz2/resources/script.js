@@ -7,7 +7,18 @@ const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
 const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
-const Link = document.querySelector('#Link'); 
+const Link = document.querySelector('#Link');
+const Next = document.querySelector('#next');
+
+function randomInt(max) {
+  return Math.floor(Math.random() * (max + 1))
+}
+
+Next.addEventListener('click', function() {
+  const randomIndex = randomInt(allPicks.length - 1);
+  const randomPick = allPicks[randomIndex];
+  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+});
 
 window.onload = loadcontent();
 
