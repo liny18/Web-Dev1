@@ -94,4 +94,4 @@ function refresh() {
 }
 
 randomInt(3);
-randomInt(allPicks.length);
+randomInt(all.length);
