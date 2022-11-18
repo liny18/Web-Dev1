@@ -1,7 +1,6 @@
 const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
 const allMbns = document.querySelector('#mbns');
-const allPicks = document.querySelector('#picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
@@ -9,19 +8,18 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
-var count = 0;
 
 function randomInt(max) {
   console.log(max);
   return Math.floor(Math.random() * (max + 1))
 }
 
-Next.addEventListener('click', function() {
-  const randomIndex = randomInt(allPicks.length - 1);
-  console.log(randomIndex);
-  const randomPick = allPicks[randomIndex];
-  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-});
+// Next.addEventListener('click', function() {
+//   const randomIndex = randomInt(allPicks.length - 1);
+//   console.log(randomIndex);
+//   const randomPick = allPicks[randomIndex];
+//   show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+// });
 
 window.onload = loadcontent();
 
@@ -36,27 +34,16 @@ fetch('resources/websys.json')
       labItem.classList.add('dropdown-item', 'picks');
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
-      count = count + 1;
-      allPicks.appendChild(labItem);
-      // allLabs.appendChild(labItem);
+      allLabs.appendChild(labItem);
     });
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
-      count = count + 1;
-      allPicks.appendChild(lectureItem);
-      // allLectures.appendChild(lectureItem);
+      allLectures.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
-    Next.addEventListener('click', function() {
-      // const randomIndex = randomInt(count - 1);
-      // console.log(randomIndex);
-      // const randomPick = allPicks[randomIndex];
-      show(labs[1].Title, labs[1].Description, labs[1].Image, labs[1].Link);
-    }
-  );
   });
 
   fetch('resources/mbn.json')
@@ -68,9 +55,7 @@ fetch('resources/websys.json')
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
-      count = count + 1;
-      allPicks.appendChild(lectureItem);
-      // allMbns.appendChild(lectureItem);
+      allMbns.appendChild(lectureItem);
     });
   });
 }
@@ -102,7 +87,3 @@ function refresh() {
   loadcontent();
   window.location.reload();
 }
-
-var all = document.getElementsByClassName('.picks');
-randomInt(3);
-randomInt(all.length);
