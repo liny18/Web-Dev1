@@ -8,7 +8,7 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
-var allPicks = [];
+const allPicks = document.querySelector('#allPicks');
 
 function randomInt(max) {
   console.log(max);
@@ -35,7 +35,7 @@ fetch('resources/websys.json')
       labItem.classList.add('dropdown-item', 'picks');
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
-      allPicks.push(lab);
+      allPicks.appendChild(labItem);
       allLabs.appendChild(labItem);
     });
     lectures.forEach(lecture => {
@@ -43,7 +43,7 @@ fetch('resources/websys.json')
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
-      allPicks.push(lecture);
+      allPicks.appendChild(lectureItem);
       allLectures.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
@@ -58,7 +58,7 @@ fetch('resources/websys.json')
       lectureItem.classList.add('dropdown-item', 'picks');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
-      allPicks.push(lecture);
+      allPicks.appendChild(lectureItem);
       allMbns.appendChild(lectureItem);
     });
   });
