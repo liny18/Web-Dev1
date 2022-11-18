@@ -92,6 +92,6 @@ function refresh() {
   window.location.reload();
 }
 
-const all = document.querySelectorAll('.picks');
+var all = document.getElementsByClassName('.picks');
 randomInt(3);
 randomInt(all.length);
