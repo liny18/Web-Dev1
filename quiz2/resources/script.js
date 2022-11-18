@@ -1,6 +1,7 @@
 const allLabs = document.querySelector('#labs');
 const allLectures = document.querySelector('#lectures');
 const allMbns = document.querySelector('#mbns');
+const allPicks = document.querySelector('#picks');
 const cardImage = document.querySelector('.card-img-top');
 const cardBody = document.querySelector('.card-body');
 const refreshButton = document.querySelector('#refresh');
@@ -8,7 +9,6 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
-const allPicks = document.querySelector('#allPicks');
 
 function randomInt(max) {
   console.log(max);
@@ -32,7 +32,7 @@ fetch('resources/websys.json')
     const lectures = data.Websys_course.Lectures;
     labs.forEach(lab => {
       const labItem = document.createElement('li');
-      labItem.classList.add('dropdown-item', 'picks');
+      labItem.classList.add('dropdown-item');
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
       allPicks.appendChild(labItem);
@@ -40,7 +40,7 @@ fetch('resources/websys.json')
     });
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
-      lectureItem.classList.add('dropdown-item', 'picks');
+      lectureItem.classList.add('dropdown-item');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allPicks.appendChild(lectureItem);
@@ -55,7 +55,7 @@ fetch('resources/websys.json')
     const lectures = data.Mbn_course.Lectures;
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
-      lectureItem.classList.add('dropdown-item', 'picks');
+      lectureItem.classList.add('dropdown-item');
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allPicks.appendChild(lectureItem);
