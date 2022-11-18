@@ -11,6 +11,7 @@ const Next = document.querySelector('#next');
 const allPicks = document.querySelectorAll('.picks');
 
 function randomInt(max) {
+  console.log(max);
   return Math.floor(Math.random() * (max + 1))
 }
 
