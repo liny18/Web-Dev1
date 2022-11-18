@@ -14,6 +14,8 @@ function randomInt(max) {
   console.log(max);
   return Math.floor(Math.random() * (max + 1))
 }
+randomInt(3);
+randomInt(allPicks.length);
 
 // Next.addEventListener('click', function() {
 //   const randomIndex = randomInt(allPicks.length - 1);
