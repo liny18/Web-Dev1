@@ -19,6 +19,7 @@ function randomInt(max) {
 }
 
 Next.addEventListener('click', function() {
+  event.preventDefault();
   const randomIndex = randomInt(t.length - 1);
   console.log(randomIndex);
   show(t[randomIndex], d[randomIndex], i[randomIndex], l[randomIndex]);
