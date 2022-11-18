@@ -17,7 +17,9 @@ function randomInt(max) {
 Next.addEventListener('click', function() {
   const randomIndex = randomInt(allPicks.length - 1);
   const randomPick = allPicks[randomIndex];
-  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+  const first = allPicks[1];
+  // show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+  show(first.Title, first.Description, first.Image, first.Link);
 });
 
 window.onload = loadcontent();
