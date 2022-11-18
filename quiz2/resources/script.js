@@ -36,7 +36,7 @@ fetch('resources/websys.json')
       labItem.innerText = lab.Title;
       labItem.setAttribute("onclick", `show('${lab.Title}', '${lab.Description}', '${lab.Image}', '${lab.Link}')`);
       allPicks.appendChild(labItem);
-      allLabs.appendChild(labItem);
+      // allLabs.appendChild(labItem);
     });
     lectures.forEach(lecture => {
       const lectureItem = document.createElement('li');
@@ -44,7 +44,7 @@ fetch('resources/websys.json')
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allPicks.appendChild(lectureItem);
-      allLectures.appendChild(lectureItem);
+      // allLectures.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });
@@ -59,7 +59,7 @@ fetch('resources/websys.json')
       lectureItem.innerText = lecture.Title;
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allPicks.appendChild(lectureItem);
-      allMbns.appendChild(lectureItem);
+      // allMbns.appendChild(lectureItem);
     });
   });
 }
