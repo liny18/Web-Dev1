@@ -16,12 +16,12 @@ function randomInt(max) {
   return Math.floor(Math.random() * (max + 1))
 }
 
-// Next.addEventListener('click', function() {
-//   const randomIndex = randomInt(allPicks.length - 1);
-//   console.log(randomIndex);
-//   const randomPick = allPicks[randomIndex];
-//   show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-// });
+Next.addEventListener('click', function() {
+  const randomIndex = randomInt(allPicks.length - 1);
+  console.log(randomIndex);
+  const randomPick = allPicks[randomIndex];
+  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+});
 
 window.onload = loadcontent();
 
@@ -50,6 +50,13 @@ fetch('resources/websys.json')
       // allLectures.appendChild(lectureItem);
     });
     show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
+    Next.addEventListener('click', function() {
+      // const randomIndex = randomInt(count - 1);
+      // console.log(randomIndex);
+      // const randomPick = allPicks[randomIndex];
+      show(labs[1].Title, labs[1].Description, labs[1].Image, labs[1].Link);
+    }
+  );
   });
 
   fetch('resources/mbn.json')
@@ -87,13 +94,6 @@ function show(title, description, image, link) {
   Title.value = title;
   Description.value = description;
   Link.value = link;
-  Next.addEventListener('click', function() {
-    const randomIndex = randomInt(count - 1);
-    console.log(randomIndex);
-    const randomPick = allPicks[randomIndex];
-    show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-  }
-  );
 }
 
 refreshButton.addEventListener('click', refresh);
@@ -105,4 +105,4 @@ function refresh() {
 
 var all = document.getElementsByClassName('.picks');
 randomInt(3);
-randomInt(count);
+randomInt(all.length);
