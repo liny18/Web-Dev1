@@ -14,7 +14,6 @@ var i = [];
 var l = [];
 
 function randomInt(max) {
-  console.log(max);
   return Math.floor(Math.random() * (max + 1))
 }
 
@@ -23,6 +22,7 @@ Next.addEventListener('click', function() {
   const randomIndex = randomInt(t.length - 1);
   console.log(randomIndex);
   show(t[randomIndex], d[randomIndex], i[randomIndex], l[randomIndex]);
+  refresh();
 });
 
 window.onload = loadcontent();
