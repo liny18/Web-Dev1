@@ -1,0 +1,98 @@
+{
+  "Websys_course": {
+    "Lectures": [
+      {
+        "Title": "Review, GitHub, Lab 1",
+        "Description": "Intro review, GitHub, Lab 1",
+        "Link": "https://docs.google.com/presentation/d/1Ldgjev5caUSdJCYMzmzMeXn-nUCmA-rzak1K1GHK668/edit?usp=sharing"
+      },
+      {
+        "Title": "GitHub & Project Proposals",
+        "Description": "GitHub & Project Proposals",
+        "Link": "https://docs.google.com/presentation/d/1hMU5IB7rQf5mOsoS-OINukgrNlgYGEfdw8gQqgtpRko/edit?usp=sharing"
+      },
+      {
+        "Title": "HTML",
+        "Description": "HTML Review",
+        "Link": "https://drive.google.com/file/d/1I2jPCnw93JDKbrLQLga7Af3tlOkCv9Vo/view?usp=sharing"
+      },
+      {
+        "Title": "CSS",
+        "Description": "CSS Review",
+        "Link": "https://docs.google.com/presentation/d/1VwSRoioMBEZ-vrKPDNCAx2POj0ZVI51h/edit?rtpof=true&sd=true"
+      },
+      {
+        "Title": "JavaScript",
+        "Description": "JavaScript fundamentals and DOM",
+        "Link": "https://docs.google.com/presentation/d/1gPVTm6JyhDi2vVvoH6iQkztpKkL-0DZ6SJCELcBW4nE/edit?usp=sharing"
+      },
+      {
+        "Title": "AJAX & JSON, APIs",
+        "Description": "AJAX & JSON, APIs",
+        "Link": "https://docs.google.com/presentation/d/1RDapivq556dK3sLUCyI-Jt1IjUvDZ9lAbl3QlpW95a0/edit"
+      },
+      {
+        "Title": "Quiz 1 review",
+        "Description": "Quiz 1 review",
+        "Link": "https://docs.google.com/presentation/d/1xT2DeGn0DKwCosDVpdr2D_3O3xqsJjouM0eBdS_A5Cg/edit"
+      },
+      {
+        "Title": "Front end optimization, UX, & Lab 6",
+        "Description": "Front end optimization, UX, & Lab 6",
+        "Link": "https://docs.google.com/presentation/d/1IcPVUmppYvAOPIa-9K-ntT-zdytOiZhNfOD-rtdWxLw/edit"
+      },
+      {
+        "Title": "PHP",
+        "Description": "PHP basics and Object Oriented Programming",
+        "Link": "https://docs.google.com/presentation/d/178sQI-x5y_hYnfEZsOtqUXl_VcAtGq2BIA_CFDsZ8cQ/edit"
+      },
+      {
+        "Title": "MySQL",
+        "Description": "MySQL and Lab 7",
+        "Link": "https://docs.google.com/presentation/d/1GQyT3oYY6tfmoO6_sdrsntjKlhPsNMPq/edit?rtpof=true&sd=true"
+      },
+      {
+        "Title": "Authentication & Authorization",
+        "Description": "Authentication & Authorization for Web Applications",
+        "Link": "https://docs.google.com/presentation/d/1T1080NC5GNp3-XEm8CqHmoJOCQgvSguU/edit?rtpof=true&sd=true"
+      }
+    ],
+    "Labs": [
+      {
+        "Title": "Lab 1",
+        "Description": "Group and personal portfolios",
+        "Link": "https://docs.google.com/document/d/1jSQyJ_csvXLUZQnzmoCB2KqOAYsQT4zn5N3CMM4EBpE/edit?usp=sharing"
+      },
+      {
+        "Title": "Lab 2",
+        "Description": "US Constitution",
+        "Link": "https://docs.google.com/document/d/1-CR_22enAmjiLD56z367NkBBhioFOBaOQmHNYn2TU94/edit"
+      },
+      {
+        "Title": "Lab 3",
+        "Description": "ITWS Website Revision",
+        "Link": "https://docs.google.com/document/d/1bauKr2Edv7pnJfRnw-LMwVCg12ORuYfCsI6kBZbvFu8/edit"
+      },
+      {
+        "Title": "Lab 4",
+        "Description": "Weather API",
+        "Link": "https://docs.google.com/document/d/1u8ZK1on4RgVPh_Rl4iaABu8GIKsXpHgAA3kk_2zQNlM/edit"
+      },
+      {
+        "Title": "Lab 6",
+        "Description": "Freebee game optimization",
+        "Link": "https://docs.google.com/document/d/102LwWml5H9pmYWQrFkBzBAuvs9SknfG6Y0bGjy93hEQ/edit"
+      },
+      {
+        "Title": "Lab 7",
+        "Description": "Grade Book",
+        "Link": "https://docs.google.com/document/d/1pgM4idrA2MPvyaR-Vu3TXCPaMYkFdtxyLU16vT7CBjc/edit"
+      },
+      {
+        "Title": "Lab 8",
+        "Description": "Web Systems Blackboard",
+        "Link": "https://docs.google.com/document/d/1M8TR5ezuCYOCKlixIi_f0cAyBCPylFMa0AORVdP-0BQ/edit"
+      }
+    ]
+  }
+}

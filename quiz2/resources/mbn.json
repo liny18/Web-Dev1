@@ -1,0 +1,56 @@
+{
+  "Mbn_course": {
+    "Lectures": [
+      {
+        "Title": "Lecture 1",
+        "Description": "Intro",
+        "Link": "https://docs.google.com/presentation/d/1XPqoocF5CX0g2PPVjINbblczLPBoVMQJCTbnVTOrbR4/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 2",
+        "Description": "Reverse Engineering",
+        "Link": "https://docs.google.com/presentation/d/1njsyW0uWA4TKp1B-8vtEOFuNxsBuhxmY4EEt_x5pi7o/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 3",
+        "Description": "Memory Corruption",
+        "Link": "https://docs.google.com/presentation/d/1avKXYm4CoxWyK93gxyJVcawbox8JUyIGs0wNNwHuhYg/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 4",
+        "Description": "Shellcoding",
+        "Link": "https://docs.google.com/presentation/d/1CbZQjUoGFJeID5Tc5j2Ez0IkhFf3Lanhw3WTiiNdGWI/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 5",
+        "Description": "Stack Cookies",
+        "Link": "https://docs.google.com/presentation/d/1vaRbpP0jNr245BMAqjR_0IkAiSZVAM9LteR2Tu4mNLk/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 6",
+        "Description": "DEP and ROP",
+        "Link": "https://docs.google.com/presentation/d/1mFhnVrPVt8TiFcEFqCIXUGePWQis5k8ossX-A0uuz6E/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 7",
+        "Description": "ASLR",
+        "Link": "https://docs.google.com/presentation/d/1GkPEr_IYfMW4ISOLeVF0IGGyM5G8NQKqlwaCLKSAPGU/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 8",
+        "Description": "Advanced defenses",
+        "Link": "https://docs.google.com/presentation/d/1NNuxVy220xdbuaa7e7njF-GC4sRB5Z8QM6ZMKyzXZcg/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 9",
+        "Description": "Heap Exploitation",
+        "Link": "https://docs.google.com/presentation/d/1m_Oc1GuOp20cttQ3l2r-jNTgU9xh9rzjZJLOS19ziHc/edit?usp=share_link"
+      },
+      {
+        "Title": "Lecture 10",
+        "Description": "Mis. types of bugs",
+        "Link": "https://docs.google.com/presentation/d/1EXdzSb38NDFuq1YP3EPs2IThOu1LaPkAl_0sbEyB3S8/edit?usp=share_link"
+      }
+    ]
+  }
+}
