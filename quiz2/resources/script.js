@@ -16,6 +16,7 @@ function randomInt(max) {
 
 Next.addEventListener('click', function() {
   const randomIndex = randomInt(allPicks.length - 1);
+  console.log(randomIndex);
   const randomPick = allPicks[randomIndex];
   show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
 });
