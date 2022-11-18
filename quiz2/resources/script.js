@@ -15,11 +15,10 @@ function randomInt(max) {
 }
 
 Next.addEventListener('click', function() {
-  const randomIndex = randomInt(allPicks.length - 1);
-  const randomPick = allPicks[randomIndex];
-  const first = allPicks[1];
+  // const randomIndex = randomInt(allPicks.length - 1);
+  // const randomPick = allPicks[randomIndex];
   // show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-  show(first.Title, first.Description, first.Image, first.Link);
+  show(allPicks[0].Title, allPicks[0].Description, allPicks[0].Image, allPicks[0].Link);
 });
 
 window.onload = loadcontent();
