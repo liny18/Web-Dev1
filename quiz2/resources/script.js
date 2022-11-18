@@ -8,17 +8,16 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
+const allPicks = document.querySelectorAll('.picks');
 
 function randomInt(max) {
   return Math.floor(Math.random() * (max + 1))
 }
 
 Next.addEventListener('click', function() {
-  // const randomIndex = randomInt(allPicks.length - 1);
-  // const randomPick = allPicks[randomIndex];
-  // show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-  const allPicks = document.querySelectorAll('.picks');
-  show(allPicks[1].Title, allPicks[1].Description, allPicks[1].Image, allPicks[1].Link);
+  const randomIndex = randomInt(allPicks.length - 1);
+  const randomPick = allPicks[randomIndex];
+  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
 });
 
 window.onload = loadcontent();
@@ -57,7 +56,6 @@ fetch('resources/websys.json')
       lectureItem.setAttribute("onclick", `show('${lecture.Title}', '${lecture.Description}', '${lecture.Image}', '${lecture.Link}')`);
       allMbns.appendChild(lectureItem);
     });
-    show(labs[0].Title, labs[0].Description, labs[0].Image, labs[0].Link);
   });
 }
 
@@ -77,7 +75,7 @@ function show(title, description, image, link) {
   linkEl.href = link;
   cardBody.appendChild(linkEl);
   cardImage.src = `https://source.unsplash.com/500x300/?${description}`;
-  Title.value = title
+  Title.value = title;
   Description.value = description;
   Link.value = link;
 }
