@@ -100,6 +100,6 @@ function show(title, description, image, link) {
 refreshButton.addEventListener('click', refresh);
 
 function refresh() {
-  loadcontent();
+  // loadcontent();
   window.location.reload();
 }
