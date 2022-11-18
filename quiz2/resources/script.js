@@ -16,12 +16,12 @@ function randomInt(max) {
   return Math.floor(Math.random() * (max + 1))
 }
 
-Next.addEventListener('click', function() {
-  const randomIndex = randomInt(allPicks.length - 1);
-  console.log(randomIndex);
-  const randomPick = allPicks[randomIndex];
-  show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
-});
+// Next.addEventListener('click', function() {
+//   const randomIndex = randomInt(allPicks.length - 1);
+//   console.log(randomIndex);
+//   const randomPick = allPicks[randomIndex];
+//   show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+// });
 
 window.onload = loadcontent();
 
@@ -87,6 +87,13 @@ function show(title, description, image, link) {
   Title.value = title;
   Description.value = description;
   Link.value = link;
+  Next.addEventListener('click', function() {
+    const randomIndex = randomInt(count - 1);
+    console.log(randomIndex);
+    const randomPick = allPicks[randomIndex];
+    show(randomPick.Title, randomPick.Description, randomPick.Image, randomPick.Link);
+  }
+  );
 }
 
 refreshButton.addEventListener('click', refresh);
