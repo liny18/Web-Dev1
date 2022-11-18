@@ -8,7 +8,7 @@ const Title = document.querySelector('#Title');
 const Description = document.querySelector('#Description');
 const Link = document.querySelector('#Link');
 const Next = document.querySelector('#next');
-const allPicks = document.querySelectorAll('.picks');
+var allPicks = document.querySelectorAll('.picks');
 
 function randomInt(max) {
   console.log(max);
