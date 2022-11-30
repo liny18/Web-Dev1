@@ -162,11 +162,15 @@
                                     </div>
                                     <div id="checkboxes">
                                         <label for="one">
-                                        <input class="check" type="checkbox" id="one" />First checkbox</label>
+                                        <input class="check" type="checkbox" id="one" />Vegetarian</label>
                                         <label for="two">
-                                        <input class="check" type="checkbox" id="two" />Second checkbox</label>
+                                        <input class="check" type="checkbox" id="two" />Beef</label>
                                         <label for="three">
-                                        <input class="check" type="checkbox" id="three" />Third checkbox</label>
+                                        <input class="check" type="checkbox" id="three" />Chicken</label>
+                                        <label for="three">
+                                        <input class="check" type="checkbox" id="three" />Non-Dairy</label>
+                                        <label for="three">
+                                        <input class="check" type="checkbox" id="three" />Desert</label>
                                     </div>
                                     </div>
                                 </form>
