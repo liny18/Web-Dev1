@@ -136,22 +136,6 @@
                                     <option value="Non-Dairy">Non-Dairy</option>
                                     <option value="Desert">Desert</option>
                                 </select> -->
-                                <!-- <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action</li>
-                                        </button>
-                                        <li><button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action</li>
-                                        </button>
-                                        <li><button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action</li>
-                                        </button>
-                                    </ul>
-                                </div> -->
                                 <form>
                                     <div class="multiselect">
                                     <div class="selectBox" onclick="showCheckboxes()">
