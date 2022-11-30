@@ -1,1 +1,1 @@
-<?php header("Location: resources/includes/phpcas/index.php"); ?>
+<?php header("Location: phpcas/index.php"); ?>
