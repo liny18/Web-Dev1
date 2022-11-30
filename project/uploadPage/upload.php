@@ -153,21 +153,21 @@
                                     </ul>
                                 </div> -->
                                 <form>
-                                    <div class="dropdown">
-                                        <div class="selectBox" onclick="showCheckboxes()">
+                                    <div class="multiselect">
+                                    <div class="selectBox" onclick="showCheckboxes()">
                                         <select>
-                                            <option>Select an option</option>
+                                        <option>Select an option</option>
                                         </select>
                                         <div class="overSelect"></div>
-                                        </div>
-                                        <div id="checkboxes">
+                                    </div>
+                                    <div id="checkboxes">
                                         <label for="one">
-                                            <input type="checkbox" id="one" />First checkbox</label>
+                                        <input class="check" type="checkbox" id="one" />First checkbox</label>
                                         <label for="two">
-                                            <input type="checkbox" id="two" />Second checkbox</label>
+                                        <input class="check" type="checkbox" id="two" />Second checkbox</label>
                                         <label for="three">
-                                            <input type="checkbox" id="three" />Third checkbox</label>
-                                        </div>
+                                        <input class="check" type="checkbox" id="three" />Third checkbox</label>
+                                    </div>
                                     </div>
                                 </form>
                             </div>
