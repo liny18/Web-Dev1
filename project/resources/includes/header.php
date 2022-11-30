@@ -50,7 +50,7 @@ if(array_key_exists('submitSearch', $_POST)){
         <ul class="navbar-nav ml-auto align-items-center">
             <li class="nav-item trending">
                 <a href="../../pages/dinning.php" class="navbar-brand">
-                    <img src="../pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
+                    <img src="../../resources/pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
                 </a>
             </li>
             <li class="nav-item post">
