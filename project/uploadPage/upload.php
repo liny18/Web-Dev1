@@ -128,14 +128,35 @@
                                 </select>
                             </div>
                             <div class="col-6 p-3">
-                                <select class="form-select" aria-label="Dining Hall Selection" name="tag1" required>
+                                <!-- <select class="form-select" aria-label="Dining Hall Selection" name="tag1" required>
                                     <option value="">What type of food was it?</option>
                                     <option value="Vegetarian">Vegetarian</option>
                                     <option value="Beef">Beef</option>
                                     <option value="Chicken">Chicken</option>
                                     <option value="Non-Dairy">Non-Dairy</option>
                                     <option value="Desert">Desert</option>
-                                </select>
+                                </select> -->
+                                <ul>
+                                    <li class="dropdown">
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown Form<b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox">Two
+                                                    </label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox">Two
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="row">
