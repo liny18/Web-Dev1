@@ -136,27 +136,23 @@
                                     <option value="Non-Dairy">Non-Dairy</option>
                                     <option value="Desert">Desert</option>
                                 </select> -->
-                                <ul>
-                                    <li class="dropdown">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown Form<b class="caret"></b></a>
-                                        <ul class="dropdown-menu">
-                                            <li>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox">Two
-                                                    </label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="checkbox">
-                                                    <label>
-                                                        <input type="checkbox">Two
-                                                    </label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" 
+                                    id="sampleDropdownMenu" data-toggle="dropdown">
+                                    Dropdown
+                                    </button>
+                                    <div class="dropdown-menu">
+                                    <button class="dropdown-item" type="button">
+                                    <input type="checkbox">Action
+                                    </button>
+                                    <button class="dropdown-item" type="button">
+                                    <input type="checkbox">Action
+                                    </button>
+                                    <button class="dropdown-item" type="button">
+                                    <input type="checkbox">Action
+                                    </button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
