@@ -140,17 +140,10 @@
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         Dropdown button
                                     </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action
-                                        </button>
-                                        <button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action
-                                        </button>
-                                        <button class="dropdown-item" type="button">
-                                        <input type="checkbox">Action
-                                        </button>
-                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li><label class="checkbox"><input type="checkbox">Two</label></li>
+                                        <li><label class="checkbox"><input type="checkbox">Two</label></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
