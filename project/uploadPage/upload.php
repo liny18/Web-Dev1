@@ -154,13 +154,10 @@
                                 </div> -->
                                 <form>
                                     <div class="dropdown">
-                                        <!-- <div class="selectBox" onclick="showCheckboxes()">
+                                        <div class="btn btn-secondary selectBox" onclick="showCheckboxes()">
                                         <select>
                                             <option>Select an option</option>
-                                        </select> -->
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
-                                        </button>
+                                        </select>
                                         <div class="overSelect"></div>
                                         </div>
                                         <div id="checkboxes">
