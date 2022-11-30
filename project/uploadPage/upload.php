@@ -155,8 +155,9 @@
                                 <form>
                                     <div class="dropdown">
                                         <div class="selectBox" onclick="showCheckboxes()">
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        </div>
+                                        <select>
+                                            <option>Select an option</option>
+                                        </select>
                                         <div class="overSelect"></div>
                                         </div>
                                         <div id="checkboxes">
