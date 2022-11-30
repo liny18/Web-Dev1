@@ -154,7 +154,7 @@
                                 </div> -->
                                 <form>
                                     <div class="dropdown">
-                                        <div class="btn btn-secondary selectBox" onclick="showCheckboxes()">
+                                        <div class="btn btn-secondary dropdown-toggle" onclick="showCheckboxes()">
                                         <select>
                                             <option>Select an option</option>
                                         </select>
