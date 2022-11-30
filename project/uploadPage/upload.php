@@ -136,7 +136,7 @@
                                     <option value="Non-Dairy">Non-Dairy</option>
                                     <option value="Desert">Desert</option>
                                 </select> -->
-                                <div class="dropdown">
+                                <!-- <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         Dropdown button
                                     </button>
@@ -151,7 +151,25 @@
                                         <input type="checkbox">Action</li>
                                         </button>
                                     </ul>
-                                </div>
+                                </div> -->
+                                <form>
+                                    <div class="multiselect">
+                                        <div class="selectBox" onclick="showCheckboxes()">
+                                        <select>
+                                            <option>Select an option</option>
+                                        </select>
+                                        <div class="overSelect"></div>
+                                        </div>
+                                        <div id="checkboxes">
+                                        <label for="one">
+                                            <input type="checkbox" id="one" />First checkbox</label>
+                                        <label for="two">
+                                            <input type="checkbox" id="two" />Second checkbox</label>
+                                        <label for="three">
+                                            <input type="checkbox" id="three" />Third checkbox</label>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <div class="row">
