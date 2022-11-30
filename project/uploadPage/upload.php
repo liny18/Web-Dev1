@@ -155,9 +155,7 @@
                                 <form>
                                     <div class="dropdown">
                                         <div class="btn btn-secondary dropdown-toggle" onclick="showCheckboxes()">
-                                        <select>
-                                            <option>Select an option</option>
-                                        </select>
+                                        Choose your tags
                                         <div class="overSelect"></div>
                                         </div>
                                         <div id="checkboxes">
