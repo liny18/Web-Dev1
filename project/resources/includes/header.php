@@ -54,7 +54,7 @@ if(array_key_exists('submitSearch', $_POST)){
                 </a>
             </li>
             <li class="nav-item post">
-                <a href="../../pages/upload.php" class="navbar-brand">
+                <a href="project/pages/upload.php" class="navbar-brand">
                     <img src="../../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
                 </a>
             </li>
