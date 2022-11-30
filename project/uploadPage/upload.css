@@ -78,29 +78,38 @@ a:active { text-decoration: none; }
 
 .multiselect {
     width: 200px;
-  }
-  
-  .selectBox {
+}
+
+.selectBox {
     position: relative;
-  }
-  
-  .overSelect {
+}
+
+.selectBox select {
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+}
+
+.overSelect {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-  }
-  
-  #checkboxes {
+}
+
+#checkboxes {
     display: none;
     border: 1px #dadada solid;
-  }
-  
-  #checkboxes label {
+}
+
+#checkboxes label {
     display: block;
-  }
-  
-  #checkboxes label:hover {
+}
+
+#checkboxes label:hover {
     background-color: #1e90ff;
-  }
+}
+
+.check {
+    margin: 10px 10px;
+}

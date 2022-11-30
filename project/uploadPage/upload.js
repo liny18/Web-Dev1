@@ -1,4 +1,4 @@
-// https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL - picture appears after input
+https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL - picture appears after input
 
 $(window).ready(centerPost);
 $(window).resize(centerPost);
