@@ -158,7 +158,7 @@
                                         <select>
                                             <option>Select an option</option>
                                         </select> -->
-                                        <button class="btn btn-secondary dropdown-toggle" onclick="showCheckboxes()" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                         Dropdown button
                                         </button>
                                         <div class="overSelect"></div>
