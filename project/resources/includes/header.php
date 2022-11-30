@@ -35,7 +35,7 @@ if(array_key_exists('submitSearch', $_POST)){
         RPI Foodies
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline justify-content-center align-items-center container" method="post" action="./header.php">
+        <form class="form-inline justify-content-center align-items-center container" method="post" action="../header.php">
             <div class="row">
                 <div class="col-11">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
@@ -49,7 +49,7 @@ if(array_key_exists('submitSearch', $_POST)){
         </form>
         <ul class="navbar-nav ml-auto align-items-center">
             <li class="nav-item trending">
-                <a href="../../pages/dinning.php" class="navbar-brand">
+                <a href="../../../pages/dinning.php" class="navbar-brand">
                     <img src="../../pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
                 </a>
             </li>
