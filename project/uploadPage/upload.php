@@ -137,11 +137,10 @@
                                     <option value="Desert">Desert</option>
                                 </select> -->
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" 
-                                    id="sampleDropdownMenu" data-toggle="dropdown">
-                                    Dropdown
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown button
                                     </button>
-                                    <div class="dropdown-menu">
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <button class="dropdown-item" type="button">
                                     <input type="checkbox">Action
                                     </button>
