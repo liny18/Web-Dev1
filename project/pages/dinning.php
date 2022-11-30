@@ -19,7 +19,7 @@
 <body>
   <!-- Top navbar includes links to login and search bar along with  -->
   <header>
-    <?php include '../resources/includes/header.php'; ?>
+    <?php include '../../resources/includes/header.php'; ?>
   </header>
 
   <div class="d-flex pt-5 align-items-center justify-content-center">
