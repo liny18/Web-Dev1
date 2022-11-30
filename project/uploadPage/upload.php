@@ -153,11 +153,10 @@
                                     </ul>
                                 </div> -->
                                 <form>
-                                    <div class="multiselect">
+                                    <div class="dropdown">
                                         <div class="selectBox" onclick="showCheckboxes()">
-                                        <select>
-                                            <option>Select an option</option>
-                                        </select>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        </div>
                                         <div class="overSelect"></div>
                                         </div>
                                         <div id="checkboxes">
