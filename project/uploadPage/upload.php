@@ -154,9 +154,9 @@
                                 </div> -->
                                 <form>
                                     <div class="dropdown">
-                                        <div class="" onclick="showCheckboxes()">
+                                        <div class="selectBox" onclick="showCheckboxes()">
                                         <select>
-                                            <option>Choose your tags</option>
+                                            <option>Select an option</option>
                                         </select>
                                         <div class="overSelect"></div>
                                         </div>
