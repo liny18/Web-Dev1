@@ -32,12 +32,12 @@
   <div class="l d-flex justify-content-between">
     <div class="d-flex align-content-center">
       <a href="#header">
-        <img src="../pictures/logo.png" alt="team-logo" class="cat-logo" style="width:30px; height:30px">
+        <img src="../../pictures/logo.png" alt="team-logo" class="cat-logo" style="width:30px; height:30px">
       </a>
       <p class="pl-3">© 2022 ErrorCats</p>
     </div>
     <a href="https://github.com/RPI-ITWS/ITWS2110-F22-ErrorCats" target="_blank">
-      <img class="git" src="../pictures/git.png" alt="git-link">
+      <img class="git" src="../../pictures/git.png" alt="git-link">
     </a>
   </div>
 </div>

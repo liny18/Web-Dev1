@@ -31,7 +31,7 @@ if(array_key_exists('submitSearch', $_POST)){
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-light">
     <a class="navbar-brand" href="../../pages/main.php">
-        <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
+        <img src="../../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
         RPI Foodies
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -42,7 +42,7 @@ if(array_key_exists('submitSearch', $_POST)){
                 </div>
                 <div class="col-1">
                     <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch">
-                        <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="30" height="30">
+                        <img src="../../pictures/search_ideogram.svg" alt="Magnifying glass" width="30" height="30">
                     </button>
                 </div>
             </div>
@@ -55,7 +55,7 @@ if(array_key_exists('submitSearch', $_POST)){
             </li>
             <li class="nav-item post">
                 <a href="../../pages/upload.php" class="navbar-brand">
-                    <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
+                    <img src="../../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
                 </a>
             </li>
             <li class="nav-item logOut">
