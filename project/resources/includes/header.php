@@ -24,13 +24,13 @@
 if(array_key_exists('submitSearch', $_POST)){
     $_SESSION['isSearch'] = true;
     $_SESSION['query'] = strtolower($_POST['search']);
-    header("Location: ../../pages/main.php");
+    header("Location: ../../../pages/main.php");
 }
 
 ?>
 
 <nav class="navbar navbar-expand-lg sticky-top navbar-light">
-    <a class="navbar-brand" href="../../pages/main.php">
+    <a class="navbar-brand" href="../../../pages/main.php">
         <img src="../../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
         RPI Foodies
     </a>
@@ -59,7 +59,7 @@ if(array_key_exists('submitSearch', $_POST)){
                 </a>
             </li>
             <li class="nav-item logOut">
-                <a href="../includes/phpcas/logout.php" class="navbar-brand">
+                <a href="../../includes/phpcas/logout.php" class="navbar-brand">
                     <button id="logOut" class="btn btn-outline-light" type="submit">Log Out</button>
                 </a>
             </li>
