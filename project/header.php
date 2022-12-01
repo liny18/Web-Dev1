@@ -49,18 +49,20 @@ if(array_key_exists('submitSearch', $_POST)){
         <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
         RPI Foodies
         </a>
-        <form class="d-flex" method="post" action="../header.php">
-        <div class="row">
-            <div class="col">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-            </div>
-            <div class="col">
-                <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
-                    <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
-                </button>
-            </div>
+        <div>
+            <form class="d-flex" method="post" action="../header.php">
+                <div class="row">
+                    <div class="col">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
+                            <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-        </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
