@@ -45,18 +45,18 @@ if(array_key_exists('submitSearch', $_POST)){
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="main/main.php">
-        <img src="pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
+        <a class="navbar-brand" href="../main/main.php">
+        <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
         RPI Foodies
         </a>
-        <form class="d-flex" method="post" action="header.php">
+        <form class="d-flex" method="post" action="../header.php">
         <div class="row">
             <div class="col">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
             </div>
             <div class="col">
                 <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
-                    <img src="pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
+                    <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
                 </button>
             </div>
         </div>
@@ -67,17 +67,17 @@ if(array_key_exists('submitSearch', $_POST)){
         <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
             <ul class="navbar-nav">
                 <li class="nav-item trending">
-                <a href="Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
-                    <img src="pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
+                <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
+                    <img src="../pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
                 </a>
                 </li>
                 <li class="nav-item post">
-                <a href="uploadPage/upload.php" class="navbar-brand" title="Upload">
-                    <img src="pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
+                <a href="../uploadPage/upload.php" class="navbar-brand" title="Upload">
+                    <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
                 </a>
                 </li>
                 <li class="nav-item logOut">
-                <a href="phpcas/logout.php" class="navbar-brand">
+                <a href="../phpcas/logout.php" class="navbar-brand">
                     <button id="logOut" class="btn btn-outline-light" type="submit">Log Out</button>
                 </a>
                 </li>
