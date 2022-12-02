@@ -71,17 +71,17 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end col-3 p-1" id="navbarScroll">
             <ul class="navbar-nav">
-                <li class="nav-item trending">
+                <li class="nav-item trending mt-0">
                     <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
                         <img src="../pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
                     </a>
                 </li>
-                <li class="nav-item post">
+                <li class="nav-item post mt-0">
                     <a href="../uploadPage/upload.php" class="navbar-brand" title="Upload">
                         <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
                     </a>
                 </li>
-                <li class="nav-item logOut">
+                <li class="nav-item logOut mt-0">
                     <a href="../phpcas/logout.php" class="navbar-brand">
                         <button id="logOut" class="btn btn-outline-light" type="submit">Log Out</button>
                     </a>
