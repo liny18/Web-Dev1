@@ -214,6 +214,64 @@
         </form>
     </main>
 
+    <br>
+
+    <main>
+        <form id="uploadPost" class="container" action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <section id="uploadPhoto" class="col shadow-lg p-3 mb-5 bg-body rounded">
+                    <h1 class="picTitle">Upload Image</h1>
+                    <hr class="bg-dark border-5 border-top border-dark">
+                    <input class="form-control" type="file" id="postPhoto" accept="image/jpg, image/png, image/jpeg"
+                        name="postPhoto" value="" onchange="previewFile()" required />
+                    <div class="imgCont"><img src="#" alt="Image preview" class="photo" /></div>
+                </section>
+                <section class="col shadow-lg p-3 mb-5 bg-body rounded">
+                    <h1 class="Caption">Finish Your Post!</h1>
+                    <hr class="bg-dark border-5 border-top border-dark">
+                    <div id="postText">
+                        <div class="form-floating fix-floating-label p-1">
+                            <textarea class="form-control" id="Caption" rows="5" name="caption" required></textarea>
+                            <label class="form-label" for="Caption">Enter A Caption</label>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 p-3">
+                                <select name="Location" id="Location" class="form-select"
+                                    aria-label="Dining Hall Selection" required>
+                                    <option value="">Select a Dining Hall</option>
+                                    <option value="Commons">Commons</option>
+                                    <option value="Sage">Sage</option>
+                                    <option value="Blitman">Blitman</option>
+                                    <option value="Barh">BarH</option>
+                                </select>
+                            </div>
+                            <div class="col-6 p-3">
+                                <select class="form-select" aria-label="Dining Hall Selection" name="tag1" required>
+                                    <option value="">What type of food was it?</option>
+                                    <option value="Vegetarian">Vegetarian</option>
+                                    <option value="Beef">Beef</option>
+                                    <option value="Chicken">Chicken</option>
+                                    <option value="Non-Dairy">Non-Dairy</option>
+                                    <option value="Desert">Desert</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- WHEN READING THIS IN AS DATA CONVERT IT TO ALL LOWERCASE USING EITHER JS OR PHP CAN DO BOTH -->
+                            <div class="form-floating fix-floating-label p-1">
+                                <input type="text" class="form-control" id="foodName" placeholder="Name of the Dish"
+                                    name="foodName" required>
+                                <label for="foodName">Name of the Dish</label>
+                            </div>
+                        </div>
+                        <button type="submit" id="postButton" class="btn" value="submitUpload"
+                            name="submitUpload">Post!</button>
+                    </div>
+                </section>
+            </div>
+        </form>
+    </main>
+
     <!-- ADD FOOTER -->
     <footer>
         <?php include '../footer.html'; ?>
