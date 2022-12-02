@@ -53,8 +53,8 @@
         <div class="col-3">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
+                RPI Foodies
             </a>
-            RPI Foodies
         </div>
         <form class="container d-flex" method="post" action="../headerLogin.php">
             <div class="col m-1">
