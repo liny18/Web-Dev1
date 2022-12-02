@@ -62,7 +62,7 @@
                 <form class="d-flex" method="post" action="../header.php">
                     <div class="row">
                         <div class="col">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Searc" aria-label="Search" name="search">
                         </div>
                         <div class="col">
                             <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
