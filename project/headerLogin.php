@@ -1,11 +1,11 @@
 <?php
-@session_start();
+// @session_start();
 
-if(array_key_exists('submitSearch', $_POST)){
-    $_SESSION['isSearch'] = true;
-    $_SESSION['query'] = strtolower($_POST['search']);
-    header("Location: main/main.php");
-}
+// if(array_key_exists('submitSearch', $_POST)){
+//     $_SESSION['isSearch'] = true;
+//     $_SESSION['query'] = strtolower($_POST['search']);
+//     header("Location: main/main.php");
+// }
 
 ?>
 
