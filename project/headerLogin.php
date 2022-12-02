@@ -47,11 +47,11 @@
             <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
             RPI Foodies
         </a>
-        <form class="container d-flex align-content-center justify-content-center" method="post" action="../headerLogin.php">
-            <div class="col m-2">
+        <form class="container d-flex" method="post" action="../headerLogin.php">
+            <div class="col m-1">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
             </div>
-            <div class="col">
+            <div class="col m-1">
                 <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
                     <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
                 </button>
