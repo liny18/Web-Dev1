@@ -33,7 +33,7 @@
     </header>
 
     <div class="d-flex pt-5 align-items-center justify-content-center">
-      <h1 class="">Dining Halls</h1>
+      <h1 class="">Dinin Halls</h1>
     </div>
     <div class="p-5">
       <div class="container">
