@@ -42,7 +42,7 @@
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container-fluid d-flex">
+    <div class="container-fluid">
         <a class="navbar-brand col-3" href="../main/main.php">
             <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
             RPI Foodies
