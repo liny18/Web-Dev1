@@ -69,7 +69,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse align-items-center align-content-center justify-content-end col-3" id="navbarScroll">
+        <div class="container collapse navbar-collapse justify-content-end col-3" id="navbarScroll">
             <ul class="navbar-nav">
                 <li class="nav-item trending">
                     <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
