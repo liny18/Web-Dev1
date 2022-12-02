@@ -22,7 +22,7 @@
         <?php include '../headerLogin.php'; ?>
     </header>
 
-    <main>
+    <!-- <main>
         <h1 class="main-slogan"> RPI Foodies, find out what you love!</h1>
         <div class="row">
             <div class="colm-logo">
@@ -31,50 +31,50 @@
             <div class="colm-form">
                 <div class="form-container">
                     <?php
-                    include_once("./CAS-1.4.0/CAS.php");
-                    phpCAS::client(CAS_VERSION_2_0, 'cas.auth.rpi.edu', 443, '/cas');
+                    // include_once("./CAS-1.4.0/CAS.php");
+                    // phpCAS::client(CAS_VERSION_2_0, 'cas.auth.rpi.edu', 443, '/cas');
 
-                    // This is not recommended in the real world!
-                    // But we don't have the apparatus to install our own certs...
-                    phpCAS::setNoCasServerValidation();
+                    // // This is not recommended in the real world!
+                    // // But we don't have the apparatus to install our own certs...
+                    // phpCAS::setNoCasServerValidation();
 
-                    if (phpCAS::isAuthenticated()) {
-                        try {
-                            // connect to database using pdo
-                            $db = new PDO('mysql:host=localhost;dbname=rpiFoodies', 'root', '');
-                            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                        } catch (PDOException $e) {
-                            echo "Connection failed: " . $e->getMessage();
-                        }
+                    // if (phpCAS::isAuthenticated()) {
+                    //     try {
+                    //         // connect to database using pdo
+                    //         $db = new PDO('mysql:host=localhost;dbname=rpiFoodies', 'root', '');
+                    //         $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    //     } catch (PDOException $e) {
+                    //         echo "Connection failed: " . $e->getMessage();
+                    //     }
 
-                        // get the user's username, this is the RCS id of the user, this is the userID in the table
-                        $username = phpCAS::getUser();
-                        // check if the userID is already in the database, if not, insert the userID into the database, and make the username same with the userID as default
-                        // if the userID is already in the database, do nothing
-                        $sql = $db->prepare("SELECT * FROM users WHERE username = :username");
-                        $sql->execute([":username" => $username]);
-                        $result = $sql->fetch();
-                        if ($result[0]==0) {
-                            $sql = $db->prepare( "INSERT INTO users (username, admin) VALUES (:username, 0)");
-                            $sql->execute([":username" => $username]);
-                        }
+                    //     // get the user's username, this is the RCS id of the user, this is the userID in the table
+                    //     $username = phpCAS::getUser();
+                    //     // check if the userID is already in the database, if not, insert the userID into the database, and make the username same with the userID as default
+                    //     // if the userID is already in the database, do nothing
+                    //     $sql = $db->prepare("SELECT * FROM users WHERE username = :username");
+                    //     $sql->execute([":username" => $username]);
+                    //     $result = $sql->fetch();
+                    //     if ($result[0]==0) {
+                    //         $sql = $db->prepare( "INSERT INTO users (username, admin) VALUES (:username, 0)");
+                    //         $sql->execute([":username" => $username]);
+                    //     }
 
-                        // get the userID from the database
-                        $sql = $db->prepare( "SELECT userID FROM users WHERE username = :username");
-                        $result = $sql->execute([":username" => $username]);
-                        $row = $sql->fetch();
-                        $_SESSION['userID'] = $row['userID'];
-                        header("Location: ../main/main.php");
-                    } else {
-                        echo "<a href='login.php' class='login_button'>Login</a>";
-                    }
+                    //     // get the userID from the database
+                    //     $sql = $db->prepare( "SELECT userID FROM users WHERE username = :username");
+                    //     $result = $sql->execute([":username" => $username]);
+                    //     $row = $sql->fetch();
+                    //     $_SESSION['userID'] = $row['userID'];
+                    //     header("Location: ../main/main.php");
+                    // } else {
+                    //     echo "<a href='login.php' class='login_button'>Login</a>";
+                    // }
                     ?>
                     <p class="cas_info">*This website is connected to RPI CAS login system, you need to have a RPI
                         account to login.</p>
                 </div>
             </div>
         </div>
-    </main>
+    </main> -->
     <footer>
         <?php include '../footer.html'; ?>
     </footer>
