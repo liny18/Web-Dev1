@@ -216,6 +216,11 @@
 
     <br>
 
+    <!-- ADD FOOTER -->
+    <footer>
+        <?php include '../footer.html'; ?>
+    </footer>
+
     <main>
         <form id="uploadPost" class="container" action="upload.php" method="post" enctype="multipart/form-data">
             <div class="row">
@@ -271,11 +276,6 @@
             </div>
         </form>
     </main>
-
-    <!-- ADD FOOTER -->
-    <footer>
-        <?php include '../footer.html'; ?>
-    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
