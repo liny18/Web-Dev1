@@ -44,7 +44,7 @@
 
     .trending:hover,
     .post:hover,
-    .navbar-brand:hover {
+    .nav-logo:hover {
         transform: scale(1.1);
     }
 </style>
