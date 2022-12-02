@@ -48,14 +48,14 @@
             RPI Foodies
         </a>
         <form class="container d-flex" method="post" action="../headerLogin.php">
-                <div class="col">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-                </div>
-                <div class="col">
-                    <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
-                        <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
-                    </button>
-                </div>
+            <div class="col m-2">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            </div>
+            <div class="col">
+                <button class="btn btn-outline-light" type="submit" name="submitSearch" id="submitSearch" value="submitSearch" title="Search">
+                    <img src="../pictures/search_ideogram.svg" alt="Magnifying glass" width="25" height="25">
+                </button>
+            </div>
         </form>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
