@@ -25,6 +25,16 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0d_qUGjTvVflSTk7-WhGem3bq7bhARUk&callback=initMap">
     </script>
   <title>RPI Foodies</title>
+  <style>
+    .card {
+      background-color: #f04320;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      margin: 10px;
+    }
+
+  </style>
 </head>
 
 <body>
