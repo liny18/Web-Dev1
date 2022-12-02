@@ -37,21 +37,19 @@
     }
 
     .trending,
-    .post,
-    .n {
+    .post {
         transition: 0.5s;
     }
 
     .trending:hover,
-    .post:hover,
-    .n:hover {
+    .post:hover {
         transform: scale(1.1);
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container-fluid d-flex align-items-center">
         <div class="col-3">
-            <a class="navbar-brand n" href="../main/main.php">
+            <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
                 RPI Foodies
             </a>
