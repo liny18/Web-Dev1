@@ -47,7 +47,7 @@
             <img src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
             RPI Foodies
         </a>
-        <form class="d-flex col-3" method="post" action="../headerLogin.php">
+        <form class="container" method="post" action="../headerLogin.php">
             <div class="row">
                 <div class="col">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
