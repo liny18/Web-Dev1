@@ -20,6 +20,7 @@
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
         background-color: #f04320;
         padding: 5px;
+        margin: 5px;
     }
 
     .navbar .navbar-nav {
@@ -49,7 +50,7 @@
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="container-fluid align-content-center">
+    <div class="container-fluid">
         <div class="col-3">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40" style="border-radius: 50%;">
