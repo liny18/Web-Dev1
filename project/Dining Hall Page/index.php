@@ -24,6 +24,7 @@
 
 <body>
   <!-- Top navbar includes links to login and search bar along with  -->
+  <div id="content-wrap">
   <header>
     <?php include '../header.php'; ?>
   </header>
@@ -201,6 +202,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <footer>

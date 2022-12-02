@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <div id="content-wrap">
   <header>
     <?php include '../header.php'; ?>
   </header>
@@ -378,7 +379,7 @@
       </div>
     </div>
   </div>
-
+  </div>
   <footer>
     <?php include '../footer.html'; ?>
   </footer>

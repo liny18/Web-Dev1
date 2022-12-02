@@ -18,7 +18,10 @@
 </head>
 
 <body>
-    <?php include '../headerLogin.php'; ?>
+    <div id="content-wrap">
+    <header>
+        <?php include '../headerLogin.php'; ?>
+    </header>
 
     <main>
         <h1 class="main-slogan"> RPI Foodies, find out what you love!</h1>
@@ -73,6 +76,7 @@
             </div>
         </div>
     </main>
+    </div>
     <footer>
         <?php include '../footer.html'; ?>
     </footer>
