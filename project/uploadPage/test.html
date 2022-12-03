@@ -18,96 +18,16 @@
 
     <div id="content-wrap">
         <header>
-            <?php include '../header.php'; ?>
         </header>
-
-
-        <?php
-
-
-        // we want to accept the form and upload everything to our server
-        
-        @session_start();
-
-        $servername = "localhost";
-        $database = "rpiFoodies";
-        $username = "root";
-        $password = "";
-
-        $conn;
-
-        function checkFile($file)
-        {
-            $allowed = array("jpg", "jpeg", "png");
-            if (in_array($file, $allowed)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        try {
-            $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-            // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        } catch (PDOException $e) {
-            echo "Connection failed: " . $e->getMessage();
-        }
-
-        if (array_key_exists('submitUpload', $_POST)) {
-            // create an insert statement
-            $upload = $conn->prepare("INSERT INTO Posts (postTime, userID, likes, mainComment, postPhoto, location, tag1, foodName) VALUES (NOW(), :userID, 0, :mainComment, :postPhoto, :location, :tag1, :foodName)");
-
-            // get file name and location
-            $fileName = $_FILES['postPhoto']['name'];
-            $ext = pathinfo($fileName, PATHINFO_EXTENSION);
-            $fileTmpName = $_FILES['postPhoto']['tmp_name'];
-
-            if (checkFile($ext)) {
-
-
-                // transfer and hash the filename
-                move_uploaded_file($fileTmpName, "../postImages/$fileName");
-
-                $hash = hash_file('sha256', "../postImages/$fileName");
-
-                $out = "$hash.$ext";
-
-
-                // // rename the file
-                rename("../postImages/$fileName", "../postImages/$out");
-
-                // // set the file name to the hashed name
-                $fileName = $out;
-
-
-                // grab all the data from the form
-                $userID = $_SESSION['userID'];
-                $mainComment = $_POST['caption'];
-                $location = $_POST['Location'];
-                $tag1 = $_POST['tag1'];
-                $foodName = $_POST['foodName'];
-
-                // execute the insert statement
-                $upload->execute([':userID' => $userID, ':mainComment' => $mainComment, ':postPhoto' => $fileName, ':location' => $location, ':tag1' => $tag1, ':foodName' => $foodName]);
-
-            } else {
-                echo "<h2 class='text-center h2'>File type not supported</h2>";
-                echo "<h3 class='text-center h3'>Please upload a .jpg, .jpeg, or .png file</h3>";
-            }
-        }
-
-        ?>
-
-<main>
+        <main>
             <form id="uploadPost" class="container" action="upload.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <section id="uploadPhoto" class="col shadow-lg p-3 mb-5 bg-body rounded position-relative">
                         <h1 class="picTitle">Upload Image</h1>
                         <hr class="bg-dark border-5 border-top border-dark">
-                        <input class="form-control w-75 mb-5 mt-lg-5" type="file" id="postPhoto" accept="image/jpg, image/png, image/jpeg"
-                        name="postPhoto" value="" onchange="previewFile()" required />
-                        <div class="imgCont"><img src="#" alt="Image preview" class="photo" /></div>
+                          <input class="form-control w-75 mb-5 mt-lg-5" type="file" id="postPhoto" accept="image/jpg, image/png, image/jpeg"
+                          name="postPhoto" value="" onchange="previewFile()" required />
+                          <div class="imgCont"><img src="#" alt="Image preview" class="photo" /></div>
                     </section>
                     <section class="col shadow-lg p-3 mb-5 bg-body rounded">
                         <h1 class="Caption">Finish Your Post!</h1>
@@ -148,8 +68,8 @@
                                 </div>
                             </div>
                             <div class="row text-center pe-3 ps-3">
-                                <button type="submit" id="postButton" class="btn" value="submitUpload"
-                                name="submitUpload">Post!</button>
+                              <button type="submit" id="postButton" class="btn" value="submitUpload"
+                              name="submitUpload">Post!</button>
                             </div>
                         </div>
                     </section>
@@ -160,7 +80,6 @@
 
     <!-- ADD FOOTER -->
     <footer>
-        <?php include '../footer.html'; ?>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
