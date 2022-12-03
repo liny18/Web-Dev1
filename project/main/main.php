@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="main.css">
   <link rel="icon" type="image/x-icon" href="../pictures/RPIFoodies.png">
   <title>RPI Foodies</title>
-  <script src="https://kit.fontawesome.com/bb67f860a0.js" crossorigin="anonymous"></script>
+  <script defer src="https://kit.fontawesome.com/bb67f860a0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
