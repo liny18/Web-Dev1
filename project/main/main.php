@@ -195,7 +195,8 @@
                 $stmt->bindValue(':task_id', $row[$i]['userID']);
                 $stmt->execute();
                 $user = $stmt->fetchAll();
-                echo '<div class="card-header p-2"> <div class="location p-2">';
+                echo '<div class="card-header p-2">';
+                echo '<div class="location p-2">';
                 echo '<i class="fa-solid fa-location-arrow"></i> ' . $row[$i]['location'] . '</div>';
                 echo '<p class="time"><i class="fa-solid fa-clock"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
                 echo '</div>';
