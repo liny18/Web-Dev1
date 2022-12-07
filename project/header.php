@@ -53,7 +53,7 @@ if(array_key_exists('submitSearch', $_POST)){
     }
 </style>
 <nav class="navbar navbar-light sticky-top">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex flex-column align-items-center justify-content-between">
         <div class="col-3">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40"
