@@ -61,8 +61,8 @@ if(array_key_exists('submitSearch', $_POST)){
                 RPI Foodies
             </a>
         </div>
-        <div>
-        <form class="container d-flex" method="post" action="../headerLogin.php">
+        <div class="container">
+        <form class="d-flex" method="post" action="../headerLogin.php">
             <div class="col m-1">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                     name="search">
