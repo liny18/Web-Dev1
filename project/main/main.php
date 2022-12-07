@@ -195,13 +195,28 @@
                 $stmt->bindValue(':task_id', $row[$i]['userID']);
                 $stmt->execute();
                 $user = $stmt->fetchAll();
-                echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
-                echo '<button type="submit" name="submit" value="submit" class="btn btn-danger">' . $user[0]['username'] . '</button>';
-                echo '</form>';
                 echo '<div class="card-header p-2"> <div class="location p-2">';
                 echo '<i class="fa-solid fa-location-arrow"></i> ' . $row[$i]['location'] . '</div>';
                 echo '<p class="time"><i class="fa-solid fa-clock"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
                 echo '</div>';
+                echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
+                echo '<button type="submit" name="submit" value="submit" class="btn btn-danger">' . $user[0]['username'] . '</button>';
+                echo '</form>';
+                if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+                  if($row[$i]['admin'] == 1){
+                    echo '<form action="main.php" method="post">';
+                    echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                    echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
+                    echo '</form>';
+                  } else {
+                    echo '<form action="main.php" method="post">';
+                    echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                    echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
+                    echo '</form>';
+                  }
+                } else {
+                  echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
+                }
                 echo '<img class="card-img-top" src="../postImages/' . $row[$i]['postPhoto'] . '"alt="Card image">';
                 echo '<div class="card-body"><h5 class="card-title"><i class="fa-solid fa-tags"></i> ';
                 echo $row[$i]['tag1'] . '</h5>';
@@ -218,24 +233,6 @@
                 echo '" onclick="likeCounter(' . $row[$i]['postID'] . ', ' . $_SESSION['userID'];
                 echo ', this)"><i class="fa-regular fa-heart';
                 echo '"></i> ' . $row[$i]['likes'] . ' likes</button>';
-                if($row[$i]['admin'] == 1){
-                  echo '<button type="button" class="btn btn-info"> Admin </button>';
-                } 
-                if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
-                  if($row[$i]['admin'] == 1){
-                    echo '<form action="main.php" method="post">';
-                    echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                    echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
-                    echo '</form>';
-                  } else {
-                    echo '<form action="main.php" method="post">';
-                    echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                    echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
-                    echo '</form>';
-                  }
-                } else {
-                  echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
-                }
                 echo '<div class="comment"><i class="fa-regular fa-comment"></i> ';
                 echo 0 . ' comments</div></div></div>';
                 // ADD A BUTTON THAT ON SUBMIT WILL INCREMENT LIKES BY 1 
@@ -265,13 +262,28 @@
               $stmt->bindValue(':task_id', $row[$i]['userID']);
               $stmt->execute();
               $user = $stmt->fetchAll();
-              echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
-              echo '<button type="submit" name="submit" value="submit" class="btn btn-danger">' . $user[0]['username'] . '</button>';
-              echo '</form>';
               echo '<div class="card-header p-2"> <div class="location p-2">';
               echo '<i class="fa-solid fa-location-arrow"></i> ' . $row[$i]['location'] . '</div>';
               echo '<p class="time"><i class="fa-solid fa-clock"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
               echo '</div>';
+              echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
+              echo '<button type="submit" name="submit" value="submit" class="btn btn-danger">' . $user[0]['username'] . '</button>';
+              echo '</form>';
+              if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+                if($row[$i]['admin'] == 1){
+                  echo '<form action="main.php" method="post">';
+                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                  echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
+                  echo '</form>';
+                } else {
+                  echo '<form action="main.php" method="post">';
+                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                  echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
+                  echo '</form>';
+                }
+              } else {
+                echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
+              }
               echo '<img class="card-img-top" src="../postImages/' . $row[$i]['postPhoto'] . '"alt="Card image">';
               echo '<div class="card-body"><h5 class="card-title"><i class="fa-solid fa-tags"></i> ';
               echo $row[$i]['tag1'] . '</h5>';
@@ -287,24 +299,6 @@
               echo '" onclick="likeCounter(' . $row[$i]['postID'] . ', ' . $_SESSION['userID'];
               echo ', this)"><i class="fa-regular fa-heart';
               echo '"></i> ' . $row[$i]['likes'] . ' likes</button>';
-              if($row[$i]['admin'] == 1){
-                echo '<button type="button" class="btn btn-info"> Admin </button>';
-              } 
-              if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
-                if($row[$i]['admin'] == 1){
-                  echo '<form action="main.php" method="post">';
-                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                  echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
-                  echo '</form>';
-                } else {
-                  echo '<form action="main.php" method="post">';
-                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                  echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
-                  echo '</form>';
-                }
-              } else {
-                echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
-              }
               echo '<div class="comment"><i class="fa-regular fa-comment"></i> ';
               echo 0 . ' comments</div></div></div>';
             }
@@ -329,6 +323,21 @@
               echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
               echo '<button type="submit" name="submit" value="submit" class="btn btn-danger">' . $user[0]['username'] . '</button>';
               echo '</form>';
+              if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+                if($row[$i]['admin'] == 1){
+                  echo '<form action="main.php" method="post">';
+                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                  echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
+                  echo '</form>';
+                } else {
+                  echo '<form action="main.php" method="post">';
+                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
+                  echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
+                  echo '</form>';
+                }
+              } else {
+                echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
+              }
               echo '<div class="card-header p-2"> <div class="location p-2">';
               echo '<i class="fa-solid fa-location-arrow"></i> ' . $row[$i]['location'] . '</div>';
               echo '<p class="time"><i class="fa-solid fa-clock"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
@@ -349,24 +358,6 @@
               echo '" onclick="likeCounter(' . $row[$i]['postID'] . ', ' . $_SESSION['userID'];
               echo ', this)"><i class="fa-regular fa-heart';
               echo '"></i> ' . $row[$i]['likes'] . ' likes</button>';
-              if($row[$i]['admin'] == 1){
-                echo '<button type="button" class="btn btn-info"> Admin </button>';
-              } 
-              if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
-                if($row[$i]['admin'] == 1){
-                  echo '<form action="main.php" method="post">';
-                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                  echo '<button type="submit" name="deleteAdmin" value="deleteAdmin" class="btn btn-danger">Delete</button>';
-                  echo '</form>';
-                } else {
-                  echo '<form action="main.php" method="post">';
-                  echo  '<input type="hidden" name="postID" value=" ' . $row[$i]['postID'] . '"/>';
-                  echo '<button type="submit" name="delete" value="delete" class="btn btn-danger">Delete</button>';
-                  echo '</form>';
-                }
-              } else {
-                echo '<button type="button" class="btn btn-danger" onclick="report('.$row[$i]['postID'].", ".$_SESSION['userID'].', this)"> Report </button>';
-              }
               echo '<div class="comment"><i class="fa-regular fa-comment"></i> ';
               echo 0 . ' comments</div></div></div>';
             }
