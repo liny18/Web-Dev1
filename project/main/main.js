@@ -28,3 +28,11 @@ function report(postID, userID, element){
     xmlhttp.open("POST", "report.php?postID=" + postID + "&userID=" + userID, true);
     xmlhttp.send();    
 }
+
+// https://stackoverflow.com/questions/454202/creating-a-textarea-with-auto-resize
+$("textarea").each(function () {
+    this.setAttribute("style", "height:" + (Math.max(30, this.scrollHeight)) + "px;overflow-y:hidden;");
+}).on("input", function () {
+    this.style.height = 0;
+    this.style.height = (this.scrollHeight) + "px";
+});

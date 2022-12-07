@@ -329,6 +329,11 @@
               echo '<div class="card-header p-2">';
               echo '<div class="d-flex justify-content-between p-1">';
               echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
+              if ($row[$i]['admin'] == 1) {
+                echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . ' <i class="far fa-check-circle text-primary" title="Admin"></i>' . '</button>';
+              } else {
+                echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . '</button>';
+              }
               echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . '</button>';
               echo '</form>';
               if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
@@ -422,3 +427,141 @@
 </body>
 
 </html>
+
+        <!-------------------------------------------------------------------->
+        <!-- Comment Modal -->
+        <!--
+            <div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="commentModalLabel">Comments</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" style="background-color: #f7f6f6;">
+                    <section>
+                      <div class="container">
+                        <div class="row d-flex">
+                          <div class="container w-100 d-flex justify-content-between" id="comment">
+                            <div class="me-1">
+                              <img class="rounded-circle shadow-1-strong"
+                                  src="../postImages/image.png" alt="avatar" width="40"
+                                  height="40" />
+                            </div>
+                            <div class="f">
+                              <form>
+                                <textarea placeholder='Add Your Comment'></textarea>
+                                <div class="d-flex justify-content-between">
+                                  <input class="btn btn-dark" type="submit" value='Comment'>
+                                  <div class="d-flex justify-content-between">
+                                    <div class="card m-0">
+                                      <div class="card-body p-1 d-flex align-items-center">
+                                        <h6 class="text-primary fw-bold small mb-0 me-2">Sort by Likes</h6>
+                                        <div class="form-check form-switch pt-1">
+                                          <input class="form-check-input" type="checkbox" id="switch" />
+                                          <label class="form-check-label" for="switch"></label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="card mb-3">
+                              <div class="card-body">
+                                <div class="d-flex flex-start">
+                                  <img class="rounded-circle shadow-1-strong me-3"
+                                    src="../postImages/image.png" alt="avatar" width="40"
+                                    height="40" />
+                                  <div class="w-100">
+                                    <div class="d-flex text-start flex-column">
+                                      <div>
+                                        <h6 class="color fw-bold">
+                                          Ryan Hickey
+                                          <i class="far fa-check-circle text-primary" title="Admin"></i>
+                                        </h6>
+                                      </div>
+                                      <div class="border-top border-bottom pt-2 pb-2">
+                                        <p class="mb-0">
+                                          Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad Gigachad
+                                        </p>
+                                      </div>
+                                      <div>
+                                        <p class="small text-secondary mb-1">
+                                          2 hours ago
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="semi-like border-0 p-0 bg-transparent">
+                                        <i class="fa-regular fa-heart"></i>
+                                        3 likes
+                                      </div>
+                                      <div>
+                                        <button class="edit btn btn-link p-0 me-1 text-decoration-none">
+                                          Edit
+                                        </button>
+                                        <button class="del btn btn-link p-0 text-danger text-decoration-none">
+                                          Delete
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                    
+                            <div class="card mb-3">
+                              <div class="card-body">
+                                <div class="d-flex flex-start">
+                                  <img class="rounded-circle shadow-1-strong me-3"
+                                    src="../pictures/nerd.jpg" alt="avatar" width="40"
+                                    height="40" />
+                                  <div class="w-100">
+                                    <div class="d-flex text-start flex-column">
+                                      <div>
+                                        <h6 class="color fw-bold">
+                                          Bo Zo
+                                        </h6>
+                                      </div>
+                                      <div class="border-top border-bottom pt-2 pb-2">
+                                        <p class="mb-0">
+                                          But actually...uhhh
+                                        </p>
+                                      </div>
+                                      <div>
+                                        <p class="small text-secondary mb-1">
+                                          3 days ago
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                      <div class="semi-like border-0 p-0 bg-transparent">
+                                        <i class="fa-regular fa-heart"></i>
+                                        0 likes
+                                      </div>
+                                      <div>
+                                        <button class="edit btn btn-link p-0 me-1 text-decoration-none">
+                                          Edit
+                                        </button>
+                                        <button class="del btn btn-link p-0 text-danger text-decoration-none">
+                                          Delete
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+          <!-------------------------------------------------------------------->
