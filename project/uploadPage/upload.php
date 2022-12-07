@@ -31,8 +31,8 @@
 
         $servername = "localhost";
         $database = "rpiFoodies";
-        $username = "root";
-        $password = "";
+        $username = "phpmyadmin";
+        $password = "Xlkswdhood00";
 
         $conn;
 

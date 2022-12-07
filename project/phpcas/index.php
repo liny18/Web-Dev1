@@ -48,7 +48,7 @@
                         if (phpCAS::isAuthenticated()) {
                             try {
                                 // connect to database using pdo
-                                $db = new PDO('mysql:host=localhost;dbname=rpiFoodies', 'root', '');
+                                $db = new PDO('mysql:host=localhost;dbname=rpiFoodies', 'phpmyadmin', 'Xlkswdhood00');
                                 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             } catch (PDOException $e) {
                                 echo "Connection failed: " . $e->getMessage();

@@ -9,8 +9,8 @@ if ($userID != $_SESSION['userID']) {
 $postID = $_GET['postID'];
 $servername = "localhost";
 $database = "rpiFoodies";
-$username = "root";
-$password = "";
+$username = "phpmyadmin";
+$password = "Xlkswdhood00";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
