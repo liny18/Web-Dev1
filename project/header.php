@@ -61,7 +61,6 @@ if(array_key_exists('submitSearch', $_POST)){
                 RPI Foodies
             </a>
         </div>
-        <div class="container">
         <form class="d-flex" method="post" action="../headerLogin.php">
             <div class="col m-1">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
@@ -74,14 +73,10 @@ if(array_key_exists('submitSearch', $_POST)){
                 </button>
             </div>
         </form>
-        </div>
-        <div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        </div>
-
         <!-- <div class="collapse navbar-collapse justify-content-end p-1" id="navbarScroll">
             <ul class="navbar-nav">
                 <li class="nav-item trending mt-0">
