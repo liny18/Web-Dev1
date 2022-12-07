@@ -91,19 +91,18 @@ if(array_key_exists('submitSearch', $_POST)){
                 </li>
                 <li class="nav-item post mt-0">
                     <?php
-                        // echo '';
-                        // echo '<form class="navbar-brand" action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
-                        // echo '<button class="icon" title="Profile" type="submit" name="submit" value="submit" ><img src="../pictures/profilepic.png" alt="profile" width="40" height="40"></button>';
-                        // echo '</form>';
+                        echo '<form class="navbar-brand" action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
+                        echo '<button class="icon" title="Profile" type="submit" name="submit" value="submit" ><img src="../pictures/profilepic.png" alt="profile" width="40" height="40"></button>';
+                        echo '</form>';
                     ?>
                 </li>
-                <?php
-                        // echo '<li class="nav-item logOut mt-0">';
-                        // echo '<a href="../AdminPage/index.php" class="navbar-brand">';
-                        // echo '<button class="btn btn-outline-light">Reported Posts</button>';
-                        // echo '</a>';
-                        // echo '</li>';
-                ?>
+                    <?php
+                        echo '<li class="nav-item logOut mt-0">';
+                        echo '<a href="../AdminPage/index.php" class="navbar-brand">';
+                        echo '<button class="btn btn-outline-light">Reported Posts</button>';
+                        echo '</a>';
+                        echo '</li>';
+                    ?>
                 <li class="nav-item logOut mt-0">
                     <a href="../phpcas/logout.php" class="navbar-brand">
                         <button id="logOut" class="btn btn-outline-light" type="submit">Log Out</button>
