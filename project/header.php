@@ -73,20 +73,20 @@ if(array_key_exists('submitSearch', $_POST)){
                 </button>
             </div>
         </form>
-        <button class="col-1 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        <button class="col-1 navbar-toggler" title="Menu" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end p-1" id="navbarScroll">
             <ul class="navbar-nav">
-                <li class="nav-item dining mt-0">
-                    <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
-                        <img src="../pictures/diningicon.ico" alt="Dining Hall Information" width="40" height="40">
-                    </a>
-                </li>
                 <li class="nav-item post mt-0">
                     <a href="../uploadPage/upload.php" class="navbar-brand" title="Upload">
                         <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
+                    </a>
+                </li>
+                <li class="nav-item dining mt-0">
+                    <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
+                        <img src="../pictures/diningicon.ico" alt="Dining Hall Information" width="40" height="40">
                     </a>
                 </li>
                 <li class="nav-item post mt-0">
