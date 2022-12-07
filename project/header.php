@@ -54,7 +54,7 @@ if(array_key_exists('submitSearch', $_POST)){
 </style>
 <nav class="navbar navbar-light sticky-top">
     <div class="container-fluid d-flex flex-row align-items-center justify-content-between">
-        <div class="col-3">
+        <div class="col">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40"
                     style="border-radius: 50%;">
@@ -73,7 +73,7 @@ if(array_key_exists('submitSearch', $_POST)){
                 </button>
             </div>
         </form>
-        <button class="col-3 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        <button class="col navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
