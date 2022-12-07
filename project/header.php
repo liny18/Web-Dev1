@@ -54,7 +54,7 @@ if(array_key_exists('submitSearch', $_POST)){
 </style>
 <nav class="navbar navbar-light sticky-top">
     <div class="container-fluid d-flex flex-row align-items-center justify-content-between">
-        <div class="col-3">
+        <div class="">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40"
                     style="border-radius: 50%;">
@@ -77,7 +77,7 @@ if(array_key_exists('submitSearch', $_POST)){
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end col-3 p-1" id="navbarScroll">
+        <div class="collapse navbar-collapse justify-content-end p-1" id="navbarScroll">
             <ul class="navbar-nav">
                 <li class="nav-item trending mt-0">
                     <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
