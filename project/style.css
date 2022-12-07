@@ -7,7 +7,6 @@ body {
   /* Margin bottom by footer height */
   padding-bottom: 101px;
 }
-
 footer {
   position: absolute;
   bottom: 0;

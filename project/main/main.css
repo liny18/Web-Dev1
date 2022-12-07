@@ -14,7 +14,8 @@
 .like:hover,
 .comment:hover,
 .location:hover,
-.list-group-item:hover {
+.list-group-item:hover,
+.liked-this-post {
   color: #f04320;
   cursor: pointer;
   transform: scale(1.1);
@@ -31,6 +32,8 @@
   object-fit: cover;
   border-radius: 20px;
   margin-top: 1rem;
+  max-width: 70.3vw;
+  max-height: 166.8vh;
 }
 
 .card {
