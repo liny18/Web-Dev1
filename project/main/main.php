@@ -329,12 +329,11 @@
               echo '<div class="card-header p-2">';
               echo '<div class="d-flex justify-content-between p-1">';
               echo '<form action="../UserPage/index.php?userID='.$row[$i]['userID'].'&userName='.$user[0]['username'].'" method="get">';
-              if ($row[$i]['admin'] == 1) {
+              if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
                 echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . ' <i class="far fa-check-circle text-primary" title="Admin"></i>' . '</button>';
               } else {
                 echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . '</button>';
               }
-              echo '<button type="submit" name="submit" value="submit" class="btn tbn-link text-decoration-none" id="postRCS">' . $user[0]['username'] . '</button>';
               echo '</form>';
               if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
                 if($row[$i]['admin'] == 1){
