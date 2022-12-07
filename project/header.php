@@ -81,7 +81,7 @@ if(array_key_exists('submitSearch', $_POST)){
             <ul class="navbar-nav">
                 <li class="nav-item dining mt-0">
                     <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
-                        <img src="../pictures/diningicon.png" alt="Dining Hall Information" width="40" height="40">
+                        <img src="../pictures/diningicon.ico" alt="Dining Hall Information" width="40" height="40">
                     </a>
                 </li>
                 <li class="nav-item post mt-0">
