@@ -93,18 +93,16 @@ if(array_key_exists('submitSearch', $_POST)){
                     <?php
                         echo '';
                         echo '<form class="navbar-brand" action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
-                        echo '<button class="icon" title="Profile" type="submit" name="submit" value="submit" ><img src="../pictures/addPostIcon.svg" alt="profile" width="40" height="40"></button>';
+                        echo '<button class="icon" title="Profile" type="submit" name="submit" value="submit" ><img src="../pictures/profilepic.png" alt="profile" width="40" height="40"></button>';
                         echo '</form>';
                     ?>
                 </li>
                 <?php
-                    if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
                         echo '<li class="nav-item logOut mt-0">';
                         echo '<a href="../AdminPage/index.php" class="navbar-brand">';
                         echo '<button class="btn btn-outline-light">Reported Posts</button>';
                         echo '</a>';
                         echo '</li>';
-                    }
                 ?>
                 <li class="nav-item logOut mt-0">
                     <a href="../phpcas/logout.php" class="navbar-brand">
