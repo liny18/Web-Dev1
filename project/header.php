@@ -42,12 +42,12 @@ if(array_key_exists('submitSearch', $_POST)){
         text-align: center;
     }
 
-    .trending,
+    .dining,
     .post {
         transition: 0.5s;
     }
 
-    .trending:hover,
+    .dining:hover,
     .post:hover {
         transform: scale(1.1);
     }
@@ -79,9 +79,9 @@ if(array_key_exists('submitSearch', $_POST)){
         </button>
         <div class="collapse navbar-collapse justify-content-end p-1" id="navbarScroll">
             <ul class="navbar-nav">
-                <li class="nav-item trending mt-0">
+                <li class="nav-item dining mt-0">
                     <a href="../Dining Hall Page/index.php" class="navbar-brand" title="Dinning Halls">
-                        <img src="../pictures/trendingIcon.svg" alt="trending button" width="40" height="40">
+                        <img src="../pictures/diningicon.png" alt="Dining Hall Information" width="40" height="40">
                     </a>
                 </li>
                 <li class="nav-item post mt-0">
@@ -97,11 +97,13 @@ if(array_key_exists('submitSearch', $_POST)){
                     ?>
                 </li>
                     <?php
-                        echo '<li class="nav-item logOut mt-0">';
-                        echo '<a href="../AdminPage/index.php" class="navbar-brand">';
-                        echo '<button class="btn btn-outline-light">Reported Posts</button>';
-                        echo '</a>';
-                        echo '</li>';
+                        if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
+                            echo '<li class="nav-item logOut mt-0">';
+                            echo '<a href="../AdminPage/index.php" class="navbar-brand">';
+                            echo '<button class="btn btn-outline-light">Reported Posts</button>';
+                            echo '</a>';
+                            echo '</li>';
+                        }
                     ?>
                 <li class="nav-item logOut mt-0">
                     <a href="../phpcas/logout.php" class="navbar-brand">
