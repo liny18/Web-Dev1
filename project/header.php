@@ -91,7 +91,7 @@ if(array_key_exists('submitSearch', $_POST)){
                 <li class="nav-item post mt-0">
                     <?php
                         echo '<form action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
-                        echo '<button class="icon bg-transparent border-none outline-none" type="submit" name="submit" value="submit" ><img src="../pictures/addPostIcon.svg" alt="profile" width="40" height="40"></button>';
+                        echo '<button class="icon" type="submit" name="submit" value="submit" ><img src="../pictures/addPostIcon.svg" alt="profile" width="40" height="40"></button>';
                         echo '</form>';
                     ?>
                 </li>
