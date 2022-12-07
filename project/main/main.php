@@ -414,7 +414,6 @@
               echo '<div class="d-flex text-start flex-column">';
               echo '<div>';
               echo '<h6 class="color fw-bold">';
-              echo 'Ryan Hickey';
               echo '<i class="far fa-check-circle text-primary" title="Admin"></i>';
               echo '</h6>';
               echo '</div>';
