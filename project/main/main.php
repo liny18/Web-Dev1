@@ -371,7 +371,7 @@
               echo '" onclick="likeCounter(' . $row[$i]['postID'] . ', ' . $_SESSION['userID'];
               echo ', this)"><i class="fa-regular fa-heart';
               echo '"></i> ' . $row[$i]['likes'] . ' likes</button>';
-              echo '<div class="comment"><i class="fa-regular fa-comment"></i> ';
+              echo '<div class="comment" data-bs-toggle="modal" data-bs-target="#commentModal"><i class="fa-regular fa-comment"></i> ';
               echo 0 . ' comments</div></div></div>';
               //modal
               echo '<div class="modal fade" id="commentModal" tabindex="-1" aria-labelledby="commentModalLabel" aria-hidden="true">';
