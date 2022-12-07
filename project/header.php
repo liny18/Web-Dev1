@@ -84,10 +84,21 @@ if(array_key_exists('submitSearch', $_POST)){
                     </a>
                 </li>
                 <li class="nav-item post mt-0">
-                    <a href="../UserPage/index.php" class="navbar-brand" title="Upload">
-                        <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
-                    </a>
+                    <?php
+                        echo '<form action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
+                        echo '<button type="submit" name="submit" value="submit" ><img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40"></button>';
+                        echo '</form>';
+                    ?>
                 </li>
+                <?php
+                    if(isset($_SESSION['admin']) && $_SESSION['admin'] == 1){
+                        echo '<li class="nav-item logOut mt-0">';
+                        echo '<a href="../AdminPage/index.php" class="navbar-brand">';
+                        echo '<button class="btn btn-outline-light">Reported Posts</button>';
+                        echo '</a>';
+                        echo '</li>';
+                    }
+                ?>
                 <li class="nav-item logOut mt-0">
                     <a href="../phpcas/logout.php" class="navbar-brand">
                         <button id="logOut" class="btn btn-outline-light" type="submit">Log Out</button>
