@@ -89,7 +89,7 @@ if(array_key_exists('submitSearch', $_POST)){
                         <img src="../pictures/addPostIcon.svg" alt="add post button" width="40" height="40">
                     </a>
                 </li>
-                <li class="nav-item mt-0">
+                <li class="nav-item post mt-0">
                     <?php
                         echo '';
                         echo '<form class="navbar-brand" action="../UserPage/index.php?userID='.$_SESSION['userID'].'&userName='.$_SESSION['userName'].'" method="post">';
