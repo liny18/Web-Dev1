@@ -54,14 +54,14 @@ if(array_key_exists('submitSearch', $_POST)){
 </style>
 <nav class="navbar navbar-light sticky-top">
     <div class="container-fluid d-flex flex-row align-items-center justify-content-between">
-        <div class="">
+        <div class="col-3">
             <a class="navbar-brand" href="../main/main.php">
                 <img class="nav-logo" src="../pictures/logo.png" alt="Error Cats logo" width="40" height="40"
                     style="border-radius: 50%;">
                 RPI Foodies
             </a>
         </div>
-        <form class="d-flex" method="post" action="../headerLogin.php">
+        <form class="col d-flex" method="post" action="../headerLogin.php">
             <div class="col m-1">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
                     name="search">
