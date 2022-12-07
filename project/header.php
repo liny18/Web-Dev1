@@ -22,7 +22,7 @@ if(array_key_exists('submitSearch', $_POST)){
         outline: none;
         padding: 0;
     }
-    nav {
+    /* nav {
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
         background-color: #f04320;
         padding: 5px;
@@ -40,7 +40,7 @@ if(array_key_exists('submitSearch', $_POST)){
 
     .navbar .navbar-collapse {
         text-align: center;
-    }
+    } */
 
     .trending,
     .post {
