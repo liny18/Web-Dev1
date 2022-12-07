@@ -52,7 +52,7 @@ if(array_key_exists('submitSearch', $_POST)){
         transform: scale(1.1);
     }
 </style>
-<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+<nav class="navbar navbar-light sticky-top">
     <div class="container-fluid d-flex align-items-center">
         <div class="col-3">
             <a class="navbar-brand" href="../main/main.php">
