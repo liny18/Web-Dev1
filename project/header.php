@@ -20,6 +20,7 @@ if(array_key_exists('submitSearch', $_POST)){
         background-color: transparent;
         border: none;
         outline: none;
+        padding: 0;
     }
     nav {
         box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.3);
