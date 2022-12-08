@@ -501,8 +501,8 @@
                   echo '</div>';
                   echo '<div class="modal-body">';
                   echo '<div class="container">';
-                  echo '<button type="button" class="btn btn-link text-danger text-decoration-none" onclick="report(' . $row[$i]['postID'] . ", " . $_SESSION['userID'] . ', this)">Yes</button>';
-                  echo '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>';
+                  echo '<button type="button" class="me-3 btn btn-link text-danger text-decoration-none" onclick="report(' . $row[$i]['postID'] . ", " . $_SESSION['userID'] . ', this)">Yes</button>';
+                  echo '<button type="button" class="btn btn-link text-secondary text-decoration-none" data-bs-dismiss="modal">No</button>';
                   echo '</div>';
                   echo '</div>';
                   echo '</div>';
