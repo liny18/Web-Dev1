@@ -350,7 +350,9 @@
               echo '<p class="time"><i class="fa-solid fa-clock pt-1"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
               echo '</div>';
               echo '<div>';
+              echo '<h5 class="card-title"><i class="fa-solid fa-utensils"></i>';
               echo $row[$i]["foodName"];
+              echo '</h5>';
               echo '</div>';
               echo '<img class="card-img-top" src="../postImages/' . $row[$i]['postPhoto'] . '"alt="Card image">';
               echo '<div class="card-body"><h5 class="card-title"><i class="fa-solid fa-tags"></i> ';
