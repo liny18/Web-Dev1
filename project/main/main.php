@@ -219,7 +219,7 @@
                 echo '<p class="time"><i class="fa-solid fa-clock pt-1"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
                 echo '</div>';
                 echo '<div>';
-                echo '<h5 class="card-title"><i class="fa-solid fa-utensils"></i> ';
+                echo '<h5 class="card-title"><i class="fa-solid fa-utensils me-1"></i>';
                 echo $row[$i]["foodName"];
                 echo '</h5>';
                 echo '</div>';
@@ -294,7 +294,7 @@
               echo '<p class="time"><i class="fa-solid fa-clock pt-1"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
               echo '</div>';
               echo '<div>';
-              echo '<h5 class="card-title"><i class="fa-solid fa-utensils"></i> ';
+              echo '<h5 class="card-title"><i class="fa-solid fa-utensils me-1"></i>';
               echo $row[$i]["foodName"];
               echo '</h5>';
               echo '</div>';
@@ -360,7 +360,7 @@
               echo '<p class="time"><i class="fa-solid fa-clock pt-1"></i> ' . calculate_time($row[$i]['postTime']) . '</p>';
               echo '</div>';
               echo '<div>';
-              echo '<h5 class="card-title"><i class="fa-solid fa-utensils"></i> ';
+              echo '<h5 class="card-title"><i class="fa-solid fa-utensils me-1"></i>';
               echo $row[$i]["foodName"];
               echo '</h5>';
               echo '</div>';
