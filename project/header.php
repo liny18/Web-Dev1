@@ -28,6 +28,10 @@ if(array_key_exists('submitSearch', $_POST)){
         padding: 5px;
     }
 
+    .navbar-toggler {
+        border-color: white;
+    }
+
     .navbar .navbar-nav {
         display: inline-block;
         float: none;
