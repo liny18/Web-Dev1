@@ -443,6 +443,7 @@
               echo '</form>';
               if (isset($_SESSION['admin']) && $_SESSION['admin'] == 1) {
                 echo '<button type="button" class="btn btn-link text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteModal">';
+                echo 'Delete';
                 echo '</button>';
                 echo '<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">';
                 echo '<div class="modal-dialog modal-sm">';
@@ -466,6 +467,7 @@
               } else {
                 if($row[$i]['userID'] == $_SESSION['userID']){
                   echo '<button type="button" class="btn btn-link text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#deleteModal">';
+                  echo 'Delete';
                   echo '</button>';
                   echo '<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">';
                   echo '<div class="modal-dialog modal-sm">';
@@ -488,6 +490,7 @@
                   echo '</div>'; 
                 } else {
                   echo '<button type="button" class="btn btn-link text-danger text-decoration-none" data-bs-toggle="modal" data-bs-target="#reportModal">';
+                  echo 'Report';
                   echo '</button>';
                   echo '<div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">';
                   echo '<div class="modal-dialog modal-sm">';
