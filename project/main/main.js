@@ -21,7 +21,7 @@ function report(postID, userID, element){
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             if (this.responseText != -1) {
-                element.className = "btn btn-success";
+                element.classList.add("disabled");
             }
         }
     }
